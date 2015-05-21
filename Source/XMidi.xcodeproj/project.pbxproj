@@ -1,0 +1,833 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95118A821B0A3BEF00EE90A3 /* iAppInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A701B0A3BEF00EE90A3 /* iAppInfos.m */; };
+		95118A831B0A3BEF00EE90A3 /* JMODevicePowerInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A721B0A3BEF00EE90A3 /* JMODevicePowerInfos.m */; };
+		95118A841B0A3BEF00EE90A3 /* JMOMobileProvisionning.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A751B0A3BEF00EE90A3 /* JMOMobileProvisionning.m */; };
+		95118A851B0A3BEF00EE90A3 /* NSDictionary+iAppInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A771B0A3BEF00EE90A3 /* NSDictionary+iAppInfos.m */; };
+		95118A861B0A3BEF00EE90A3 /* UIApplication+iAppInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A791B0A3BEF00EE90A3 /* UIApplication+iAppInfos.m */; };
+		95118A871B0A3BEF00EE90A3 /* UIDevice+iAppInfos.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A7B1B0A3BEF00EE90A3 /* UIDevice+iAppInfos.m */; };
+		95118A881B0A3BEF00EE90A3 /* Sound.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 95118A7E1B0A3BEF00EE90A3 /* Sound.fsh */; };
+		95118A891B0A3BEF00EE90A3 /* XSharderCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A801B0A3BEF00EE90A3 /* XSharderCenter.m */; };
+		95118B031B0A3BFB00EE90A3 /* XFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A8D1B0A3BFB00EE90A3 /* XFunction.m */; };
+		95118B041B0A3BFB00EE90A3 /* XMidiEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A901B0A3BFB00EE90A3 /* XMidiEvent.m */; };
+		95118B051B0A3BFB00EE90A3 /* XMidiEventIterator.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A921B0A3BFB00EE90A3 /* XMidiEventIterator.m */; };
+		95118B061B0A3BFB00EE90A3 /* XMidiNoteMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A941B0A3BFB00EE90A3 /* XMidiNoteMessage.m */; };
+		95118B071B0A3BFB00EE90A3 /* XMidiSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A961B0A3BFB00EE90A3 /* XMidiSequence.m */; };
+		95118B081B0A3BFB00EE90A3 /* XMidiTempoEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A981B0A3BFB00EE90A3 /* XMidiTempoEvent.m */; };
+		95118B091B0A3BFB00EE90A3 /* XMidiTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A9A1B0A3BFB00EE90A3 /* XMidiTrack.m */; };
+		95118B0D1B0A3BFB00EE90A3 /* XMidiPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118AA41B0A3BFB00EE90A3 /* XMidiPlayer.m */; };
+		952B60B31AB68FD500A87CDB /* 至爱丽丝.mid in Resources */ = {isa = PBXBuildFile; fileRef = 952B60AE1AB68FD500A87CDB /* 至爱丽丝.mid */; };
+		952B60B41AB68FD500A87CDB /* Rondeau.mid in Resources */ = {isa = PBXBuildFile; fileRef = 952B60AF1AB68FD500A87CDB /* Rondeau.mid */; };
+		952B60B51AB68FD500A87CDB /* Rondo in C (Op.51. No.1.).mid in Resources */ = {isa = PBXBuildFile; fileRef = 952B60B01AB68FD500A87CDB /* Rondo in C (Op.51. No.1.).mid */; };
+		952B60B61AB68FD500A87CDB /* Sonata No 14 in C#min-1.mid in Resources */ = {isa = PBXBuildFile; fileRef = 952B60B11AB68FD500A87CDB /* Sonata No 14 in C#min-1.mid */; };
+		952B60B71AB68FD500A87CDB /* Sonata No 14 in C#min-3.mid in Resources */ = {isa = PBXBuildFile; fileRef = 952B60B21AB68FD500A87CDB /* Sonata No 14 in C#min-3.mid */; };
+		9589ED051AB34F1B0088FB9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589ED041AB34F1B0088FB9C /* AppDelegate.swift */; };
+		9589ED091AB34F1B0088FB9C /* MusicPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589ED081AB34F1B0088FB9C /* MusicPlay.swift */; };
+		9589ED0B1AB34F1B0088FB9C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589ED0A1AB34F1B0088FB9C /* GameViewController.swift */; };
+		9589ED0E1AB34F1B0088FB9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9589ED0C1AB34F1B0088FB9C /* Main.storyboard */; };
+		9589ED131AB34F1B0088FB9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9589ED111AB34F1B0088FB9C /* LaunchScreen.xib */; };
+		9589ED1F1AB34F1B0088FB9C /* XMidiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589ED1E1AB34F1B0088FB9C /* XMidiTests.swift */; };
+		9589EDA91AB350460088FB9C /* 埃克赛斯舞曲.mid in Resources */ = {isa = PBXBuildFile; fileRef = 9589ED4A1AB350460088FB9C /* 埃克赛斯舞曲.mid */; };
+		9589EDAB1AB350460088FB9C /* 绮想轮旋曲.mid in Resources */ = {isa = PBXBuildFile; fileRef = 9589ED4D1AB350460088FB9C /* 绮想轮旋曲.mid */; };
+		9589EE051AB3523A0088FB9C /* XBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589EE041AB3523A0088FB9C /* XBarButton.swift */; };
+		958C315D1AB943D9009A1EA1 /* XMidiFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958C315C1AB943D9009A1EA1 /* XMidiFile.swift */; };
+		95A4E2251ABE4CDC00FE6946 /* XProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4E2241ABE4CDC00FE6946 /* XProgressBar.swift */; };
+		95A4E2271ABE500600FE6946 /* XIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4E2261ABE500600FE6946 /* XIconButton.swift */; };
+		95AF42181AB4A2DC005C708C /* Sonata No.9 in E-1.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42151AB4A2DC005C708C /* Sonata No.9 in E-1.mid */; };
+		95AF42281AB5EBBC005C708C /* 命运交响曲第一章.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42271AB5EBBC005C708C /* 命运交响曲第一章.mid */; };
+		95AF422A1AB5FF5D005C708C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42291AB5FF5D005C708C /* Images.xcassets */; };
+		95B4C6AA1B0CD018000AC36A /* Violins 1.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6A91B0CD018000AC36A /* Violins 1.aupreset */; };
+		95B4C6B61B0CEF47000AC36A /* Tuba Solo+.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6B51B0CEF47000AC36A /* Tuba Solo+.aupreset */; };
+		95B4C6B81B0CF01C000AC36A /* Clarient Solo+.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6B71B0CF01C000AC36A /* Clarient Solo+.aupreset */; };
+		95B4C6BA1B0CF119000AC36A /* Orchestral Kit.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */; };
+		95B4C6BC1B0CF372000AC36A /* Flute Solo+.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6BB1B0CF372000AC36A /* Flute Solo+.aupreset */; };
+		95B4C6C71B0CF96B000AC36A /* 卡农.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6C41B0CF96B000AC36A /* 卡农.mid */; };
+		95B4C6C91B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */; };
+		95B4C6CB1B0CFC71000AC36A /* 一千个伤心的理由.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6CA1B0CFC71000AC36A /* 一千个伤心的理由.mid */; };
+		95B4C6CD1B0CFD62000AC36A /* French Horn Solo+.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6CC1B0CFD62000AC36A /* French Horn Solo+.aupreset */; };
+		95F815B81B0C522D00C72B20 /* XAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F815B71B0C522D00C72B20 /* XAudioUnit.m */; };
+		95F815BD1B0C551000C72B20 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 95F815BC1B0C551000C72B20 /* Sounds */; };
+		95F815C01B0C554000C72B20 /* Classical Piano.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F815BF1B0C554000C72B20 /* Classical Piano.aupreset */; };
+		95F8163E1B0C63AB00C72B20 /* Vibraphone.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F8163D1B0C63AB00C72B20 /* Vibraphone.aupreset */; };
+		95F816441B0C6C2600C72B20 /* XAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F816431B0C6C2600C72B20 /* XAudioPlayer.m */; };
+		95F816481B0CA67000C72B20 /* String Ensemble.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F816471B0CA67000C72B20 /* String Ensemble.aupreset */; };
+		95F8164A1B0CAC6C00C72B20 /* French Horns.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F816491B0CAC6C00C72B20 /* French Horns.aupreset */; };
+		95F8164C1B0CAFDD00C72B20 /* Flutes.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F8164B1B0CAFDD00C72B20 /* Flutes.aupreset */; };
+		95F8164E1B0CB28400C72B20 /* Clarinets.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F8164D1B0CB28400C72B20 /* Clarinets.aupreset */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9589ED191AB34F1B0088FB9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9589ECF71AB34F1B0088FB9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9589ECFE1AB34F1B0088FB9C;
+			remoteInfo = XMidi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		95118A6F1B0A3BEF00EE90A3 /* iAppInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAppInfos.h; sourceTree = "<group>"; };
+		95118A701B0A3BEF00EE90A3 /* iAppInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAppInfos.m; sourceTree = "<group>"; };
+		95118A711B0A3BEF00EE90A3 /* JMODevicePowerInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMODevicePowerInfos.h; sourceTree = "<group>"; };
+		95118A721B0A3BEF00EE90A3 /* JMODevicePowerInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMODevicePowerInfos.m; sourceTree = "<group>"; };
+		95118A731B0A3BEF00EE90A3 /* JMOLogMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMOLogMacro.h; sourceTree = "<group>"; };
+		95118A741B0A3BEF00EE90A3 /* JMOMobileProvisionning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMOMobileProvisionning.h; sourceTree = "<group>"; };
+		95118A751B0A3BEF00EE90A3 /* JMOMobileProvisionning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMOMobileProvisionning.m; sourceTree = "<group>"; };
+		95118A761B0A3BEF00EE90A3 /* NSDictionary+iAppInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+iAppInfos.h"; sourceTree = "<group>"; };
+		95118A771B0A3BEF00EE90A3 /* NSDictionary+iAppInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+iAppInfos.m"; sourceTree = "<group>"; };
+		95118A781B0A3BEF00EE90A3 /* UIApplication+iAppInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+iAppInfos.h"; sourceTree = "<group>"; };
+		95118A791B0A3BEF00EE90A3 /* UIApplication+iAppInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+iAppInfos.m"; sourceTree = "<group>"; };
+		95118A7A1B0A3BEF00EE90A3 /* UIDevice+iAppInfos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+iAppInfos.h"; sourceTree = "<group>"; };
+		95118A7B1B0A3BEF00EE90A3 /* UIDevice+iAppInfos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+iAppInfos.m"; sourceTree = "<group>"; };
+		95118A7E1B0A3BEF00EE90A3 /* Sound.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Sound.fsh; sourceTree = "<group>"; };
+		95118A7F1B0A3BEF00EE90A3 /* XSharderCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSharderCenter.h; sourceTree = "<group>"; };
+		95118A801B0A3BEF00EE90A3 /* XSharderCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSharderCenter.m; sourceTree = "<group>"; };
+		95118A8C1B0A3BFB00EE90A3 /* XFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFunction.h; sourceTree = "<group>"; };
+		95118A8D1B0A3BFB00EE90A3 /* XFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFunction.m; sourceTree = "<group>"; };
+		95118A8F1B0A3BFB00EE90A3 /* XMidiEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiEvent.h; sourceTree = "<group>"; };
+		95118A901B0A3BFB00EE90A3 /* XMidiEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiEvent.m; sourceTree = "<group>"; };
+		95118A911B0A3BFB00EE90A3 /* XMidiEventIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiEventIterator.h; sourceTree = "<group>"; };
+		95118A921B0A3BFB00EE90A3 /* XMidiEventIterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiEventIterator.m; sourceTree = "<group>"; };
+		95118A931B0A3BFB00EE90A3 /* XMidiNoteMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiNoteMessage.h; sourceTree = "<group>"; };
+		95118A941B0A3BFB00EE90A3 /* XMidiNoteMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiNoteMessage.m; sourceTree = "<group>"; };
+		95118A951B0A3BFB00EE90A3 /* XMidiSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiSequence.h; sourceTree = "<group>"; };
+		95118A961B0A3BFB00EE90A3 /* XMidiSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiSequence.m; sourceTree = "<group>"; };
+		95118A971B0A3BFB00EE90A3 /* XMidiTempoEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiTempoEvent.h; sourceTree = "<group>"; };
+		95118A981B0A3BFB00EE90A3 /* XMidiTempoEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiTempoEvent.m; sourceTree = "<group>"; };
+		95118A991B0A3BFB00EE90A3 /* XMidiTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiTrack.h; sourceTree = "<group>"; };
+		95118A9A1B0A3BFB00EE90A3 /* XMidiTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiTrack.m; sourceTree = "<group>"; };
+		95118AA31B0A3BFB00EE90A3 /* XMidiPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiPlayer.h; sourceTree = "<group>"; };
+		95118AA41B0A3BFB00EE90A3 /* XMidiPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiPlayer.m; sourceTree = "<group>"; };
+		95118B661B0A3C2100EE90A3 /* XMidi-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XMidi-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		952B60AE1AB68FD500A87CDB /* 至爱丽丝.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "至爱丽丝.mid"; sourceTree = "<group>"; };
+		952B60AF1AB68FD500A87CDB /* Rondeau.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = Rondeau.mid; sourceTree = "<group>"; };
+		952B60B01AB68FD500A87CDB /* Rondo in C (Op.51. No.1.).mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Rondo in C (Op.51. No.1.).mid"; sourceTree = "<group>"; };
+		952B60B11AB68FD500A87CDB /* Sonata No 14 in C#min-1.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Sonata No 14 in C#min-1.mid"; sourceTree = "<group>"; };
+		952B60B21AB68FD500A87CDB /* Sonata No 14 in C#min-3.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Sonata No 14 in C#min-3.mid"; sourceTree = "<group>"; };
+		9589ECFF1AB34F1B0088FB9C /* XMidi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMidi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9589ED031AB34F1B0088FB9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9589ED041AB34F1B0088FB9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9589ED081AB34F1B0088FB9C /* MusicPlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlay.swift; sourceTree = "<group>"; };
+		9589ED0A1AB34F1B0088FB9C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		9589ED0D1AB34F1B0088FB9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9589ED121AB34F1B0088FB9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9589ED181AB34F1B0088FB9C /* XMidiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMidiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9589ED1D1AB34F1B0088FB9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9589ED1E1AB34F1B0088FB9C /* XMidiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMidiTests.swift; sourceTree = "<group>"; };
+		9589ED4A1AB350460088FB9C /* 埃克赛斯舞曲.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "埃克赛斯舞曲.mid"; sourceTree = "<group>"; };
+		9589ED4D1AB350460088FB9C /* 绮想轮旋曲.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "绮想轮旋曲.mid"; sourceTree = "<group>"; };
+		9589EE041AB3523A0088FB9C /* XBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBarButton.swift; sourceTree = "<group>"; };
+		958C315C1AB943D9009A1EA1 /* XMidiFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMidiFile.swift; sourceTree = "<group>"; };
+		95A4E2241ABE4CDC00FE6946 /* XProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XProgressBar.swift; sourceTree = "<group>"; };
+		95A4E2261ABE500600FE6946 /* XIconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIconButton.swift; sourceTree = "<group>"; };
+		95AF42151AB4A2DC005C708C /* Sonata No.9 in E-1.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Sonata No.9 in E-1.mid"; sourceTree = "<group>"; };
+		95AF42271AB5EBBC005C708C /* 命运交响曲第一章.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "命运交响曲第一章.mid"; sourceTree = "<group>"; };
+		95AF42291AB5FF5D005C708C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		95B4C6A91B0CD018000AC36A /* Violins 1.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Violins 1.aupreset"; sourceTree = "<group>"; };
+		95B4C6B51B0CEF47000AC36A /* Tuba Solo+.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Tuba Solo+.aupreset"; sourceTree = "<group>"; };
+		95B4C6B71B0CF01C000AC36A /* Clarient Solo+.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Clarient Solo+.aupreset"; sourceTree = "<group>"; };
+		95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Orchestral Kit.aupreset"; sourceTree = "<group>"; };
+		95B4C6BB1B0CF372000AC36A /* Flute Solo+.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Flute Solo+.aupreset"; sourceTree = "<group>"; };
+		95B4C6C41B0CF96B000AC36A /* 卡农.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "卡农.mid"; sourceTree = "<group>"; };
+		95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Yamaha Grand Piano.aupreset"; sourceTree = "<group>"; };
+		95B4C6CA1B0CFC71000AC36A /* 一千个伤心的理由.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "一千个伤心的理由.mid"; sourceTree = "<group>"; };
+		95B4C6CC1B0CFD62000AC36A /* French Horn Solo+.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "French Horn Solo+.aupreset"; sourceTree = "<group>"; };
+		95F815B71B0C522D00C72B20 /* XAudioUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XAudioUnit.m; path = AudioUnit/XAudioUnit.m; sourceTree = "<group>"; };
+		95F815B91B0C524100C72B20 /* XAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XAudioUnit.h; path = AudioUnit/XAudioUnit.h; sourceTree = "<group>"; };
+		95F815BC1B0C551000C72B20 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = Resource/Sounds; sourceTree = "<group>"; };
+		95F815BF1B0C554000C72B20 /* Classical Piano.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Classical Piano.aupreset"; sourceTree = "<group>"; };
+		95F8163D1B0C63AB00C72B20 /* Vibraphone.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Vibraphone.aupreset; sourceTree = "<group>"; };
+		95F816421B0C6C2600C72B20 /* XAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XAudioPlayer.h; path = AudioUnit/XAudioPlayer.h; sourceTree = "<group>"; };
+		95F816431B0C6C2600C72B20 /* XAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XAudioPlayer.m; path = AudioUnit/XAudioPlayer.m; sourceTree = "<group>"; };
+		95F816471B0CA67000C72B20 /* String Ensemble.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "String Ensemble.aupreset"; sourceTree = "<group>"; };
+		95F816491B0CAC6C00C72B20 /* French Horns.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "French Horns.aupreset"; sourceTree = "<group>"; };
+		95F8164B1B0CAFDD00C72B20 /* Flutes.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Flutes.aupreset; sourceTree = "<group>"; };
+		95F8164D1B0CB28400C72B20 /* Clarinets.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Clarinets.aupreset; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9589ECFC1AB34F1B0088FB9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9589ED151AB34F1B0088FB9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95118A6C1B0A3BEF00EE90A3 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				95118B661B0A3C2100EE90A3 /* XMidi-Bridging-Header.h */,
+				95118A6E1B0A3BEF00EE90A3 /* iAppInfos */,
+				95118A7C1B0A3BEF00EE90A3 /* XShader */,
+			);
+			path = ObjC;
+			sourceTree = "<group>";
+		};
+		95118A6E1B0A3BEF00EE90A3 /* iAppInfos */ = {
+			isa = PBXGroup;
+			children = (
+				95118A6F1B0A3BEF00EE90A3 /* iAppInfos.h */,
+				95118A701B0A3BEF00EE90A3 /* iAppInfos.m */,
+				95118A711B0A3BEF00EE90A3 /* JMODevicePowerInfos.h */,
+				95118A721B0A3BEF00EE90A3 /* JMODevicePowerInfos.m */,
+				95118A731B0A3BEF00EE90A3 /* JMOLogMacro.h */,
+				95118A741B0A3BEF00EE90A3 /* JMOMobileProvisionning.h */,
+				95118A751B0A3BEF00EE90A3 /* JMOMobileProvisionning.m */,
+				95118A761B0A3BEF00EE90A3 /* NSDictionary+iAppInfos.h */,
+				95118A771B0A3BEF00EE90A3 /* NSDictionary+iAppInfos.m */,
+				95118A781B0A3BEF00EE90A3 /* UIApplication+iAppInfos.h */,
+				95118A791B0A3BEF00EE90A3 /* UIApplication+iAppInfos.m */,
+				95118A7A1B0A3BEF00EE90A3 /* UIDevice+iAppInfos.h */,
+				95118A7B1B0A3BEF00EE90A3 /* UIDevice+iAppInfos.m */,
+			);
+			path = iAppInfos;
+			sourceTree = "<group>";
+		};
+		95118A7C1B0A3BEF00EE90A3 /* XShader */ = {
+			isa = PBXGroup;
+			children = (
+				95118A7D1B0A3BEF00EE90A3 /* XShaderFile */,
+				95118A7F1B0A3BEF00EE90A3 /* XSharderCenter.h */,
+				95118A801B0A3BEF00EE90A3 /* XSharderCenter.m */,
+			);
+			path = XShader;
+			sourceTree = "<group>";
+		};
+		95118A7D1B0A3BEF00EE90A3 /* XShaderFile */ = {
+			isa = PBXGroup;
+			children = (
+				95118A7E1B0A3BEF00EE90A3 /* Sound.fsh */,
+			);
+			path = XShaderFile;
+			sourceTree = "<group>";
+		};
+		95118A8A1B0A3BFB00EE90A3 /* XMidiLib */ = {
+			isa = PBXGroup;
+			children = (
+				95F815BB1B0C549000C72B20 /* Resource */,
+				95F815B61B0C520700C72B20 /* AudioUnit */,
+				95118A8B1B0A3BFB00EE90A3 /* Data */,
+				95118A8E1B0A3BFB00EE90A3 /* MIDI */,
+				95118AA21B0A3BFB00EE90A3 /* Player */,
+			);
+			path = XMidiLib;
+			sourceTree = "<group>";
+		};
+		95118A8B1B0A3BFB00EE90A3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				95118A8C1B0A3BFB00EE90A3 /* XFunction.h */,
+				95118A8D1B0A3BFB00EE90A3 /* XFunction.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		95118A8E1B0A3BFB00EE90A3 /* MIDI */ = {
+			isa = PBXGroup;
+			children = (
+				95118A8F1B0A3BFB00EE90A3 /* XMidiEvent.h */,
+				95118A901B0A3BFB00EE90A3 /* XMidiEvent.m */,
+				95118A911B0A3BFB00EE90A3 /* XMidiEventIterator.h */,
+				95118A921B0A3BFB00EE90A3 /* XMidiEventIterator.m */,
+				95118A931B0A3BFB00EE90A3 /* XMidiNoteMessage.h */,
+				95118A941B0A3BFB00EE90A3 /* XMidiNoteMessage.m */,
+				95118A951B0A3BFB00EE90A3 /* XMidiSequence.h */,
+				95118A961B0A3BFB00EE90A3 /* XMidiSequence.m */,
+				95118A971B0A3BFB00EE90A3 /* XMidiTempoEvent.h */,
+				95118A981B0A3BFB00EE90A3 /* XMidiTempoEvent.m */,
+				95118A991B0A3BFB00EE90A3 /* XMidiTrack.h */,
+				95118A9A1B0A3BFB00EE90A3 /* XMidiTrack.m */,
+			);
+			path = MIDI;
+			sourceTree = "<group>";
+		};
+		95118AA21B0A3BFB00EE90A3 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				95118AA31B0A3BFB00EE90A3 /* XMidiPlayer.h */,
+				95118AA41B0A3BFB00EE90A3 /* XMidiPlayer.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		9589ECF61AB34F1B0088FB9C = {
+			isa = PBXGroup;
+			children = (
+				95118A8A1B0A3BFB00EE90A3 /* XMidiLib */,
+				95118A6C1B0A3BEF00EE90A3 /* ObjC */,
+				9589ED011AB34F1B0088FB9C /* XMidi */,
+				9589ED1B1AB34F1B0088FB9C /* XMidiTests */,
+				9589ED001AB34F1B0088FB9C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9589ED001AB34F1B0088FB9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9589ECFF1AB34F1B0088FB9C /* XMidi.app */,
+				9589ED181AB34F1B0088FB9C /* XMidiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9589ED011AB34F1B0088FB9C /* XMidi */ = {
+			isa = PBXGroup;
+			children = (
+				958C315F1AB9440C009A1EA1 /* App */,
+				958C315E1AB943EB009A1EA1 /* Demo */,
+				95AF42291AB5FF5D005C708C /* Images.xcassets */,
+				9589ED461AB350460088FB9C /* Resource */,
+			);
+			path = XMidi;
+			sourceTree = "<group>";
+		};
+		9589ED021AB34F1B0088FB9C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9589ED031AB34F1B0088FB9C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9589ED1B1AB34F1B0088FB9C /* XMidiTests */ = {
+			isa = PBXGroup;
+			children = (
+				9589ED1E1AB34F1B0088FB9C /* XMidiTests.swift */,
+				9589ED1C1AB34F1B0088FB9C /* Supporting Files */,
+			);
+			path = XMidiTests;
+			sourceTree = "<group>";
+		};
+		9589ED1C1AB34F1B0088FB9C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9589ED1D1AB34F1B0088FB9C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9589ED461AB350460088FB9C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9589ED471AB350460088FB9C /* Midi */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9589ED471AB350460088FB9C /* Midi */ = {
+			isa = PBXGroup;
+			children = (
+				95B4C6C01B0CF96B000AC36A /* 其他 */,
+				95B4C6BD1B0CF7B3000AC36A /* 歌曲 */,
+				9589ED481AB350460088FB9C /* 贝多芬 */,
+			);
+			path = Midi;
+			sourceTree = "<group>";
+		};
+		9589ED481AB350460088FB9C /* 贝多芬 */ = {
+			isa = PBXGroup;
+			children = (
+				95AF42261AB5EBBC005C708C /* 交响乐 */,
+				9589ED491AB350460088FB9C /* 合奏 */,
+				9589ED4B1AB350460088FB9C /* 钢琴 */,
+			);
+			path = "贝多芬";
+			sourceTree = "<group>";
+		};
+		9589ED491AB350460088FB9C /* 合奏 */ = {
+			isa = PBXGroup;
+			children = (
+				9589ED4A1AB350460088FB9C /* 埃克赛斯舞曲.mid */,
+			);
+			path = "合奏";
+			sourceTree = "<group>";
+		};
+		9589ED4B1AB350460088FB9C /* 钢琴 */ = {
+			isa = PBXGroup;
+			children = (
+				952B60AE1AB68FD500A87CDB /* 至爱丽丝.mid */,
+				952B60AF1AB68FD500A87CDB /* Rondeau.mid */,
+				952B60B01AB68FD500A87CDB /* Rondo in C (Op.51. No.1.).mid */,
+				952B60B11AB68FD500A87CDB /* Sonata No 14 in C#min-1.mid */,
+				952B60B21AB68FD500A87CDB /* Sonata No 14 in C#min-3.mid */,
+				95AF42151AB4A2DC005C708C /* Sonata No.9 in E-1.mid */,
+				9589ED4D1AB350460088FB9C /* 绮想轮旋曲.mid */,
+			);
+			path = "钢琴";
+			sourceTree = "<group>";
+		};
+		958C315E1AB943EB009A1EA1 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				95A4E2261ABE500600FE6946 /* XIconButton.swift */,
+				9589EE041AB3523A0088FB9C /* XBarButton.swift */,
+				95A4E2241ABE4CDC00FE6946 /* XProgressBar.swift */,
+				958C315C1AB943D9009A1EA1 /* XMidiFile.swift */,
+				9589ED081AB34F1B0088FB9C /* MusicPlay.swift */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		958C315F1AB9440C009A1EA1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9589ED0A1AB34F1B0088FB9C /* GameViewController.swift */,
+				9589ED041AB34F1B0088FB9C /* AppDelegate.swift */,
+				9589ED0C1AB34F1B0088FB9C /* Main.storyboard */,
+				9589ED111AB34F1B0088FB9C /* LaunchScreen.xib */,
+				9589ED021AB34F1B0088FB9C /* Supporting Files */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		95AF42261AB5EBBC005C708C /* 交响乐 */ = {
+			isa = PBXGroup;
+			children = (
+				95AF42271AB5EBBC005C708C /* 命运交响曲第一章.mid */,
+			);
+			path = "交响乐";
+			sourceTree = "<group>";
+		};
+		95B4C6BD1B0CF7B3000AC36A /* 歌曲 */ = {
+			isa = PBXGroup;
+			children = (
+				95B4C6CA1B0CFC71000AC36A /* 一千个伤心的理由.mid */,
+			);
+			path = "歌曲";
+			sourceTree = "<group>";
+		};
+		95B4C6C01B0CF96B000AC36A /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				95B4C6C21B0CF96B000AC36A /* 钢琴 */,
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
+		95B4C6C21B0CF96B000AC36A /* 钢琴 */ = {
+			isa = PBXGroup;
+			children = (
+				95B4C6C41B0CF96B000AC36A /* 卡农.mid */,
+			);
+			path = "钢琴";
+			sourceTree = "<group>";
+		};
+		95F815B61B0C520700C72B20 /* AudioUnit */ = {
+			isa = PBXGroup;
+			children = (
+				95F816421B0C6C2600C72B20 /* XAudioPlayer.h */,
+				95F816431B0C6C2600C72B20 /* XAudioPlayer.m */,
+				95F815B91B0C524100C72B20 /* XAudioUnit.h */,
+				95F815B71B0C522D00C72B20 /* XAudioUnit.m */,
+			);
+			name = AudioUnit;
+			sourceTree = "<group>";
+		};
+		95F815BB1B0C549000C72B20 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				95F815BE1B0C554000C72B20 /* Aupreset */,
+				95F815BC1B0C551000C72B20 /* Sounds */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		95F815BE1B0C554000C72B20 /* Aupreset */ = {
+			isa = PBXGroup;
+			children = (
+				95B4C6CC1B0CFD62000AC36A /* French Horn Solo+.aupreset */,
+				95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */,
+				95B4C6BB1B0CF372000AC36A /* Flute Solo+.aupreset */,
+				95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */,
+				95B4C6B71B0CF01C000AC36A /* Clarient Solo+.aupreset */,
+				95B4C6B51B0CEF47000AC36A /* Tuba Solo+.aupreset */,
+				95B4C6A91B0CD018000AC36A /* Violins 1.aupreset */,
+				95F8164D1B0CB28400C72B20 /* Clarinets.aupreset */,
+				95F8164B1B0CAFDD00C72B20 /* Flutes.aupreset */,
+				95F816491B0CAC6C00C72B20 /* French Horns.aupreset */,
+				95F816471B0CA67000C72B20 /* String Ensemble.aupreset */,
+				95F8163D1B0C63AB00C72B20 /* Vibraphone.aupreset */,
+				95F815BF1B0C554000C72B20 /* Classical Piano.aupreset */,
+			);
+			name = Aupreset;
+			path = Resource/Aupreset;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9589ECFE1AB34F1B0088FB9C /* XMidi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9589ED221AB34F1B0088FB9C /* Build configuration list for PBXNativeTarget "XMidi" */;
+			buildPhases = (
+				9589ECFB1AB34F1B0088FB9C /* Sources */,
+				9589ECFC1AB34F1B0088FB9C /* Frameworks */,
+				9589ECFD1AB34F1B0088FB9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XMidi;
+			productName = XMidi;
+			productReference = 9589ECFF1AB34F1B0088FB9C /* XMidi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9589ED171AB34F1B0088FB9C /* XMidiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9589ED251AB34F1B0088FB9C /* Build configuration list for PBXNativeTarget "XMidiTests" */;
+			buildPhases = (
+				9589ED141AB34F1B0088FB9C /* Sources */,
+				9589ED151AB34F1B0088FB9C /* Frameworks */,
+				9589ED161AB34F1B0088FB9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9589ED1A1AB34F1B0088FB9C /* PBXTargetDependency */,
+			);
+			name = XMidiTests;
+			productName = XMidiTests;
+			productReference = 9589ED181AB34F1B0088FB9C /* XMidiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9589ECF71AB34F1B0088FB9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Freedom;
+				TargetAttributes = {
+					9589ECFE1AB34F1B0088FB9C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					9589ED171AB34F1B0088FB9C = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 9589ECFE1AB34F1B0088FB9C;
+					};
+				};
+			};
+			buildConfigurationList = 9589ECFA1AB34F1B0088FB9C /* Build configuration list for PBXProject "XMidi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9589ECF61AB34F1B0088FB9C;
+			productRefGroup = 9589ED001AB34F1B0088FB9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9589ECFE1AB34F1B0088FB9C /* XMidi */,
+				9589ED171AB34F1B0088FB9C /* XMidiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9589ECFD1AB34F1B0088FB9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95B4C6B81B0CF01C000AC36A /* Clarient Solo+.aupreset in Resources */,
+				95AF42281AB5EBBC005C708C /* 命运交响曲第一章.mid in Resources */,
+				95B4C6B61B0CEF47000AC36A /* Tuba Solo+.aupreset in Resources */,
+				95B4C6CB1B0CFC71000AC36A /* 一千个伤心的理由.mid in Resources */,
+				95B4C6BC1B0CF372000AC36A /* Flute Solo+.aupreset in Resources */,
+				95B4C6CD1B0CFD62000AC36A /* French Horn Solo+.aupreset in Resources */,
+				95B4C6C91B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset in Resources */,
+				952B60B41AB68FD500A87CDB /* Rondeau.mid in Resources */,
+				95F815C01B0C554000C72B20 /* Classical Piano.aupreset in Resources */,
+				95AF422A1AB5FF5D005C708C /* Images.xcassets in Resources */,
+				952B60B31AB68FD500A87CDB /* 至爱丽丝.mid in Resources */,
+				95F816481B0CA67000C72B20 /* String Ensemble.aupreset in Resources */,
+				9589ED131AB34F1B0088FB9C /* LaunchScreen.xib in Resources */,
+				95AF42181AB4A2DC005C708C /* Sonata No.9 in E-1.mid in Resources */,
+				95F8164E1B0CB28400C72B20 /* Clarinets.aupreset in Resources */,
+				95F8163E1B0C63AB00C72B20 /* Vibraphone.aupreset in Resources */,
+				95B4C6AA1B0CD018000AC36A /* Violins 1.aupreset in Resources */,
+				95F8164C1B0CAFDD00C72B20 /* Flutes.aupreset in Resources */,
+				95118A881B0A3BEF00EE90A3 /* Sound.fsh in Resources */,
+				952B60B61AB68FD500A87CDB /* Sonata No 14 in C#min-1.mid in Resources */,
+				952B60B71AB68FD500A87CDB /* Sonata No 14 in C#min-3.mid in Resources */,
+				95F8164A1B0CAC6C00C72B20 /* French Horns.aupreset in Resources */,
+				95F815BD1B0C551000C72B20 /* Sounds in Resources */,
+				9589EDAB1AB350460088FB9C /* 绮想轮旋曲.mid in Resources */,
+				95B4C6C71B0CF96B000AC36A /* 卡农.mid in Resources */,
+				95B4C6BA1B0CF119000AC36A /* Orchestral Kit.aupreset in Resources */,
+				952B60B51AB68FD500A87CDB /* Rondo in C (Op.51. No.1.).mid in Resources */,
+				9589EDA91AB350460088FB9C /* 埃克赛斯舞曲.mid in Resources */,
+				9589ED0E1AB34F1B0088FB9C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9589ED161AB34F1B0088FB9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9589ECFB1AB34F1B0088FB9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95118B0D1B0A3BFB00EE90A3 /* XMidiPlayer.m in Sources */,
+				95118B051B0A3BFB00EE90A3 /* XMidiEventIterator.m in Sources */,
+				95A4E2271ABE500600FE6946 /* XIconButton.swift in Sources */,
+				958C315D1AB943D9009A1EA1 /* XMidiFile.swift in Sources */,
+				95118A861B0A3BEF00EE90A3 /* UIApplication+iAppInfos.m in Sources */,
+				95118B031B0A3BFB00EE90A3 /* XFunction.m in Sources */,
+				95118B061B0A3BFB00EE90A3 /* XMidiNoteMessage.m in Sources */,
+				95F815B81B0C522D00C72B20 /* XAudioUnit.m in Sources */,
+				95118B071B0A3BFB00EE90A3 /* XMidiSequence.m in Sources */,
+				95118B041B0A3BFB00EE90A3 /* XMidiEvent.m in Sources */,
+				95118A891B0A3BEF00EE90A3 /* XSharderCenter.m in Sources */,
+				9589EE051AB3523A0088FB9C /* XBarButton.swift in Sources */,
+				9589ED091AB34F1B0088FB9C /* MusicPlay.swift in Sources */,
+				95118B091B0A3BFB00EE90A3 /* XMidiTrack.m in Sources */,
+				95118A851B0A3BEF00EE90A3 /* NSDictionary+iAppInfos.m in Sources */,
+				95118A871B0A3BEF00EE90A3 /* UIDevice+iAppInfos.m in Sources */,
+				95A4E2251ABE4CDC00FE6946 /* XProgressBar.swift in Sources */,
+				95118A831B0A3BEF00EE90A3 /* JMODevicePowerInfos.m in Sources */,
+				95118A841B0A3BEF00EE90A3 /* JMOMobileProvisionning.m in Sources */,
+				9589ED0B1AB34F1B0088FB9C /* GameViewController.swift in Sources */,
+				95F816441B0C6C2600C72B20 /* XAudioPlayer.m in Sources */,
+				9589ED051AB34F1B0088FB9C /* AppDelegate.swift in Sources */,
+				95118B081B0A3BFB00EE90A3 /* XMidiTempoEvent.m in Sources */,
+				95118A821B0A3BEF00EE90A3 /* iAppInfos.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9589ED141AB34F1B0088FB9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9589ED1F1AB34F1B0088FB9C /* XMidiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9589ED1A1AB34F1B0088FB9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9589ECFE1AB34F1B0088FB9C /* XMidi */;
+			targetProxy = 9589ED191AB34F1B0088FB9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9589ED0C1AB34F1B0088FB9C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9589ED0D1AB34F1B0088FB9C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9589ED111AB34F1B0088FB9C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9589ED121AB34F1B0088FB9C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9589ED201AB34F1B0088FB9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9589ED211AB34F1B0088FB9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9589ED231AB34F1B0088FB9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XMidi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XMidi-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		9589ED241AB34F1B0088FB9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XMidi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XMidi-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		9589ED261AB34F1B0088FB9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XMidiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XMidi.app/XMidi";
+			};
+			name = Debug;
+		};
+		9589ED271AB34F1B0088FB9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = XMidiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XMidi.app/XMidi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9589ECFA1AB34F1B0088FB9C /* Build configuration list for PBXProject "XMidi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9589ED201AB34F1B0088FB9C /* Debug */,
+				9589ED211AB34F1B0088FB9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9589ED221AB34F1B0088FB9C /* Build configuration list for PBXNativeTarget "XMidi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9589ED231AB34F1B0088FB9C /* Debug */,
+				9589ED241AB34F1B0088FB9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9589ED251AB34F1B0088FB9C /* Build configuration list for PBXNativeTarget "XMidiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9589ED261AB34F1B0088FB9C /* Debug */,
+				9589ED271AB34F1B0088FB9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9589ECF71AB34F1B0088FB9C /* Project object */;
+}

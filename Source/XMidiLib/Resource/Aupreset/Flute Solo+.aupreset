@@ -1,0 +1,2343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AU version</key>
+	<real>1</real>
+	<key>Instrument</key>
+	<dict>
+		<key>LFOs</key>
+		<array>
+			<dict>
+				<key>ID</key>
+				<integer>241</integer>
+				<key>enabled</key>
+				<true/>
+				<key>rate</key>
+				<real>4.8000001907348633</real>
+			</dict>
+		</array>
+		<key>Layers</key>
+		<array>
+			<dict>
+				<key>Amplifier</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>enabled</key>
+					<true/>
+				</dict>
+				<key>Connections</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>816840704</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>scale</key>
+						<real>12800</real>
+						<key>source</key>
+						<integer>300</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343225856</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-60</real>
+						<key>source</key>
+						<integer>301</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>2</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343225856</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>7</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>3</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343225856</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>11</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>4</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1344274432</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>max value</key>
+						<real>0.50800001621246338</real>
+						<key>min value</key>
+						<real>-0.50800001621246338</real>
+						<key>source</key>
+						<integer>10</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>5</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343225856</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>536870912</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+				</array>
+				<key>Envelopes</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>Stages</key>
+						<array>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>0</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>22</integer>
+								<key>stage</key>
+								<integer>1</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>2</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>3</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>level</key>
+								<real>1</real>
+								<key>stage</key>
+								<integer>4</integer>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>5</integer>
+								<key>time</key>
+								<real>0.28817218542098999</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>6</integer>
+								<key>time</key>
+								<real>0.004999999888241291</real>
+							</dict>
+						</array>
+						<key>enabled</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>Stages</key>
+						<array>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>0</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>1</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>2</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>3</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>level</key>
+								<real>0.0</real>
+								<key>stage</key>
+								<integer>4</integer>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>5</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>6</integer>
+								<key>time</key>
+								<real>0.004999999888241291</real>
+							</dict>
+						</array>
+						<key>enabled</key>
+						<true/>
+					</dict>
+				</array>
+				<key>Filters</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>cutoff</key>
+					<real>20000</real>
+					<key>enabled</key>
+					<false/>
+					<key>resonance</key>
+					<real>0.0</real>
+				</dict>
+				<key>ID</key>
+				<integer>0</integer>
+				<key>LFOs</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>delay</key>
+						<real>0.0</real>
+						<key>enabled</key>
+						<true/>
+						<key>rate</key>
+						<real>4.8000001907348633</real>
+					</dict>
+				</array>
+				<key>Oscillator</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>enabled</key>
+					<true/>
+				</dict>
+				<key>Zones</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>21</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>260196</integer>
+						<key>loop start</key>
+						<integer>200787</integer>
+						<key>max key</key>
+						<integer>61</integer>
+						<key>min key</key>
+						<integer>61</integer>
+						<key>name</key>
+						<string>Zone #4</string>
+						<key>root key</key>
+						<integer>61</integer>
+						<key>waveform</key>
+						<integer>268435456</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>3</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>264577</integer>
+						<key>loop start</key>
+						<integer>96026</integer>
+						<key>max key</key>
+						<integer>60</integer>
+						<key>min key</key>
+						<integer>21</integer>
+						<key>name</key>
+						<string>Zone #89</string>
+						<key>root key</key>
+						<integer>60</integer>
+						<key>waveform</key>
+						<integer>268435472</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>20</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-2</real>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>255884</integer>
+						<key>loop start</key>
+						<integer>165431</integer>
+						<key>max key</key>
+						<integer>62</integer>
+						<key>min key</key>
+						<integer>62</integer>
+						<key>name</key>
+						<string>Zone #7</string>
+						<key>root key</key>
+						<integer>62</integer>
+						<key>waveform</key>
+						<integer>268435457</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>2</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-3</real>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>263508</integer>
+						<key>loop start</key>
+						<integer>115522</integer>
+						<key>max key</key>
+						<integer>64</integer>
+						<key>min key</key>
+						<integer>63</integer>
+						<key>name</key>
+						<string>Zone #92</string>
+						<key>root key</key>
+						<integer>64</integer>
+						<key>waveform</key>
+						<integer>268435475</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>19</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>216663</integer>
+						<key>loop start</key>
+						<integer>108734</integer>
+						<key>max key</key>
+						<integer>66</integer>
+						<key>min key</key>
+						<integer>65</integer>
+						<key>name</key>
+						<string>Zone #13</string>
+						<key>root key</key>
+						<integer>66</integer>
+						<key>waveform</key>
+						<integer>268435458</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>18</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>258058</integer>
+						<key>loop start</key>
+						<integer>151108</integer>
+						<key>max key</key>
+						<integer>68</integer>
+						<key>min key</key>
+						<integer>67</integer>
+						<key>name</key>
+						<string>Zone #16</string>
+						<key>root key</key>
+						<integer>68</integer>
+						<key>waveform</key>
+						<integer>268435459</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>17</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-3</real>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>288016</integer>
+						<key>loop start</key>
+						<integer>212099</integer>
+						<key>max key</key>
+						<integer>70</integer>
+						<key>min key</key>
+						<integer>69</integer>
+						<key>name</key>
+						<string>Zone #88</string>
+						<key>root key</key>
+						<integer>70</integer>
+						<key>waveform</key>
+						<integer>268435471</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>241411</integer>
+						<key>loop start</key>
+						<integer>163750</integer>
+						<key>max key</key>
+						<integer>72</integer>
+						<key>min key</key>
+						<integer>71</integer>
+						<key>name</key>
+						<string>Zone #90</string>
+						<key>root key</key>
+						<integer>72</integer>
+						<key>waveform</key>
+						<integer>268435473</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>16</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-3</real>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>254855</integer>
+						<key>loop start</key>
+						<integer>141588</integer>
+						<key>max key</key>
+						<integer>74</integer>
+						<key>min key</key>
+						<integer>73</integer>
+						<key>name</key>
+						<string>Zone #91</string>
+						<key>root key</key>
+						<integer>74</integer>
+						<key>waveform</key>
+						<integer>268435474</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>15</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-2</real>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>257727</integer>
+						<key>loop start</key>
+						<integer>136122</integer>
+						<key>max key</key>
+						<integer>76</integer>
+						<key>min key</key>
+						<integer>75</integer>
+						<key>name</key>
+						<string>Zone #28</string>
+						<key>root key</key>
+						<integer>76</integer>
+						<key>waveform</key>
+						<integer>268435460</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>14</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>2</real>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>213856</integer>
+						<key>loop start</key>
+						<integer>43568</integer>
+						<key>max key</key>
+						<integer>78</integer>
+						<key>min key</key>
+						<integer>77</integer>
+						<key>name</key>
+						<string>Zone #31</string>
+						<key>root key</key>
+						<integer>78</integer>
+						<key>waveform</key>
+						<integer>268435461</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>13</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>3</real>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>287638</integer>
+						<key>loop start</key>
+						<integer>152489</integer>
+						<key>max key</key>
+						<integer>80</integer>
+						<key>min key</key>
+						<integer>79</integer>
+						<key>name</key>
+						<string>Zone #94</string>
+						<key>root key</key>
+						<integer>80</integer>
+						<key>waveform</key>
+						<integer>268435477</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>12</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-2</real>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>222447</integer>
+						<key>loop start</key>
+						<integer>157731</integer>
+						<key>max key</key>
+						<integer>82</integer>
+						<key>min key</key>
+						<integer>81</integer>
+						<key>name</key>
+						<string>Zone #37</string>
+						<key>root key</key>
+						<integer>82</integer>
+						<key>waveform</key>
+						<integer>268435462</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>11</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>203533</integer>
+						<key>loop start</key>
+						<integer>110799</integer>
+						<key>max key</key>
+						<integer>84</integer>
+						<key>min key</key>
+						<integer>83</integer>
+						<key>name</key>
+						<string>Zone #40</string>
+						<key>root key</key>
+						<integer>84</integer>
+						<key>waveform</key>
+						<integer>268435463</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>10</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>256560</integer>
+						<key>loop start</key>
+						<integer>210702</integer>
+						<key>max key</key>
+						<integer>86</integer>
+						<key>min key</key>
+						<integer>85</integer>
+						<key>name</key>
+						<string>Zone #43</string>
+						<key>root key</key>
+						<integer>86</integer>
+						<key>waveform</key>
+						<integer>268435464</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>267587</integer>
+						<key>loop start</key>
+						<integer>172985</integer>
+						<key>max key</key>
+						<integer>88</integer>
+						<key>min key</key>
+						<integer>87</integer>
+						<key>name</key>
+						<string>Zone #93</string>
+						<key>root key</key>
+						<integer>88</integer>
+						<key>waveform</key>
+						<integer>268435476</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>9</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>5</real>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>288994</integer>
+						<key>loop start</key>
+						<integer>195678</integer>
+						<key>max key</key>
+						<integer>90</integer>
+						<key>min key</key>
+						<integer>89</integer>
+						<key>name</key>
+						<string>Zone #49</string>
+						<key>root key</key>
+						<integer>90</integer>
+						<key>waveform</key>
+						<integer>268435465</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>8</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>311743</integer>
+						<key>loop start</key>
+						<integer>221328</integer>
+						<key>max key</key>
+						<integer>92</integer>
+						<key>min key</key>
+						<integer>91</integer>
+						<key>name</key>
+						<string>Zone #52</string>
+						<key>root key</key>
+						<integer>92</integer>
+						<key>waveform</key>
+						<integer>268435466</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>7</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>3</real>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>270091</integer>
+						<key>loop start</key>
+						<integer>15038</integer>
+						<key>max key</key>
+						<integer>94</integer>
+						<key>min key</key>
+						<integer>93</integer>
+						<key>name</key>
+						<string>Zone #55</string>
+						<key>root key</key>
+						<integer>94</integer>
+						<key>waveform</key>
+						<integer>268435467</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>6</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>269395</integer>
+						<key>loop start</key>
+						<integer>38443</integer>
+						<key>max key</key>
+						<integer>96</integer>
+						<key>min key</key>
+						<integer>95</integer>
+						<key>name</key>
+						<string>Zone #58</string>
+						<key>root key</key>
+						<integer>96</integer>
+						<key>waveform</key>
+						<integer>268435468</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>5</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>283496</integer>
+						<key>loop start</key>
+						<integer>163599</integer>
+						<key>max key</key>
+						<integer>97</integer>
+						<key>min key</key>
+						<integer>97</integer>
+						<key>name</key>
+						<string>Zone #61</string>
+						<key>root key</key>
+						<integer>97</integer>
+						<key>waveform</key>
+						<integer>268435469</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>4</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<true/>
+						<key>loop end</key>
+						<integer>196816</integer>
+						<key>loop start</key>
+						<integer>95600</integer>
+						<key>max key</key>
+						<integer>108</integer>
+						<key>min key</key>
+						<integer>98</integer>
+						<key>name</key>
+						<string>Zone #64</string>
+						<key>root key</key>
+						<integer>98</integer>
+						<key>waveform</key>
+						<integer>268435470</integer>
+					</dict>
+				</array>
+				<key>name</key>
+				<string>Legato</string>
+			</dict>
+			<dict>
+				<key>Amplifier</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>enabled</key>
+					<true/>
+				</dict>
+				<key>Connections</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>816840960</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>scale</key>
+						<real>12800</real>
+						<key>source</key>
+						<integer>300</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343226112</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-60</real>
+						<key>source</key>
+						<integer>301</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>2</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343226112</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>7</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>3</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343226112</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>11</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>4</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1344274688</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>max value</key>
+						<real>0.50800001621246338</real>
+						<key>min value</key>
+						<real>-0.50800001621246338</real>
+						<key>source</key>
+						<integer>10</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>5</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343226112</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>536871168</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+				</array>
+				<key>Envelopes</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>Stages</key>
+						<array>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>0</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>22</integer>
+								<key>stage</key>
+								<integer>1</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>2</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>3</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>level</key>
+								<real>1</real>
+								<key>stage</key>
+								<integer>4</integer>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>5</integer>
+								<key>time</key>
+								<real>8.5825719833374023</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>6</integer>
+								<key>time</key>
+								<real>0.004999999888241291</real>
+							</dict>
+						</array>
+						<key>enabled</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>Stages</key>
+						<array>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>0</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>1</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>2</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>3</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>level</key>
+								<real>0.0</real>
+								<key>stage</key>
+								<integer>4</integer>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>5</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>6</integer>
+								<key>time</key>
+								<real>0.004999999888241291</real>
+							</dict>
+						</array>
+						<key>enabled</key>
+						<true/>
+					</dict>
+				</array>
+				<key>Filters</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>cutoff</key>
+					<real>20000</real>
+					<key>enabled</key>
+					<false/>
+					<key>resonance</key>
+					<real>0.0</real>
+				</dict>
+				<key>ID</key>
+				<integer>1</integer>
+				<key>LFOs</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>delay</key>
+						<real>0.0</real>
+						<key>enabled</key>
+						<true/>
+						<key>rate</key>
+						<real>4.8000001907348633</real>
+					</dict>
+				</array>
+				<key>Oscillator</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>enabled</key>
+					<true/>
+				</dict>
+				<key>Zones</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>21</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-6</real>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>60</integer>
+						<key>min key</key>
+						<integer>21</integer>
+						<key>name</key>
+						<string>Zone #2</string>
+						<key>root key</key>
+						<integer>60</integer>
+						<key>waveform</key>
+						<integer>268435478</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>20</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-3</real>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>61</integer>
+						<key>min key</key>
+						<integer>61</integer>
+						<key>name</key>
+						<string>Zone #5</string>
+						<key>root key</key>
+						<integer>61</integer>
+						<key>waveform</key>
+						<integer>268435479</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>19</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-3</real>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>62</integer>
+						<key>min key</key>
+						<integer>62</integer>
+						<key>name</key>
+						<string>Zone #8</string>
+						<key>root key</key>
+						<integer>62</integer>
+						<key>waveform</key>
+						<integer>268435480</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>18</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-4</real>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>64</integer>
+						<key>min key</key>
+						<integer>63</integer>
+						<key>name</key>
+						<string>Zone #11</string>
+						<key>root key</key>
+						<integer>64</integer>
+						<key>waveform</key>
+						<integer>268435481</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>17</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>66</integer>
+						<key>min key</key>
+						<integer>65</integer>
+						<key>name</key>
+						<string>Zone #14</string>
+						<key>root key</key>
+						<integer>66</integer>
+						<key>waveform</key>
+						<integer>268435482</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>16</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>68</integer>
+						<key>min key</key>
+						<integer>67</integer>
+						<key>name</key>
+						<string>Zone #17</string>
+						<key>root key</key>
+						<integer>68</integer>
+						<key>waveform</key>
+						<integer>268435483</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>15</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>70</integer>
+						<key>min key</key>
+						<integer>69</integer>
+						<key>name</key>
+						<string>Zone #20</string>
+						<key>root key</key>
+						<integer>70</integer>
+						<key>waveform</key>
+						<integer>268435484</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>14</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>72</integer>
+						<key>min key</key>
+						<integer>71</integer>
+						<key>name</key>
+						<string>Zone #23</string>
+						<key>root key</key>
+						<integer>72</integer>
+						<key>waveform</key>
+						<integer>268435485</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>13</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-3</real>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>74</integer>
+						<key>min key</key>
+						<integer>73</integer>
+						<key>name</key>
+						<string>Zone #26</string>
+						<key>root key</key>
+						<integer>74</integer>
+						<key>waveform</key>
+						<integer>268435486</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>12</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>76</integer>
+						<key>min key</key>
+						<integer>75</integer>
+						<key>name</key>
+						<string>Zone #29</string>
+						<key>root key</key>
+						<integer>76</integer>
+						<key>waveform</key>
+						<integer>268435487</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>11</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>78</integer>
+						<key>min key</key>
+						<integer>77</integer>
+						<key>name</key>
+						<string>Zone #32</string>
+						<key>root key</key>
+						<integer>78</integer>
+						<key>waveform</key>
+						<integer>268435488</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>10</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>80</integer>
+						<key>min key</key>
+						<integer>79</integer>
+						<key>name</key>
+						<string>Zone #87</string>
+						<key>root key</key>
+						<integer>80</integer>
+						<key>waveform</key>
+						<integer>268435499</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>9</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-2</real>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>82</integer>
+						<key>min key</key>
+						<integer>81</integer>
+						<key>name</key>
+						<string>Zone #38</string>
+						<key>root key</key>
+						<integer>82</integer>
+						<key>waveform</key>
+						<integer>268435489</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>8</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>84</integer>
+						<key>min key</key>
+						<integer>83</integer>
+						<key>name</key>
+						<string>Zone #41</string>
+						<key>root key</key>
+						<integer>84</integer>
+						<key>waveform</key>
+						<integer>268435490</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>7</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>-4</real>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>86</integer>
+						<key>min key</key>
+						<integer>85</integer>
+						<key>name</key>
+						<string>Zone #44</string>
+						<key>root key</key>
+						<integer>86</integer>
+						<key>waveform</key>
+						<integer>268435491</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>6</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>88</integer>
+						<key>min key</key>
+						<integer>87</integer>
+						<key>name</key>
+						<string>Zone #47</string>
+						<key>root key</key>
+						<integer>88</integer>
+						<key>waveform</key>
+						<integer>268435492</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>5</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>90</integer>
+						<key>min key</key>
+						<integer>89</integer>
+						<key>name</key>
+						<string>Zone #50</string>
+						<key>root key</key>
+						<integer>90</integer>
+						<key>waveform</key>
+						<integer>268435493</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>4</integer>
+						<key>enabled</key>
+						<true/>
+						<key>gain</key>
+						<real>3</real>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>92</integer>
+						<key>min key</key>
+						<integer>91</integer>
+						<key>name</key>
+						<string>Zone #53</string>
+						<key>root key</key>
+						<integer>92</integer>
+						<key>waveform</key>
+						<integer>268435494</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>3</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>94</integer>
+						<key>min key</key>
+						<integer>93</integer>
+						<key>name</key>
+						<string>Zone #56</string>
+						<key>root key</key>
+						<integer>94</integer>
+						<key>waveform</key>
+						<integer>268435495</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>2</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>96</integer>
+						<key>min key</key>
+						<integer>95</integer>
+						<key>name</key>
+						<string>Zone #59</string>
+						<key>root key</key>
+						<integer>96</integer>
+						<key>waveform</key>
+						<integer>268435496</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>97</integer>
+						<key>min key</key>
+						<integer>97</integer>
+						<key>name</key>
+						<string>Zone #62</string>
+						<key>root key</key>
+						<integer>97</integer>
+						<key>waveform</key>
+						<integer>268435497</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>108</integer>
+						<key>min key</key>
+						<integer>98</integer>
+						<key>name</key>
+						<string>Zone #65</string>
+						<key>root key</key>
+						<integer>98</integer>
+						<key>waveform</key>
+						<integer>268435498</integer>
+					</dict>
+				</array>
+				<key>gain</key>
+				<real>-4</real>
+				<key>max vel</key>
+				<integer>127</integer>
+				<key>min vel</key>
+				<integer>89</integer>
+				<key>name</key>
+				<string>Staccato:Forte</string>
+			</dict>
+			<dict>
+				<key>Amplifier</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>enabled</key>
+					<true/>
+				</dict>
+				<key>Connections</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>816841216</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>scale</key>
+						<real>12800</real>
+						<key>source</key>
+						<integer>300</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343226368</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-60</real>
+						<key>source</key>
+						<integer>301</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>2</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343226368</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>7</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>3</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343226368</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>11</integer>
+						<key>transform</key>
+						<integer>2</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>4</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1344274944</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<false/>
+						<key>max value</key>
+						<real>0.50800001621246338</real>
+						<key>min value</key>
+						<real>-0.50800001621246338</real>
+						<key>source</key>
+						<integer>10</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>5</integer>
+						<key>control</key>
+						<integer>0</integer>
+						<key>destination</key>
+						<integer>1343226368</integer>
+						<key>enabled</key>
+						<true/>
+						<key>inverse</key>
+						<true/>
+						<key>scale</key>
+						<real>-96</real>
+						<key>source</key>
+						<integer>536871424</integer>
+						<key>transform</key>
+						<integer>1</integer>
+					</dict>
+				</array>
+				<key>Envelopes</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>Stages</key>
+						<array>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>0</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>22</integer>
+								<key>stage</key>
+								<integer>1</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>2</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>3</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>level</key>
+								<real>1</real>
+								<key>stage</key>
+								<integer>4</integer>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>5</integer>
+								<key>time</key>
+								<real>7.9681720733642578</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>6</integer>
+								<key>time</key>
+								<real>0.004999999888241291</real>
+							</dict>
+						</array>
+						<key>enabled</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>Stages</key>
+						<array>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>0</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>1</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>2</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>3</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>level</key>
+								<real>0.0</real>
+								<key>stage</key>
+								<integer>4</integer>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>5</integer>
+								<key>time</key>
+								<real>0.0</real>
+							</dict>
+							<dict>
+								<key>curve</key>
+								<integer>20</integer>
+								<key>stage</key>
+								<integer>6</integer>
+								<key>time</key>
+								<real>0.004999999888241291</real>
+							</dict>
+						</array>
+						<key>enabled</key>
+						<true/>
+					</dict>
+				</array>
+				<key>Filters</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>cutoff</key>
+					<real>20000</real>
+					<key>enabled</key>
+					<false/>
+					<key>resonance</key>
+					<real>0.0</real>
+				</dict>
+				<key>ID</key>
+				<integer>2</integer>
+				<key>LFOs</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>delay</key>
+						<real>0.0</real>
+						<key>enabled</key>
+						<true/>
+						<key>rate</key>
+						<real>4.8000001907348633</real>
+					</dict>
+				</array>
+				<key>Oscillator</key>
+				<dict>
+					<key>ID</key>
+					<integer>0</integer>
+					<key>enabled</key>
+					<true/>
+				</dict>
+				<key>Zones</key>
+				<array>
+					<dict>
+						<key>ID</key>
+						<integer>19</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>61</integer>
+						<key>min key</key>
+						<integer>21</integer>
+						<key>name</key>
+						<string>Zone #70</string>
+						<key>root key</key>
+						<integer>60</integer>
+						<key>waveform</key>
+						<integer>268435503</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>18</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>63</integer>
+						<key>min key</key>
+						<integer>62</integer>
+						<key>name</key>
+						<string>Zone #74</string>
+						<key>root key</key>
+						<integer>62</integer>
+						<key>waveform</key>
+						<integer>268435507</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>17</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>65</integer>
+						<key>min key</key>
+						<integer>64</integer>
+						<key>name</key>
+						<string>Zone #78</string>
+						<key>root key</key>
+						<integer>64</integer>
+						<key>waveform</key>
+						<integer>268435511</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>16</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>67</integer>
+						<key>min key</key>
+						<integer>66</integer>
+						<key>name</key>
+						<string>Zone #81</string>
+						<key>root key</key>
+						<integer>66</integer>
+						<key>waveform</key>
+						<integer>268435514</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>15</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>69</integer>
+						<key>min key</key>
+						<integer>68</integer>
+						<key>name</key>
+						<string>Zone #84</string>
+						<key>root key</key>
+						<integer>68</integer>
+						<key>waveform</key>
+						<integer>268435517</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>14</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>71</integer>
+						<key>min key</key>
+						<integer>70</integer>
+						<key>name</key>
+						<string>Zone #67</string>
+						<key>root key</key>
+						<integer>70</integer>
+						<key>waveform</key>
+						<integer>268435500</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>13</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>73</integer>
+						<key>min key</key>
+						<integer>72</integer>
+						<key>name</key>
+						<string>Zone #71</string>
+						<key>root key</key>
+						<integer>72</integer>
+						<key>waveform</key>
+						<integer>268435504</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>12</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>75</integer>
+						<key>min key</key>
+						<integer>74</integer>
+						<key>name</key>
+						<string>Zone #75</string>
+						<key>root key</key>
+						<integer>74</integer>
+						<key>waveform</key>
+						<integer>268435508</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>11</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>77</integer>
+						<key>min key</key>
+						<integer>76</integer>
+						<key>name</key>
+						<string>Zone #79</string>
+						<key>root key</key>
+						<integer>76</integer>
+						<key>waveform</key>
+						<integer>268435512</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>10</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>79</integer>
+						<key>min key</key>
+						<integer>78</integer>
+						<key>name</key>
+						<string>Zone #82</string>
+						<key>root key</key>
+						<integer>78</integer>
+						<key>waveform</key>
+						<integer>268435515</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>9</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>81</integer>
+						<key>min key</key>
+						<integer>80</integer>
+						<key>name</key>
+						<string>Zone #85</string>
+						<key>root key</key>
+						<integer>80</integer>
+						<key>waveform</key>
+						<integer>268435518</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>8</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>83</integer>
+						<key>min key</key>
+						<integer>82</integer>
+						<key>name</key>
+						<string>Zone #68</string>
+						<key>root key</key>
+						<integer>82</integer>
+						<key>waveform</key>
+						<integer>268435501</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>7</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>85</integer>
+						<key>min key</key>
+						<integer>84</integer>
+						<key>name</key>
+						<string>Zone #72</string>
+						<key>root key</key>
+						<integer>84</integer>
+						<key>waveform</key>
+						<integer>268435505</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>6</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>87</integer>
+						<key>min key</key>
+						<integer>86</integer>
+						<key>name</key>
+						<string>Zone #76</string>
+						<key>root key</key>
+						<integer>86</integer>
+						<key>waveform</key>
+						<integer>268435509</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>5</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>89</integer>
+						<key>min key</key>
+						<integer>88</integer>
+						<key>name</key>
+						<string>Zone #80</string>
+						<key>root key</key>
+						<integer>88</integer>
+						<key>waveform</key>
+						<integer>268435513</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>4</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>91</integer>
+						<key>min key</key>
+						<integer>90</integer>
+						<key>name</key>
+						<string>Zone #83</string>
+						<key>root key</key>
+						<integer>90</integer>
+						<key>waveform</key>
+						<integer>268435516</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>3</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>93</integer>
+						<key>min key</key>
+						<integer>92</integer>
+						<key>name</key>
+						<string>Zone #86</string>
+						<key>root key</key>
+						<integer>92</integer>
+						<key>waveform</key>
+						<integer>268435519</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>2</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>95</integer>
+						<key>min key</key>
+						<integer>94</integer>
+						<key>name</key>
+						<string>Zone #69</string>
+						<key>root key</key>
+						<integer>94</integer>
+						<key>waveform</key>
+						<integer>268435502</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>1</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>97</integer>
+						<key>min key</key>
+						<integer>96</integer>
+						<key>name</key>
+						<string>Zone #73</string>
+						<key>root key</key>
+						<integer>96</integer>
+						<key>waveform</key>
+						<integer>268435506</integer>
+					</dict>
+					<dict>
+						<key>ID</key>
+						<integer>0</integer>
+						<key>enabled</key>
+						<true/>
+						<key>loop enabled</key>
+						<false/>
+						<key>max key</key>
+						<integer>108</integer>
+						<key>min key</key>
+						<integer>98</integer>
+						<key>name</key>
+						<string>Zone #77</string>
+						<key>root key</key>
+						<integer>98</integer>
+						<key>waveform</key>
+						<integer>268435510</integer>
+					</dict>
+				</array>
+				<key>gain</key>
+				<real>-5</real>
+				<key>max vel</key>
+				<integer>88</integer>
+				<key>min vel</key>
+				<integer>0</integer>
+				<key>name</key>
+				<string>Staccato:Mezzo Piano</string>
+			</dict>
+		</array>
+		<key>gain</key>
+		<real>-3</real>
+		<key>name</key>
+		<string>Flute Solo+.exs</string>
+		<key>voice count</key>
+		<integer>10</integer>
+	</dict>
+	<key>coarse tune</key>
+	<integer>0</integer>
+	<key>data</key>
+	<data>
+	AAAAAAAAAAAAAAAEAAADhAAAAAAAAAOFAAAAAAAAA4YAAAAAAAADhwAAAAA=
+	</data>
+	<key>file-references</key>
+	<dict>
+		<key>Sample:268435456</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_C#4.caf</string>
+		<key>Sample:268435457</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_D4.caf</string>
+		<key>Sample:268435458</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_F#4.caf</string>
+		<key>Sample:268435459</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_G#4.caf</string>
+		<key>Sample:268435460</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_E5.caf</string>
+		<key>Sample:268435461</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_F#5.caf</string>
+		<key>Sample:268435462</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_A#5.caf</string>
+		<key>Sample:268435463</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_C6.caf</string>
+		<key>Sample:268435464</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_D6.caf</string>
+		<key>Sample:268435465</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_F#6.caf</string>
+		<key>Sample:268435466</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_G#6.caf</string>
+		<key>Sample:268435467</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_A#6.caf</string>
+		<key>Sample:268435468</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_C7.caf</string>
+		<key>Sample:268435469</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_C#7.caf</string>
+		<key>Sample:268435470</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_D7.caf</string>
+		<key>Sample:268435471</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_A#4.caf</string>
+		<key>Sample:268435472</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_C4.caf</string>
+		<key>Sample:268435473</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_C5.caf</string>
+		<key>Sample:268435474</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_D5.caf</string>
+		<key>Sample:268435475</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_E4.caf</string>
+		<key>Sample:268435476</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_E6.caf</string>
+		<key>Sample:268435477</key>
+		<string>Sounds/Flute Solo/Flute_LV_na_sus_mf/FL1-L_LV_na_sus_mf_G#5.caf</string>
+		<key>Sample:268435478</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_C4.caf</string>
+		<key>Sample:268435479</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_C#4.caf</string>
+		<key>Sample:268435480</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_D4.caf</string>
+		<key>Sample:268435481</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_E4.caf</string>
+		<key>Sample:268435482</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_F#4.caf</string>
+		<key>Sample:268435483</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_G#4.caf</string>
+		<key>Sample:268435484</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_A#4.caf</string>
+		<key>Sample:268435485</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_C5.caf</string>
+		<key>Sample:268435486</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_D5.caf</string>
+		<key>Sample:268435487</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_E5.caf</string>
+		<key>Sample:268435488</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_F#5.caf</string>
+		<key>Sample:268435489</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_A#5.caf</string>
+		<key>Sample:268435490</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_C6.caf</string>
+		<key>Sample:268435491</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_D6.caf</string>
+		<key>Sample:268435492</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_E6.caf</string>
+		<key>Sample:268435493</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_F#6.caf</string>
+		<key>Sample:268435494</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_G#6.caf</string>
+		<key>Sample:268435495</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_A#6.caf</string>
+		<key>Sample:268435496</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_C7.caf</string>
+		<key>Sample:268435497</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_C#7.caf</string>
+		<key>Sample:268435498</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_D7.caf</string>
+		<key>Sample:268435499</key>
+		<string>Sounds/Flute Solo/Flute_stac_f1/FL1_stac_f1_G#5.caf</string>
+		<key>Sample:268435500</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_A#4.caf</string>
+		<key>Sample:268435501</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_A#5.caf</string>
+		<key>Sample:268435502</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_A#6.caf</string>
+		<key>Sample:268435503</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_C4.caf</string>
+		<key>Sample:268435504</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_C5.caf</string>
+		<key>Sample:268435505</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_C6.caf</string>
+		<key>Sample:268435506</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_C7.caf</string>
+		<key>Sample:268435507</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_D4.caf</string>
+		<key>Sample:268435508</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_D5.caf</string>
+		<key>Sample:268435509</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_D6.caf</string>
+		<key>Sample:268435510</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_D7.caf</string>
+		<key>Sample:268435511</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_E4.caf</string>
+		<key>Sample:268435512</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_E5.caf</string>
+		<key>Sample:268435513</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_E6.caf</string>
+		<key>Sample:268435514</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_F#4.caf</string>
+		<key>Sample:268435515</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_F#5.caf</string>
+		<key>Sample:268435516</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_F#6.caf</string>
+		<key>Sample:268435517</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_G#4.caf</string>
+		<key>Sample:268435518</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_G#5.caf</string>
+		<key>Sample:268435519</key>
+		<string>Sounds/Flute Solo/Flute_stac_mp1/FL1_stac_mp1_G#6.caf</string>
+	</dict>
+	<key>fine tune</key>
+	<real>0.0</real>
+	<key>gain</key>
+	<real>0.0</real>
+	<key>manufacturer</key>
+	<integer>1634758764</integer>
+	<key>name</key>
+	<string>Flute Solo+</string>
+	<key>output</key>
+	<integer>0</integer>
+	<key>pan</key>
+	<real>0.0</real>
+	<key>subtype</key>
+	<integer>1935764848</integer>
+	<key>type</key>
+	<integer>1635085685</integer>
+	<key>version</key>
+	<integer>0</integer>
+	<key>voice count</key>
+	<integer>64</integer>
+</dict>
+</plist>
