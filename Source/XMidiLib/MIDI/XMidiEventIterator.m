@@ -42,11 +42,11 @@
             
             if ([event type] == kMusicEventType_MIDIChannelMessage
                 && event.channelMessage != nil
-                && track.instrumentPatchNumber == 0)
+                && track.instrumentSecondType == 0)
             {
                 UInt8 patchNumberIndex = event.channelMessage->data1;
-                track.instrumentPatchNumber = patchNumberIndex + 1;
-                track.instrumentType = (int)ceil((double)track.instrumentPatchNumber / 8.0);
+                track.instrumentSecondType = patchNumberIndex + 1;
+                track.instrumentFirstType = 10000 + (int)ceil((double)track.instrumentSecondType / 8.0);
 //                NSLog(@"========== trackIndex %d ==========", track.trackIndex);
 //                NSLog(@"timeStamp %f", event.timeStamp);
 //                NSLog(@"channel event status %X", event.channelMessage->status);

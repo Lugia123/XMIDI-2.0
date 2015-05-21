@@ -180,27 +180,39 @@ enum {
     return result;
 }
 
-- (void)stopAudioProcessingGraph {
-    OSStatus result = noErr;
-    
-    if (self.processingGraph) {
-        result = AUGraphStop(self.processingGraph);
-        if (result != noErr)
-        {
-            [XFunction writeLog:@"Unable to stop the audio processing graph. Error code: %d in %s.", (int)result, __PRETTY_FUNCTION__];
-        }
-    }
-}
-
-- (void)restartAudioProcessingGraph {
-    OSStatus result = noErr;
-    
-    if (self.processingGraph) {
-        result = AUGraphStart(self.processingGraph);
-        if (result != noErr)
-        {
-            [XFunction writeLog:@"Unable to restart the audio processing graph. Error code: %d in %s.", (int)result, __PRETTY_FUNCTION__];
-        }
-    }
-}
+//- (void)stopAudioProcessingGraph {
+//    OSStatus result = noErr;
+//    
+//    if (self.processingGraph) {
+//        result = AUGraphStop(self.processingGraph);
+//        if (result != noErr)
+//        {
+//            [XFunction writeLog:@"Unable to stop the audio processing graph. Error code: %d in %s.", (int)result, __PRETTY_FUNCTION__];
+//        }
+//    }
+//}
+//
+//- (void)closeAudioProcessingGraph {
+//    OSStatus result = noErr;
+//    
+//    if (self.processingGraph) {
+//        result = AUGraphClose(self.processingGraph);
+//        if (result != noErr)
+//        {
+//            [XFunction writeLog:@"Unable to stop the audio processing graph. Error code: %d in %s.", (int)result, __PRETTY_FUNCTION__];
+//        }
+//    }
+//}
+//
+//- (void)restartAudioProcessingGraph {
+//    OSStatus result = noErr;
+//    
+//    if (self.processingGraph) {
+//        result = AUGraphStart(self.processingGraph);
+//        if (result != noErr)
+//        {
+//            [XFunction writeLog:@"Unable to restart the audio processing graph. Error code: %d in %s.", (int)result, __PRETTY_FUNCTION__];
+//        }
+//    }
+//}
 @end

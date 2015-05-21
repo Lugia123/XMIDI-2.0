@@ -109,8 +109,6 @@ static NSMutableArray* tempoChildEvents;
 }
 
 -(void)initTrack{
-    [XAudioPlayer xDispose];
-    [XAudioPlayer xInit];
     self.tracks = [NSMutableArray array];
     int count = [self trackCount];
     for (int i=0; i<count; i++) {
@@ -121,7 +119,7 @@ static NSMutableArray* tempoChildEvents;
         }
         XMidiTrack* xTrack = [[XMidiTrack alloc] init:track trackIndex:i];
         [self.tracks addObject:xTrack];
-        [XAudioPlayer addAudioUnit:xTrack];
+        [XAudioPlayer setAudioUnit:xTrack];
     }
 }
 

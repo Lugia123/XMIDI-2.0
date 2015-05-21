@@ -6,35 +6,13 @@
 #import "XAudioPlayer.h"
 
 @implementation XAudioPlayer
-static NSMutableArray* xAudioUnits;
-static id<XAudioPlayerDelegate> delegate;
+#define DEFAULT_AUPRESENT @"Yamaha Grand Piano"
+
 static BOOL isDisposed = false;
+static NSMutableArray* xAudioUnits;
+static NSMutableArray* xInstrumentAupresets;
 
-enum
-{
-    InstrumentTypePiano = 1,
-    InstrumentTypeChromaticPercussion = 2,
-    InstrumentTypeOrgan = 3,
-    InstrumentTypeGuitar = 4,
-    InstrumentTypeBass = 5,
-    InstrumentTypeOrchestraSolo = 6,
-    InstrumentTypeOrchestraEnsemble = 7,
-    InstrumentTypeBrass = 8,
-    InstrumentTypeReed = 9,
-    InstrumentTypeWind = 10,
-    InstrumentTypeSynthLead = 11,
-    InstrumentTypeSynthPad = 12,
-    InstrumentTypeSynthSoundFX = 13,
-    InstrumentTypeEthnic = 14,
-    InstrumentTypePercussive = 15,
-    InstrumentTypeSoundEffect = 16,
-    InstrumentTypeDrumSounds = 17
-};
-
-enum
-{
-  InstrumentSubTypeOrchestralKit = 48
-};
+static id<XAudioPlayerDelegate> delegate;
 
 +(id<XAudioPlayerDelegate>)getDelegate{
     return delegate;
@@ -48,23 +26,63 @@ enum
     //设置文件打开最大数
     struct rlimit rlp;
     getrlimit(RLIMIT_NOFILE, &rlp);
-//    NSLog(@"before %d %d", rlp.rlim_cur, rlp.rlim_max);
-    
     rlp.rlim_cur = 10240;
     setrlimit(RLIMIT_NOFILE, &rlp);
-           
-//    getrlimit(RLIMIT_NOFILE, &rlp);
-//     NSLog(@"after %d %d", rlp.rlim_cur, rlp.rlim_max);
     
     isDisposed = false;
     xAudioUnits = [NSMutableArray array];
+    //设置默认音频
+    xInstrumentAupresets = [NSMutableArray array];
+    //FirstType
+    [self setInstrumentAupreset:InstrumentFirstType_Piano aupresent:@"Yamaha Grand Piano"];
+    [self setInstrumentAupreset:InstrumentFirstType_ChromaticPercussion aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_Organ aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_Guitar aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_Bass aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_OrchestraSolo aupresent:@"String Ensemble"];
+    [self setInstrumentAupreset:InstrumentFirstType_OrchestraEnsemble aupresent:@"String Ensemble"];
+    [self setInstrumentAupreset:InstrumentFirstType_Brass aupresent:@"French Horn Solo+"];
+    [self setInstrumentAupreset:InstrumentFirstType_Reed aupresent:@"Clarient Solo+"];
+    [self setInstrumentAupreset:InstrumentFirstType_Wind aupresent:@"Flute Solo+"];
+    [self setInstrumentAupreset:InstrumentFirstType_SynthLead aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_SynthPad aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_SynthSoundFX aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_Ethnic aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_Percussive aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_SoundEffect aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_DrumSounds aupresent:@""];
+    
+    //SecondType
+    [self setInstrumentAupreset:InstrumentSecondType_OrchestralKit aupresent:@"Orchestral Kit"];
 }
 
 + (void)xDispose{
     isDisposed = true;
 }
 
-+ (void)addAudioUnit:(XMidiTrack*)track
++(void)setInstrumentAupreset:(int)instrumentType aupresent:(NSString*)aupresentFileName
+{
+    XInstrumentAupreset* instrumentAupreset = [self getInstrumentAupreset:instrumentType];
+    if (instrumentAupreset == nil){
+        instrumentAupreset = [[XInstrumentAupreset alloc] initWithInstrumentType:instrumentType AupresentFileName:aupresentFileName];
+        [xInstrumentAupresets addObject:instrumentAupreset];
+        return;
+    }
+    instrumentAupreset.aupresentFileName = aupresentFileName;
+}
+
++(XInstrumentAupreset*)getInstrumentAupreset:(int)instrumentType
+{
+    for(int i=0;i<xInstrumentAupresets.count;i++){
+        XInstrumentAupreset *instrumentAupreset = xInstrumentAupresets[i];
+        if (instrumentAupreset.instrumentType == instrumentType){
+            return instrumentAupreset;
+        }
+    }
+    return nil;
+}
+
++ (void)setAudioUnit:(XMidiTrack*)track
 {
     if (track == nil || track.eventIterator == nil){
         return;
@@ -74,49 +92,40 @@ enum
         return;
     }
     
-    NSString *instrumentType = @"";
-    int type = track.instrumentType;
-    switch (type) {
-        case InstrumentTypePiano:
-            instrumentType = @"Yamaha Grand Piano";
-            break;
-        case InstrumentTypeOrchestraSolo:
-            instrumentType = @"String Ensemble";
-            break;
-        case InstrumentTypeOrchestraEnsemble:
-            instrumentType = @"String Ensemble";
-            break;
-        case InstrumentTypeBrass:
-            instrumentType = @"French Horn Solo+";
-            break;
-        case InstrumentTypeReed:
-            instrumentType = @"Clarient Solo+";
-            break;
-        case InstrumentTypeWind:
-            instrumentType = @"Flute Solo+";
-            break;
-        default:
-            NSLog(@"Not Support Instrument TrackIndex:%d PatchNumber:%d P:%d",
-                  track.trackIndex, track.instrumentPatchNumber, type);
-            return;
-            break;
+    if (track.instrumentFirstType <= 0){
+        return;
     }
     
-    //针对性子类
-    switch (track.instrumentPatchNumber) {
-        case InstrumentSubTypeOrchestralKit:
-            instrumentType = @"Orchestral Kit";
-            break;
+    NSString *preset = DEFAULT_AUPRESENT;
+    //SecondType
+    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:track.instrumentSecondType];
+    if (instrumentAupreset == nil){
+        //FirstType
+        instrumentAupreset = [self getInstrumentAupreset:track.instrumentFirstType];
     }
+    preset = instrumentAupreset.aupresentFileName;
 
-    NSURL *presetURL = [[NSURL alloc] initFileURLWithPath:[[NSBundle mainBundle] pathForResource:instrumentType ofType:@"aupreset"]];
-    NSLog(@"TrackIndex:%d PatchNumber:%d P:%d",
-          track.trackIndex, track.instrumentPatchNumber, type);
+    NSString *presetFilePath = [[NSBundle mainBundle] pathForResource:preset ofType:@"aupreset"];
+    if (presetFilePath == nil || [@"" isEqual:presetFilePath]){
+        [XFunction writeLog:@"No Aupreset File Find. TrackIndex:%d FirstType:%d SecondType:%d",
+         track.trackIndex, track.instrumentFirstType, track.instrumentSecondType];
+        return;
+    }
     
-    XAudioUnit *audioUnit = [[XAudioUnit alloc] initWithPresetURL:presetURL];
-    audioUnit.trackIndex = track.trackIndex;
-    audioUnit.instrumentType = type;
-    [xAudioUnits addObject:audioUnit];
+    NSURL *presetURL = [[NSURL alloc] initFileURLWithPath:presetFilePath];
+    NSLog(@"TrackIndex:%d FirstType:%d SecondType:%d",
+          track.trackIndex, track.instrumentFirstType, track.instrumentSecondType);
+    
+    
+    XAudioUnit *audioUnit = [self getAudioUnit:track.trackIndex];
+    if (audioUnit == nil){
+        audioUnit = [[XAudioUnit alloc] initWithPresetURL:presetURL];
+        audioUnit.trackIndex = track.trackIndex;
+        [xAudioUnits addObject:audioUnit];
+        return;
+    }
+    
+    [audioUnit loadSynthFromPresetURL:presetURL];
 }
 
 + (XAudioUnit*)getAudioUnit:(int)trackIndex{
@@ -139,9 +148,6 @@ enum
     if (au == nil){
         return;
     }
-    
-//    NSLog(@"trackIndex:%d note:%d duration:%f",
-//          xMidiNoteMessage.track.instrumentType, xMidiNoteMessage.note, xMidiNoteMessage.duration);
     
     Float32 velocity = xMidiNoteMessage.velocity;
     if (velocity > 100){
@@ -171,6 +177,16 @@ enum
     if (delegate != nil
         && [delegate respondsToSelector:@selector(playingSoundNote:)]) {
         [delegate playingSoundNote:xMidiNoteMessage];
+    }
+}
+
++ (void)pauseSound
+{
+    for(int i=0;i<xAudioUnits.count;i++){
+        XAudioUnit *audioUnit = xAudioUnits[i];
+        for(int j=0;j<128;j++){
+            [audioUnit stopPlayingNote:j];
+        }
     }
 }
 @end

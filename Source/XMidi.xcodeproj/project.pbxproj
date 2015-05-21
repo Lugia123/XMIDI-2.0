@@ -52,6 +52,7 @@
 		95B4C6C91B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */; };
 		95B4C6CB1B0CFC71000AC36A /* 一千个伤心的理由.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6CA1B0CFC71000AC36A /* 一千个伤心的理由.mid */; };
 		95B4C6CD1B0CFD62000AC36A /* French Horn Solo+.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6CC1B0CFD62000AC36A /* French Horn Solo+.aupreset */; };
+		95EFE98A1B0E0685008DD230 /* XInstrumentAupreset.m in Sources */ = {isa = PBXBuildFile; fileRef = 95EFE9891B0E0685008DD230 /* XInstrumentAupreset.m */; };
 		95F815B81B0C522D00C72B20 /* XAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F815B71B0C522D00C72B20 /* XAudioUnit.m */; };
 		95F815BD1B0C551000C72B20 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 95F815BC1B0C551000C72B20 /* Sounds */; };
 		95F815C01B0C554000C72B20 /* Classical Piano.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F815BF1B0C554000C72B20 /* Classical Piano.aupreset */; };
@@ -140,6 +141,8 @@
 		95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Yamaha Grand Piano.aupreset"; sourceTree = "<group>"; };
 		95B4C6CA1B0CFC71000AC36A /* 一千个伤心的理由.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "一千个伤心的理由.mid"; sourceTree = "<group>"; };
 		95B4C6CC1B0CFD62000AC36A /* French Horn Solo+.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "French Horn Solo+.aupreset"; sourceTree = "<group>"; };
+		95EFE9891B0E0685008DD230 /* XInstrumentAupreset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XInstrumentAupreset.m; path = AudioUnit/XInstrumentAupreset.m; sourceTree = "<group>"; };
+		95EFE98B1B0E0691008DD230 /* XInstrumentAupreset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XInstrumentAupreset.h; path = AudioUnit/XInstrumentAupreset.h; sourceTree = "<group>"; };
 		95F815B71B0C522D00C72B20 /* XAudioUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XAudioUnit.m; path = AudioUnit/XAudioUnit.m; sourceTree = "<group>"; };
 		95F815B91B0C524100C72B20 /* XAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XAudioUnit.h; path = AudioUnit/XAudioUnit.h; sourceTree = "<group>"; };
 		95F815BC1B0C551000C72B20 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = Resource/Sounds; sourceTree = "<group>"; };
@@ -437,6 +440,8 @@
 				95F816431B0C6C2600C72B20 /* XAudioPlayer.m */,
 				95F815B91B0C524100C72B20 /* XAudioUnit.h */,
 				95F815B71B0C522D00C72B20 /* XAudioUnit.m */,
+				95EFE98B1B0E0691008DD230 /* XInstrumentAupreset.h */,
+				95EFE9891B0E0685008DD230 /* XInstrumentAupreset.m */,
 			);
 			name = AudioUnit;
 			sourceTree = "<group>";
@@ -614,6 +619,7 @@
 				95118A851B0A3BEF00EE90A3 /* NSDictionary+iAppInfos.m in Sources */,
 				95118A871B0A3BEF00EE90A3 /* UIDevice+iAppInfos.m in Sources */,
 				95A4E2251ABE4CDC00FE6946 /* XProgressBar.swift in Sources */,
+				95EFE98A1B0E0685008DD230 /* XInstrumentAupreset.m in Sources */,
 				95118A831B0A3BEF00EE90A3 /* JMODevicePowerInfos.m in Sources */,
 				95118A841B0A3BEF00EE90A3 /* JMOMobileProvisionning.m in Sources */,
 				9589ED0B1AB34F1B0088FB9C /* GameViewController.swift in Sources */,

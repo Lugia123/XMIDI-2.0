@@ -14,8 +14,8 @@
 @property (nonatomic) MusicTrack musicTrack;
 @property (nonatomic) XMidiEventIterator* eventIterator;
 @property (nonatomic) int trackIndex;
-@property (nonatomic) int instrumentPatchNumber;
-@property (nonatomic) int instrumentType;
+@property (nonatomic) int instrumentFirstType;
+@property (nonatomic) int instrumentSecondType;
 
 //当前播放到第几个事件
 @property (nonatomic) int playEventIndex;

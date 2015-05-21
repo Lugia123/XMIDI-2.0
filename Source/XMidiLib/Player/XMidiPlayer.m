@@ -14,15 +14,12 @@ double playTimeStamp;
 double lastUpdateTime;
 
 +(void)xInit{
-//    [XOpenALPlayer xInit];
-//    [XOpenAL xInit];
-//    [XMusicalInstrumentsManager xInit];
+    [XAudioPlayer xInit];
 }
 
 +(void)xDispose{
-//    [XOpenALPlayer xDispose];
-//    [XOpenAL xDispose];
-//    [XMusicalInstrumentsManager xDispose];
+    [XAudioPlayer pauseSound];
+    [XAudioPlayer xDispose];
 }
 
 -(id)init{
@@ -50,12 +47,14 @@ double lastUpdateTime;
 }
 
 -(void)closePlayer{
+    [XAudioPlayer pauseSound];
     isPlayTimerEnabled = false;
     isPaused = true;
     midiSequence = NULL;
 }
 
 -(void)pause{
+    [XAudioPlayer pauseSound];
     isPaused = true;
 }
 
@@ -65,6 +64,7 @@ double lastUpdateTime;
 }
 
 -(void)replay{
+    [XAudioPlayer pauseSound];
     [self setProgress:0];
 }
 

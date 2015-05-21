@@ -80,7 +80,7 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
         uiLayout.addChild(titileLayout)
         
         var titleNode = SKLabelNode(fontNamed:"System")
-        titleNode.text = "XMIDI"
+        titleNode.text = "XMIDI 2.0"
         titleNode.fontSize = 60
         titleNode.fontColor = UIColor.whiteColor()
         titleNode.position = CGPoint(x:0, y: 0)
@@ -188,7 +188,7 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
         var midi = midiFiles[index]
         
         var filePath = NSBundle.mainBundle().pathForResource(midi.fileName, ofType: "mid")
-        
+
         
         //播放MIDI URL
         var url = NSURL(fileURLWithPath: filePath!)
