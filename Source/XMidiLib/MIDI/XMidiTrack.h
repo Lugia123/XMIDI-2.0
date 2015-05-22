@@ -13,7 +13,6 @@
 @interface XMidiTrack : NSObject
 @property (nonatomic) MusicTrack musicTrack;
 @property (nonatomic) XMidiEventIterator* eventIterator;
-@property (nonatomic) BOOL isEnabled;
 @property (nonatomic) int trackIndex;
 
 //当前播放到第几个事件

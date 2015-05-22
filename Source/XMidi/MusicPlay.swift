@@ -61,10 +61,11 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
         midiFiles.append(XMidiFile(fileName:"Sonata No 14 in C#min-1"))
         midiFiles.append(XMidiFile(fileName:"Sonata No 14 in C#min-3"))
         midiFiles.append(XMidiFile(fileName:"至爱丽丝"))
-        midiFiles.append(XMidiFile(fileName:"绮想轮旋曲"))
+//        midiFiles.append(XMidiFile(fileName:"绮想轮旋曲"))
 //        midiFiles.append(XMidiFile(fileName:"埃克赛斯舞曲"))
+        midiFiles.append(XMidiFile(fileName:"Symphony No.5-4"))
         midiFiles.append(XMidiFile(fileName:"命运交响曲第一章"))
-        midiFiles.append(XMidiFile(fileName:"卡农"))
+        midiFiles.append(XMidiFile(fileName:"亡灵序曲"))
         midiFiles.append(XMidiFile(fileName:"White Girl"))
     }
     

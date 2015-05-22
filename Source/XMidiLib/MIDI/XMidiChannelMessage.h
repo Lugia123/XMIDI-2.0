@@ -16,6 +16,13 @@ struct MidiInstrument {
     int firstType;
 };
 
+enum {
+    MidiType_UNKNOWN = 0,
+    MidiType_GM = 1,
+    MidiType_GS = 2,
+    MidiType_XG = 4
+};
+
 extern struct MidiInstrument minstr[];
 @property (nonatomic) UInt8 channel;
 @property (nonatomic) UInt8 status;

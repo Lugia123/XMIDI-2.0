@@ -37,7 +37,7 @@ enum
 
 enum
 {
-    InstrumentSecondType_OrchestralKit = 48
+    InstrumentSecondType_OrchestralKit = 47
 };
 
 @protocol XAudioPlayerDelegate <NSObject>

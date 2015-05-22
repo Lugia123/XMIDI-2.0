@@ -44,8 +44,13 @@
 		95AF42281AB5EBBC005C708C /* 命运交响曲第一章.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42271AB5EBBC005C708C /* 命运交响曲第一章.mid */; };
 		95AF422A1AB5FF5D005C708C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42291AB5FF5D005C708C /* Images.xcassets */; };
 		95B288101B0F1AF4004BC1DC /* XMidiChannelMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B2880F1B0F1AF4004BC1DC /* XMidiChannelMessage.m */; };
+		95B288121B0F2A67004BC1DC /* Classical Acoustic Guitar.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B288111B0F2A67004BC1DC /* Classical Acoustic Guitar.aupreset */; };
+		95B288141B0F2C96004BC1DC /* Muted Electric Bass.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B288131B0F2C96004BC1DC /* Muted Electric Bass.aupreset */; };
+		95B288161B0F30D4004BC1DC /* Celesta.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B288151B0F30D4004BC1DC /* Celesta.aupreset */; };
+		95B288181B0F3299004BC1DC /* Full Organ.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B288171B0F3299004BC1DC /* Full Organ.aupreset */; };
+		95B2881A1B0F4243004BC1DC /* 亡灵序曲.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95B288191B0F4243004BC1DC /* 亡灵序曲.mid */; };
+		95B288201B0F4B3E004BC1DC /* Symphony No.5-4.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95B2881F1B0F4B3E004BC1DC /* Symphony No.5-4.mid */; };
 		95B4C6BA1B0CF119000AC36A /* Orchestral Kit.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */; };
-		95B4C6C71B0CF96B000AC36A /* 卡农.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6C41B0CF96B000AC36A /* 卡农.mid */; };
 		95B4C6C91B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */; };
 		95EFE98A1B0E0685008DD230 /* XInstrumentAupreset.m in Sources */ = {isa = PBXBuildFile; fileRef = 95EFE9891B0E0685008DD230 /* XInstrumentAupreset.m */; };
 		95EFE98D1B0E27AF008DD230 /* Alto Sax.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95EFE98C1B0E27AF008DD230 /* Alto Sax.aupreset */; };
@@ -128,8 +133,13 @@
 		95AF42291AB5FF5D005C708C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		95B2880E1B0F1AE4004BC1DC /* XMidiChannelMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMidiChannelMessage.h; sourceTree = "<group>"; };
 		95B2880F1B0F1AF4004BC1DC /* XMidiChannelMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiChannelMessage.m; sourceTree = "<group>"; };
+		95B288111B0F2A67004BC1DC /* Classical Acoustic Guitar.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Classical Acoustic Guitar.aupreset"; sourceTree = "<group>"; };
+		95B288131B0F2C96004BC1DC /* Muted Electric Bass.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Muted Electric Bass.aupreset"; sourceTree = "<group>"; };
+		95B288151B0F30D4004BC1DC /* Celesta.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Celesta.aupreset; sourceTree = "<group>"; };
+		95B288171B0F3299004BC1DC /* Full Organ.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Full Organ.aupreset"; sourceTree = "<group>"; };
+		95B288191B0F4243004BC1DC /* 亡灵序曲.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "亡灵序曲.mid"; sourceTree = "<group>"; };
+		95B2881F1B0F4B3E004BC1DC /* Symphony No.5-4.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Symphony No.5-4.mid"; sourceTree = "<group>"; };
 		95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Orchestral Kit.aupreset"; sourceTree = "<group>"; };
-		95B4C6C41B0CF96B000AC36A /* 卡农.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "卡农.mid"; sourceTree = "<group>"; };
 		95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Yamaha Grand Piano.aupreset"; sourceTree = "<group>"; };
 		95EFE9891B0E0685008DD230 /* XInstrumentAupreset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XInstrumentAupreset.m; path = AudioUnit/XInstrumentAupreset.m; sourceTree = "<group>"; };
 		95EFE98B1B0E0691008DD230 /* XInstrumentAupreset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XInstrumentAupreset.h; path = AudioUnit/XInstrumentAupreset.h; sourceTree = "<group>"; };
@@ -395,6 +405,7 @@
 		95AF42261AB5EBBC005C708C /* 交响乐 */ = {
 			isa = PBXGroup;
 			children = (
+				95B2881F1B0F4B3E004BC1DC /* Symphony No.5-4.mid */,
 				95AF42271AB5EBBC005C708C /* 命运交响曲第一章.mid */,
 			);
 			path = "交响乐";
@@ -411,17 +422,9 @@
 		95B4C6C01B0CF96B000AC36A /* 其他 */ = {
 			isa = PBXGroup;
 			children = (
-				95B4C6C21B0CF96B000AC36A /* 钢琴 */,
+				95B288191B0F4243004BC1DC /* 亡灵序曲.mid */,
 			);
 			path = "其他";
-			sourceTree = "<group>";
-		};
-		95B4C6C21B0CF96B000AC36A /* 钢琴 */ = {
-			isa = PBXGroup;
-			children = (
-				95B4C6C41B0CF96B000AC36A /* 卡农.mid */,
-			);
-			path = "钢琴";
 			sourceTree = "<group>";
 		};
 		95F815B61B0C520700C72B20 /* AudioUnit */ = {
@@ -449,6 +452,10 @@
 		95F815BE1B0C554000C72B20 /* Aupreset */ = {
 			isa = PBXGroup;
 			children = (
+				95B288171B0F3299004BC1DC /* Full Organ.aupreset */,
+				95B288151B0F30D4004BC1DC /* Celesta.aupreset */,
+				95B288131B0F2C96004BC1DC /* Muted Electric Bass.aupreset */,
+				95B288111B0F2A67004BC1DC /* Classical Acoustic Guitar.aupreset */,
 				95EFE98C1B0E27AF008DD230 /* Alto Sax.aupreset */,
 				95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */,
 				95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */,
@@ -540,13 +547,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B288181B0F3299004BC1DC /* Full Organ.aupreset in Resources */,
+				95B288201B0F4B3E004BC1DC /* Symphony No.5-4.mid in Resources */,
 				95AF42281AB5EBBC005C708C /* 命运交响曲第一章.mid in Resources */,
 				95EFE98D1B0E27AF008DD230 /* Alto Sax.aupreset in Resources */,
 				95B4C6C91B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset in Resources */,
 				952B60B41AB68FD500A87CDB /* Rondeau.mid in Resources */,
 				95AF422A1AB5FF5D005C708C /* Images.xcassets in Resources */,
 				952B60B31AB68FD500A87CDB /* 至爱丽丝.mid in Resources */,
+				95B288141B0F2C96004BC1DC /* Muted Electric Bass.aupreset in Resources */,
 				95F816481B0CA67000C72B20 /* String Ensemble.aupreset in Resources */,
+				95B288161B0F30D4004BC1DC /* Celesta.aupreset in Resources */,
 				9589ED131AB34F1B0088FB9C /* LaunchScreen.xib in Resources */,
 				95AF42181AB4A2DC005C708C /* Sonata No.9 in E-1.mid in Resources */,
 				95EFE9911B0E3008008DD230 /* White Girl.mid in Resources */,
@@ -554,10 +565,11 @@
 				95118A881B0A3BEF00EE90A3 /* Sound.fsh in Resources */,
 				952B60B61AB68FD500A87CDB /* Sonata No 14 in C#min-1.mid in Resources */,
 				952B60B71AB68FD500A87CDB /* Sonata No 14 in C#min-3.mid in Resources */,
+				95B2881A1B0F4243004BC1DC /* 亡灵序曲.mid in Resources */,
 				95F8164A1B0CAC6C00C72B20 /* French Horns.aupreset in Resources */,
 				95F815BD1B0C551000C72B20 /* Sounds in Resources */,
 				9589EDAB1AB350460088FB9C /* 绮想轮旋曲.mid in Resources */,
-				95B4C6C71B0CF96B000AC36A /* 卡农.mid in Resources */,
+				95B288121B0F2A67004BC1DC /* Classical Acoustic Guitar.aupreset in Resources */,
 				95B4C6BA1B0CF119000AC36A /* Orchestral Kit.aupreset in Resources */,
 				952B60B51AB68FD500A87CDB /* Rondo in C (Op.51. No.1.).mid in Resources */,
 				9589EDA91AB350460088FB9C /* 埃克赛斯舞曲.mid in Resources */,

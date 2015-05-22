@@ -34,23 +34,23 @@ static id<XAudioPlayerDelegate> delegate;
     //设置默认音频
     xInstrumentAupresets = [NSMutableArray array];
     //FirstType
-    [self setInstrumentAupreset:InstrumentFirstType_Piano aupresent:@"Yamaha Grand Piano"];
-    [self setInstrumentAupreset:InstrumentFirstType_ChromaticPercussion aupresent:@""];
-    [self setInstrumentAupreset:InstrumentFirstType_Organ aupresent:@""];
-    [self setInstrumentAupreset:InstrumentFirstType_Guitar aupresent:@""];
-    [self setInstrumentAupreset:InstrumentFirstType_Bass aupresent:@""];
-    [self setInstrumentAupreset:InstrumentFirstType_OrchestraSolo aupresent:@"String Ensemble"];
-    [self setInstrumentAupreset:InstrumentFirstType_OrchestraEnsemble aupresent:@"String Ensemble"];
-    [self setInstrumentAupreset:InstrumentFirstType_Brass aupresent:@"French Horns"];//French Horns
-    [self setInstrumentAupreset:InstrumentFirstType_Reed aupresent:@"Alto Sax"];//Alto Sax
-    [self setInstrumentAupreset:InstrumentFirstType_Wind aupresent:@"Flutes"];//Flute Solo+
-    [self setInstrumentAupreset:InstrumentFirstType_SynthLead aupresent:@""];
-    [self setInstrumentAupreset:InstrumentFirstType_SynthPad aupresent:@""];
-    [self setInstrumentAupreset:InstrumentFirstType_SynthSoundFX aupresent:@""];
-    [self setInstrumentAupreset:InstrumentFirstType_Ethnic aupresent:@""];
-    [self setInstrumentAupreset:InstrumentFirstType_Percussive aupresent:@""];
-    [self setInstrumentAupreset:InstrumentFirstType_SoundEffect aupresent:@""];
-    [self setInstrumentAupreset:InstrumentFirstType_DrumSounds aupresent:@""];
+    [self setInstrumentAupreset:InstrumentFirstType_Piano aupresent:@"Yamaha Grand Piano"];//1
+    [self setInstrumentAupreset:InstrumentFirstType_ChromaticPercussion aupresent:@"Celesta"];//2
+    [self setInstrumentAupreset:InstrumentFirstType_Organ aupresent:@"Full Organ"];//3
+    [self setInstrumentAupreset:InstrumentFirstType_Guitar aupresent:@"Classical Acoustic Guitar"];//4
+    [self setInstrumentAupreset:InstrumentFirstType_Bass aupresent:@"Muted Electric Bass"];//5
+    [self setInstrumentAupreset:InstrumentFirstType_OrchestraSolo aupresent:@"String Ensemble"];//6
+    [self setInstrumentAupreset:InstrumentFirstType_OrchestraEnsemble aupresent:@"String Ensemble"];//7
+    [self setInstrumentAupreset:InstrumentFirstType_Brass aupresent:@"French Horns"];//8
+    [self setInstrumentAupreset:InstrumentFirstType_Reed aupresent:@"Alto Sax"];//9
+    [self setInstrumentAupreset:InstrumentFirstType_Wind aupresent:@"Flutes"];//10
+    [self setInstrumentAupreset:InstrumentFirstType_SynthLead aupresent:@""];//11
+    [self setInstrumentAupreset:InstrumentFirstType_SynthPad aupresent:@""];//12*
+    [self setInstrumentAupreset:InstrumentFirstType_SynthSoundFX aupresent:@""];//13
+    [self setInstrumentAupreset:InstrumentFirstType_Ethnic aupresent:@""];//14
+    [self setInstrumentAupreset:InstrumentFirstType_Percussive aupresent:@""];//15
+    [self setInstrumentAupreset:InstrumentFirstType_SoundEffect aupresent:@""];//16
+    [self setInstrumentAupreset:InstrumentFirstType_DrumSounds aupresent:@""];//17
     
     //SecondType
     [self setInstrumentAupreset:InstrumentSecondType_OrchestralKit aupresent:@"Orchestral Kit"];
@@ -93,13 +93,13 @@ static id<XAudioPlayerDelegate> delegate;
     }
     
     NSString *preset = DEFAULT_AUPRESENT;
-//    //SecondType
-//    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentSecondType];
-//    if (instrumentAupreset == nil){
-//        //FirstType
-//        instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentFirstType];
-//    }
-    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentFirstType];
+    //SecondType
+    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentSecondType];
+    if (instrumentAupreset == nil){
+        //FirstType
+        instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentFirstType];
+    }
+//    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentFirstType];
     
     if (instrumentAupreset != nil){
         preset = instrumentAupreset.aupresentFileName;
@@ -160,7 +160,7 @@ static id<XAudioPlayerDelegate> delegate;
 
 + (void)playSound:(XMidiEvent *)event {
     if (isDisposed
-        || !event.track.isEnabled
+        || event.track.isMuted
         || event.noteMessage == nil){
         return;
     }

@@ -575,7 +575,7 @@ struct MidiInstrument minstr[] = {
         for (int i = 0; i < sizeof(minstr)/sizeof(*minstr); ++i) {
             struct MidiInstrument* mi = &minstr[i];
             if ((mi->patch == self.instrumentSecondType)
-                //&& (mi->type & type)
+                && (mi->type & (char)MidiType_GM)
                 && (mi->hbank == hbank || hbank == -1)
                 && (mi->lbank == lbank || lbank == -1))
             {
