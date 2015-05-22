@@ -99,7 +99,6 @@ static id<XAudioPlayerDelegate> delegate;
         //FirstType
         instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentFirstType];
     }
-//    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentFirstType];
     
     if (instrumentAupreset != nil){
         preset = instrumentAupreset.aupresentFileName;

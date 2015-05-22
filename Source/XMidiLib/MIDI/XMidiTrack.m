@@ -8,7 +8,6 @@
 @implementation XMidiTrack
 - (id)init:(MusicTrack)musicTrack trackIndex:(int)trackIndex{
     if(self = [super init]){
-        self.isEnabled = true;
         self.playEventIndex = 0;
         self.musicTrack = musicTrack;
         self.trackIndex = trackIndex;

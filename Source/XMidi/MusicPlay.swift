@@ -66,7 +66,7 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
         midiFiles.append(XMidiFile(fileName:"Symphony No.5-4"))
         midiFiles.append(XMidiFile(fileName:"命运交响曲第一章"))
         midiFiles.append(XMidiFile(fileName:"亡灵序曲"))
-        midiFiles.append(XMidiFile(fileName:"White Girl"))
+        midiFiles.append(XMidiFile(fileName:"机器猫"))
     }
     
     func initUI(){
