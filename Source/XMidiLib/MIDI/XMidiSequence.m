@@ -78,7 +78,7 @@ static NSMutableArray* tempoChildEvents;
     
     [self initTempoTrack];
     [self initTrack];
-//    [self initMusicTotalTimeStamp];
+    [self initAudioUnit];
     NSLog(@"musicTotalTime:%f length:%f",self.musicTotalTime,self.length);
 }
 
@@ -89,6 +89,7 @@ static NSMutableArray* tempoChildEvents;
         [XFunction writeLog:@"MusicSequenceGetIndTrack() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
     }
     
+//    NSLog(@"=============Tempo Track=============");
     NSMutableArray* tempoEvents = [NSMutableArray array];
     self.xTempoTrack = [[XMidiTrack alloc] init:tempoTrack trackIndex:-1];
     
@@ -117,9 +118,19 @@ static NSMutableArray* tempoChildEvents;
         if (err != 0){
             [XFunction writeLog:@"MusicSequenceGetIndTrack() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
         }
+//        NSLog(@"=============Track [%d]=============",i);
         XMidiTrack* xTrack = [[XMidiTrack alloc] init:track trackIndex:i];
         [self.tracks addObject:xTrack];
-        [XAudioPlayer setAudioUnit:xTrack];
+    }
+}
+
+-(void)initAudioUnit
+{
+    for (XMidiTrack *track in self.tracks) {
+        for (XMidiEvent* event in track.eventIterator.childChannelMessageEvents)
+        {
+            [XAudioPlayer setAudioUnit:event];
+        }
     }
 }
 

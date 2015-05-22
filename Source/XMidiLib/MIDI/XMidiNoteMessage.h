@@ -6,13 +6,8 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import "XFunction.h"
-#import "XMidiSequence.h"
-#import "XMidiTrack.h"
-
-@class XMidiTrack;
 
 @interface XMidiNoteMessage : NSObject
-@property (nonatomic) XMidiTrack* track;
 @property (nonatomic) UInt8 channel;
 @property (nonatomic) UInt8 note;
 @property (nonatomic) UInt8 velocity;

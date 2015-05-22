@@ -43,25 +43,19 @@
 		95AF42181AB4A2DC005C708C /* Sonata No.9 in E-1.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42151AB4A2DC005C708C /* Sonata No.9 in E-1.mid */; };
 		95AF42281AB5EBBC005C708C /* 命运交响曲第一章.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42271AB5EBBC005C708C /* 命运交响曲第一章.mid */; };
 		95AF422A1AB5FF5D005C708C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42291AB5FF5D005C708C /* Images.xcassets */; };
-		95B4C6AA1B0CD018000AC36A /* Violins 1.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6A91B0CD018000AC36A /* Violins 1.aupreset */; };
-		95B4C6B61B0CEF47000AC36A /* Tuba Solo+.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6B51B0CEF47000AC36A /* Tuba Solo+.aupreset */; };
-		95B4C6B81B0CF01C000AC36A /* Clarient Solo+.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6B71B0CF01C000AC36A /* Clarient Solo+.aupreset */; };
+		95B288101B0F1AF4004BC1DC /* XMidiChannelMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B2880F1B0F1AF4004BC1DC /* XMidiChannelMessage.m */; };
 		95B4C6BA1B0CF119000AC36A /* Orchestral Kit.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */; };
-		95B4C6BC1B0CF372000AC36A /* Flute Solo+.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6BB1B0CF372000AC36A /* Flute Solo+.aupreset */; };
 		95B4C6C71B0CF96B000AC36A /* 卡农.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6C41B0CF96B000AC36A /* 卡农.mid */; };
 		95B4C6C91B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */; };
-		95B4C6CB1B0CFC71000AC36A /* 一千个伤心的理由.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6CA1B0CFC71000AC36A /* 一千个伤心的理由.mid */; };
-		95B4C6CD1B0CFD62000AC36A /* French Horn Solo+.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6CC1B0CFD62000AC36A /* French Horn Solo+.aupreset */; };
 		95EFE98A1B0E0685008DD230 /* XInstrumentAupreset.m in Sources */ = {isa = PBXBuildFile; fileRef = 95EFE9891B0E0685008DD230 /* XInstrumentAupreset.m */; };
+		95EFE98D1B0E27AF008DD230 /* Alto Sax.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95EFE98C1B0E27AF008DD230 /* Alto Sax.aupreset */; };
+		95EFE9911B0E3008008DD230 /* White Girl.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95EFE9901B0E3008008DD230 /* White Girl.mid */; };
 		95F815B81B0C522D00C72B20 /* XAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F815B71B0C522D00C72B20 /* XAudioUnit.m */; };
 		95F815BD1B0C551000C72B20 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 95F815BC1B0C551000C72B20 /* Sounds */; };
-		95F815C01B0C554000C72B20 /* Classical Piano.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F815BF1B0C554000C72B20 /* Classical Piano.aupreset */; };
-		95F8163E1B0C63AB00C72B20 /* Vibraphone.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F8163D1B0C63AB00C72B20 /* Vibraphone.aupreset */; };
 		95F816441B0C6C2600C72B20 /* XAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F816431B0C6C2600C72B20 /* XAudioPlayer.m */; };
 		95F816481B0CA67000C72B20 /* String Ensemble.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F816471B0CA67000C72B20 /* String Ensemble.aupreset */; };
 		95F8164A1B0CAC6C00C72B20 /* French Horns.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F816491B0CAC6C00C72B20 /* French Horns.aupreset */; };
 		95F8164C1B0CAFDD00C72B20 /* Flutes.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F8164B1B0CAFDD00C72B20 /* Flutes.aupreset */; };
-		95F8164E1B0CB28400C72B20 /* Clarinets.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95F8164D1B0CB28400C72B20 /* Clarinets.aupreset */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,28 +126,23 @@
 		95AF42151AB4A2DC005C708C /* Sonata No.9 in E-1.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Sonata No.9 in E-1.mid"; sourceTree = "<group>"; };
 		95AF42271AB5EBBC005C708C /* 命运交响曲第一章.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "命运交响曲第一章.mid"; sourceTree = "<group>"; };
 		95AF42291AB5FF5D005C708C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		95B4C6A91B0CD018000AC36A /* Violins 1.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Violins 1.aupreset"; sourceTree = "<group>"; };
-		95B4C6B51B0CEF47000AC36A /* Tuba Solo+.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Tuba Solo+.aupreset"; sourceTree = "<group>"; };
-		95B4C6B71B0CF01C000AC36A /* Clarient Solo+.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Clarient Solo+.aupreset"; sourceTree = "<group>"; };
+		95B2880E1B0F1AE4004BC1DC /* XMidiChannelMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMidiChannelMessage.h; sourceTree = "<group>"; };
+		95B2880F1B0F1AF4004BC1DC /* XMidiChannelMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiChannelMessage.m; sourceTree = "<group>"; };
 		95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Orchestral Kit.aupreset"; sourceTree = "<group>"; };
-		95B4C6BB1B0CF372000AC36A /* Flute Solo+.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Flute Solo+.aupreset"; sourceTree = "<group>"; };
 		95B4C6C41B0CF96B000AC36A /* 卡农.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "卡农.mid"; sourceTree = "<group>"; };
 		95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Yamaha Grand Piano.aupreset"; sourceTree = "<group>"; };
-		95B4C6CA1B0CFC71000AC36A /* 一千个伤心的理由.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "一千个伤心的理由.mid"; sourceTree = "<group>"; };
-		95B4C6CC1B0CFD62000AC36A /* French Horn Solo+.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "French Horn Solo+.aupreset"; sourceTree = "<group>"; };
 		95EFE9891B0E0685008DD230 /* XInstrumentAupreset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XInstrumentAupreset.m; path = AudioUnit/XInstrumentAupreset.m; sourceTree = "<group>"; };
 		95EFE98B1B0E0691008DD230 /* XInstrumentAupreset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XInstrumentAupreset.h; path = AudioUnit/XInstrumentAupreset.h; sourceTree = "<group>"; };
+		95EFE98C1B0E27AF008DD230 /* Alto Sax.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Alto Sax.aupreset"; sourceTree = "<group>"; };
+		95EFE9901B0E3008008DD230 /* White Girl.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "White Girl.mid"; sourceTree = "<group>"; };
 		95F815B71B0C522D00C72B20 /* XAudioUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XAudioUnit.m; path = AudioUnit/XAudioUnit.m; sourceTree = "<group>"; };
 		95F815B91B0C524100C72B20 /* XAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XAudioUnit.h; path = AudioUnit/XAudioUnit.h; sourceTree = "<group>"; };
 		95F815BC1B0C551000C72B20 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = Resource/Sounds; sourceTree = "<group>"; };
-		95F815BF1B0C554000C72B20 /* Classical Piano.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Classical Piano.aupreset"; sourceTree = "<group>"; };
-		95F8163D1B0C63AB00C72B20 /* Vibraphone.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Vibraphone.aupreset; sourceTree = "<group>"; };
 		95F816421B0C6C2600C72B20 /* XAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XAudioPlayer.h; path = AudioUnit/XAudioPlayer.h; sourceTree = "<group>"; };
 		95F816431B0C6C2600C72B20 /* XAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XAudioPlayer.m; path = AudioUnit/XAudioPlayer.m; sourceTree = "<group>"; };
 		95F816471B0CA67000C72B20 /* String Ensemble.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "String Ensemble.aupreset"; sourceTree = "<group>"; };
 		95F816491B0CAC6C00C72B20 /* French Horns.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "French Horns.aupreset"; sourceTree = "<group>"; };
 		95F8164B1B0CAFDD00C72B20 /* Flutes.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Flutes.aupreset; sourceTree = "<group>"; };
-		95F8164D1B0CB28400C72B20 /* Clarinets.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Clarinets.aupreset; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +247,8 @@
 				95118A981B0A3BFB00EE90A3 /* XMidiTempoEvent.m */,
 				95118A991B0A3BFB00EE90A3 /* XMidiTrack.h */,
 				95118A9A1B0A3BFB00EE90A3 /* XMidiTrack.m */,
+				95B2880E1B0F1AE4004BC1DC /* XMidiChannelMessage.h */,
+				95B2880F1B0F1AF4004BC1DC /* XMidiChannelMessage.m */,
 			);
 			path = MIDI;
 			sourceTree = "<group>";
@@ -412,7 +403,7 @@
 		95B4C6BD1B0CF7B3000AC36A /* 歌曲 */ = {
 			isa = PBXGroup;
 			children = (
-				95B4C6CA1B0CFC71000AC36A /* 一千个伤心的理由.mid */,
+				95EFE9901B0E3008008DD230 /* White Girl.mid */,
 			);
 			path = "歌曲";
 			sourceTree = "<group>";
@@ -458,19 +449,12 @@
 		95F815BE1B0C554000C72B20 /* Aupreset */ = {
 			isa = PBXGroup;
 			children = (
-				95B4C6CC1B0CFD62000AC36A /* French Horn Solo+.aupreset */,
+				95EFE98C1B0E27AF008DD230 /* Alto Sax.aupreset */,
 				95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */,
-				95B4C6BB1B0CF372000AC36A /* Flute Solo+.aupreset */,
 				95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */,
-				95B4C6B71B0CF01C000AC36A /* Clarient Solo+.aupreset */,
-				95B4C6B51B0CEF47000AC36A /* Tuba Solo+.aupreset */,
-				95B4C6A91B0CD018000AC36A /* Violins 1.aupreset */,
-				95F8164D1B0CB28400C72B20 /* Clarinets.aupreset */,
 				95F8164B1B0CAFDD00C72B20 /* Flutes.aupreset */,
 				95F816491B0CAC6C00C72B20 /* French Horns.aupreset */,
 				95F816471B0CA67000C72B20 /* String Ensemble.aupreset */,
-				95F8163D1B0C63AB00C72B20 /* Vibraphone.aupreset */,
-				95F815BF1B0C554000C72B20 /* Classical Piano.aupreset */,
 			);
 			name = Aupreset;
 			path = Resource/Aupreset;
@@ -556,23 +540,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95B4C6B81B0CF01C000AC36A /* Clarient Solo+.aupreset in Resources */,
 				95AF42281AB5EBBC005C708C /* 命运交响曲第一章.mid in Resources */,
-				95B4C6B61B0CEF47000AC36A /* Tuba Solo+.aupreset in Resources */,
-				95B4C6CB1B0CFC71000AC36A /* 一千个伤心的理由.mid in Resources */,
-				95B4C6BC1B0CF372000AC36A /* Flute Solo+.aupreset in Resources */,
-				95B4C6CD1B0CFD62000AC36A /* French Horn Solo+.aupreset in Resources */,
+				95EFE98D1B0E27AF008DD230 /* Alto Sax.aupreset in Resources */,
 				95B4C6C91B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset in Resources */,
 				952B60B41AB68FD500A87CDB /* Rondeau.mid in Resources */,
-				95F815C01B0C554000C72B20 /* Classical Piano.aupreset in Resources */,
 				95AF422A1AB5FF5D005C708C /* Images.xcassets in Resources */,
 				952B60B31AB68FD500A87CDB /* 至爱丽丝.mid in Resources */,
 				95F816481B0CA67000C72B20 /* String Ensemble.aupreset in Resources */,
 				9589ED131AB34F1B0088FB9C /* LaunchScreen.xib in Resources */,
 				95AF42181AB4A2DC005C708C /* Sonata No.9 in E-1.mid in Resources */,
-				95F8164E1B0CB28400C72B20 /* Clarinets.aupreset in Resources */,
-				95F8163E1B0C63AB00C72B20 /* Vibraphone.aupreset in Resources */,
-				95B4C6AA1B0CD018000AC36A /* Violins 1.aupreset in Resources */,
+				95EFE9911B0E3008008DD230 /* White Girl.mid in Resources */,
 				95F8164C1B0CAFDD00C72B20 /* Flutes.aupreset in Resources */,
 				95118A881B0A3BEF00EE90A3 /* Sound.fsh in Resources */,
 				952B60B61AB68FD500A87CDB /* Sonata No 14 in C#min-1.mid in Resources */,
@@ -627,6 +604,7 @@
 				9589ED051AB34F1B0088FB9C /* AppDelegate.swift in Sources */,
 				95118B081B0A3BFB00EE90A3 /* XMidiTempoEvent.m in Sources */,
 				95118A821B0A3BEF00EE90A3 /* iAppInfos.m in Sources */,
+				95B288101B0F1AF4004BC1DC /* XMidiChannelMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

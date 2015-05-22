@@ -67,17 +67,61 @@
     //velocity 力度
     //duration 持续时间
     self.noteMessage = [[XMidiNoteMessage alloc] init:(MIDINoteMessage*)[self.data bytes]];
+//    
+//    NSLog(@"noteMessage %f %d %d %d %f",
+//          self.timeStamp,
+//          self.noteMessage.channel,
+//          self.noteMessage.note,
+//          self.noteMessage.velocity,
+//          self.noteMessage.duration);
 }
 
 #pragma mark - ChannelMessage
 -(void)initMIDIChannelMessage
 {
-    MIDIChannelMessage *channelMessage = (MIDIChannelMessage *)[self.data bytes];
-    int channel = channelMessage->status & 0xF0;
-    //MIDIChannelVoiceMessageTypeProgramChange
-    if(channel == 192) {
-        self.channelMessage = channelMessage;
+    MIDIChannelMessage *cm = (MIDIChannelMessage *)[self.data bytes];
+    int channel = cm->status & 0xF0;
+    
+//    switch(channel){
+//        case 0x80:
+//            [self printLog:@"Note Off" message:channelMessage];
+//            break;
+//        case 0x90:
+//            [self printLog:@"Note On" message:channelMessage];
+//            break;
+//        case 0xA0:
+//            [self printLog:@"Polyphonic key aftertouch" message:channelMessage];
+//            break;
+//        case 0xB0:
+//            [self printLog:@"Control change" message:channelMessage];
+//            break;
+//        case 0xC0:
+//            [self printLog:@"Program change" message:channelMessage];
+//            break;
+//        case 0xD0:
+//            [self printLog:@"Channel aftertouch" message:channelMessage];
+//            break;
+//        case 0xE0:
+//            [self printLog:@"Pitch bend change" message:channelMessage];
+//            break;
+//        case 0xF0:
+//            [self printLog:@"System" message:channelMessage];
+//            break;
+//    }
+    
+    if(channel == 0xC0) {
+        self.channelMessage = [[XMidiChannelMessage alloc] init:cm];
     }
+}
+
+-(void)printLog:(NSString*)str message:(MIDIChannelMessage*)channelMessage{
+     NSLog(@"%@ %f %x %x %x %x",
+           str,
+           self.timeStamp,
+           channelMessage->status,
+           channelMessage->data1,
+           channelMessage->data2,
+           channelMessage->reserved);
 }
 
 
@@ -113,7 +157,6 @@
     }
     self.isPlayed = true;
     
-    [XAudioPlayer  playSound:self.noteMessage];
-//    [XOpenALPlayer playSound:self.noteMessage];
+    [XAudioPlayer playSound:self];
 }
 @end

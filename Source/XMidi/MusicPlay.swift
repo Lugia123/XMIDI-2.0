@@ -65,7 +65,7 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
 //        midiFiles.append(XMidiFile(fileName:"埃克赛斯舞曲"))
         midiFiles.append(XMidiFile(fileName:"命运交响曲第一章"))
         midiFiles.append(XMidiFile(fileName:"卡农"))
-        midiFiles.append(XMidiFile(fileName:"一千个伤心的理由"))
+        midiFiles.append(XMidiFile(fileName:"White Girl"))
     }
     
     func initUI(){
@@ -206,8 +206,8 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
         progressBar.progress = progress
     }
     
-    func playingSoundNote(xMidiNoteMessage: XMidiNoteMessage!) {
-        initBgShader(Float32(xMidiNoteMessage.note))
+    func playingSoundNote(event: XMidiEvent!) {
+        initBgShader(Float32(event.noteMessage.note))
     }
     
     //低性能设备，关闭shader

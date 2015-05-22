@@ -19,6 +19,7 @@ enum eventTypes{
 
 @property (nonatomic) MusicEventIterator eventIterator;
 @property (nonatomic) NSMutableArray* childEvents;
+@property (nonatomic) NSMutableArray* childChannelMessageEvents;
 @property (nonatomic) enum eventTypes* eventType;
 
 

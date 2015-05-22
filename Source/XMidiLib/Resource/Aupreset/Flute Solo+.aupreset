@@ -311,8 +311,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>260196</integer>
+						
 						<key>loop start</key>
 						<integer>200787</integer>
 						<key>max key</key>
@@ -333,8 +332,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>264577</integer>
+						
 						<key>loop start</key>
 						<integer>96026</integer>
 						<key>max key</key>
@@ -357,8 +355,7 @@
 						<real>-2</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>255884</integer>
+						
 						<key>loop start</key>
 						<integer>165431</integer>
 						<key>max key</key>
@@ -381,8 +378,7 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>263508</integer>
+						
 						<key>loop start</key>
 						<integer>115522</integer>
 						<key>max key</key>
@@ -403,8 +399,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>216663</integer>
+						
 						<key>loop start</key>
 						<integer>108734</integer>
 						<key>max key</key>
@@ -425,8 +420,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>258058</integer>
+						
 						<key>loop start</key>
 						<integer>151108</integer>
 						<key>max key</key>
@@ -449,8 +443,7 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>288016</integer>
+						
 						<key>loop start</key>
 						<integer>212099</integer>
 						<key>max key</key>
@@ -471,8 +464,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>241411</integer>
+						
 						<key>loop start</key>
 						<integer>163750</integer>
 						<key>max key</key>
@@ -495,8 +487,7 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>254855</integer>
+						
 						<key>loop start</key>
 						<integer>141588</integer>
 						<key>max key</key>
@@ -519,8 +510,7 @@
 						<real>-2</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>257727</integer>
+						
 						<key>loop start</key>
 						<integer>136122</integer>
 						<key>max key</key>
@@ -543,8 +533,7 @@
 						<real>2</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>213856</integer>
+						
 						<key>loop start</key>
 						<integer>43568</integer>
 						<key>max key</key>
@@ -567,8 +556,7 @@
 						<real>3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>287638</integer>
+						
 						<key>loop start</key>
 						<integer>152489</integer>
 						<key>max key</key>
@@ -591,8 +579,7 @@
 						<real>-2</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>222447</integer>
+						
 						<key>loop start</key>
 						<integer>157731</integer>
 						<key>max key</key>
@@ -613,8 +600,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>203533</integer>
+						
 						<key>loop start</key>
 						<integer>110799</integer>
 						<key>max key</key>
@@ -635,8 +621,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>256560</integer>
+						
 						<key>loop start</key>
 						<integer>210702</integer>
 						<key>max key</key>
@@ -657,8 +642,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>267587</integer>
+						
 						<key>loop start</key>
 						<integer>172985</integer>
 						<key>max key</key>
@@ -681,8 +665,7 @@
 						<real>5</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>288994</integer>
+						
 						<key>loop start</key>
 						<integer>195678</integer>
 						<key>max key</key>
@@ -703,8 +686,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>311743</integer>
+						
 						<key>loop start</key>
 						<integer>221328</integer>
 						<key>max key</key>
@@ -727,8 +709,7 @@
 						<real>3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>270091</integer>
+						
 						<key>loop start</key>
 						<integer>15038</integer>
 						<key>max key</key>
@@ -749,8 +730,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>269395</integer>
+						
 						<key>loop start</key>
 						<integer>38443</integer>
 						<key>max key</key>
@@ -771,8 +751,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>283496</integer>
+						
 						<key>loop start</key>
 						<integer>163599</integer>
 						<key>max key</key>
@@ -793,8 +772,7 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>196816</integer>
+						
 						<key>loop start</key>
 						<integer>95600</integer>
 						<key>max key</key>

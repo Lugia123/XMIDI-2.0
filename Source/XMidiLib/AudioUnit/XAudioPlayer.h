@@ -11,7 +11,7 @@
 #import "XInstrumentAupreset.h"
 
 
-@class XMidiNoteMessage;
+@class XMidiEvent;
 @class XMidiTrack;
 
 enum
@@ -42,7 +42,7 @@ enum
 
 @protocol XAudioPlayerDelegate <NSObject>
 @optional
-+ (void)playingSoundNote:(XMidiNoteMessage *)xMidiNoteMessage;
++ (void)playingSoundNote:(XMidiEvent *)event;
 @end
 
 @interface XAudioPlayer : NSObject <XAudioPlayerDelegate>
@@ -56,13 +56,13 @@ enum
 + (void)xDispose;
 
 //根据track生成AudioUnit
-+ (void)setAudioUnit:(XMidiTrack*)track;
++ (void)setAudioUnit:(XMidiEvent*)event;
 
 //设置音频
 + (void)setInstrumentAupreset:(int)instrumentType aupresent:(NSString*)aupresentFileName;
 
 //播放声音
-+ (void)playSound:(XMidiNoteMessage *)xMidiNoteMessage;
++ (void)playSound:(XMidiEvent *)event;
 
 //停止声音
 + (void)pauseSound;

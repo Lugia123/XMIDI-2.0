@@ -14,7 +14,7 @@
 				<key>enabled</key>
 				<true/>
 				<key>rate</key>
-				<real>4.8000001907348633</real>
+				<real>4.800000190734863</real>
 			</dict>
 		</array>
 		<key>Layers</key>
@@ -113,9 +113,9 @@
 						<key>inverse</key>
 						<false/>
 						<key>max value</key>
-						<real>0.50800001621246338</real>
+						<real>0.5080000162124634</real>
 						<key>min value</key>
-						<real>-0.50800001621246338</real>
+						<real>-0.5080000162124634</real>
 						<key>source</key>
 						<integer>10</integer>
 						<key>transform</key>
@@ -153,7 +153,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -161,7 +161,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -169,7 +169,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -177,7 +177,7 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
@@ -191,7 +191,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>0.28817218542098999</real>
+								<real>0.28817218542099</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -216,7 +216,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -224,7 +224,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -232,7 +232,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -240,11 +240,11 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
-								<real>0.0</real>
+								<real>0</real>
 								<key>stage</key>
 								<integer>4</integer>
 							</dict>
@@ -254,7 +254,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -278,7 +278,7 @@
 					<key>enabled</key>
 					<false/>
 					<key>resonance</key>
-					<real>0.0</real>
+					<real>0</real>
 				</dict>
 				<key>ID</key>
 				<integer>0</integer>
@@ -288,11 +288,11 @@
 						<key>ID</key>
 						<integer>0</integer>
 						<key>delay</key>
-						<real>0.0</real>
+						<real>0</real>
 						<key>enabled</key>
 						<true/>
 						<key>rate</key>
-						<real>4.8000001907348633</real>
+						<real>4.800000190734863</real>
 					</dict>
 				</array>
 				<key>Oscillator</key>
@@ -393,8 +393,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>160311</integer>
 						<key>loop start</key>
 						<integer>75866</integer>
 						<key>max key</key>
@@ -515,8 +513,6 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>124413</integer>
 						<key>loop start</key>
 						<integer>51920</integer>
 						<key>max key</key>
@@ -557,8 +553,6 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>152512</integer>
 						<key>loop start</key>
 						<integer>62616</integer>
 						<key>max key</key>
@@ -599,8 +593,6 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>143952</integer>
 						<key>loop start</key>
 						<integer>39953</integer>
 						<key>max key</key>
@@ -736,9 +728,9 @@
 						<key>inverse</key>
 						<false/>
 						<key>max value</key>
-						<real>0.50800001621246338</real>
+						<real>0.5080000162124634</real>
 						<key>min value</key>
-						<real>-0.50800001621246338</real>
+						<real>-0.5080000162124634</real>
 						<key>source</key>
 						<integer>10</integer>
 						<key>transform</key>
@@ -776,7 +768,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -784,7 +776,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -792,7 +784,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -800,7 +792,7 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
@@ -814,7 +806,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>0.28817218542098999</real>
+								<real>0.28817218542099</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -839,7 +831,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -847,7 +839,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -855,7 +847,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -863,11 +855,11 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
-								<real>0.0</real>
+								<real>0</real>
 								<key>stage</key>
 								<integer>4</integer>
 							</dict>
@@ -877,7 +869,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -901,7 +893,7 @@
 					<key>enabled</key>
 					<false/>
 					<key>resonance</key>
-					<real>0.0</real>
+					<real>0</real>
 				</dict>
 				<key>ID</key>
 				<integer>1</integer>
@@ -911,11 +903,11 @@
 						<key>ID</key>
 						<integer>0</integer>
 						<key>delay</key>
-						<real>0.0</real>
+						<real>0</real>
 						<key>enabled</key>
 						<true/>
 						<key>rate</key>
-						<real>4.8000001907348633</real>
+						<real>4.800000190734863</real>
 					</dict>
 				</array>
 				<key>Oscillator</key>
@@ -936,8 +928,6 @@
 						<real>-5</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>322694</integer>
 						<key>loop start</key>
 						<integer>50803</integer>
 						<key>max key</key>
@@ -960,8 +950,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>268128</integer>
 						<key>loop start</key>
 						<integer>27283</integer>
 						<key>max key</key>
@@ -984,8 +972,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>317990</integer>
 						<key>loop start</key>
 						<integer>98784</integer>
 						<key>max key</key>
@@ -1008,8 +994,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>267187</integer>
 						<key>loop start</key>
 						<integer>62092</integer>
 						<key>max key</key>
@@ -1032,8 +1016,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>365971</integer>
 						<key>loop start</key>
 						<integer>59270</integer>
 						<key>max key</key>
@@ -1056,8 +1038,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>326457</integer>
 						<key>loop start</key>
 						<integer>66796</integer>
 						<key>max key</key>
@@ -1080,8 +1060,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>349036</integer>
 						<key>loop start</key>
 						<integer>63033</integer>
 						<key>max key</key>
@@ -1104,8 +1082,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>327397</integer>
 						<key>loop start</key>
 						<integer>53625</integer>
 						<key>max key</key>
@@ -1128,8 +1104,6 @@
 						<real>-5</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>304819</integer>
 						<key>loop start</key>
 						<integer>48921</integer>
 						<key>max key</key>
@@ -1152,8 +1126,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>334924</integer>
 						<key>loop start</key>
 						<integer>55507</integer>
 						<key>max key</key>
@@ -1174,8 +1146,6 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>329921</integer>
 						<key>loop start</key>
 						<integer>94191</integer>
 						<key>max key</key>
@@ -1198,8 +1168,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>262483</integer>
 						<key>loop start</key>
 						<integer>36691</integer>
 						<key>max key</key>
@@ -1222,8 +1190,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>320812</integer>
 						<key>loop start</key>
 						<integer>54566</integer>
 						<key>max key</key>
@@ -1246,8 +1212,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>319871</integer>
 						<key>loop start</key>
 						<integer>55507</integer>
 						<key>max key</key>
@@ -1270,8 +1234,6 @@
 						<real>-3</real>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>207445</integer>
 						<key>loop start</key>
 						<integer>40454</integer>
 						<key>max key</key>
@@ -1292,8 +1254,6 @@
 						<true/>
 						<key>loop enabled</key>
 						<true/>
-						<key>loop end</key>
-						<integer>206975</integer>
 						<key>loop start</key>
 						<integer>40924</integer>
 						<key>max key</key>
@@ -1409,9 +1369,9 @@
 						<key>inverse</key>
 						<false/>
 						<key>max value</key>
-						<real>0.50800001621246338</real>
+						<real>0.5080000162124634</real>
 						<key>min value</key>
-						<real>-0.50800001621246338</real>
+						<real>-0.5080000162124634</real>
 						<key>source</key>
 						<integer>10</integer>
 						<key>transform</key>
@@ -1449,7 +1409,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -1457,7 +1417,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -1465,7 +1425,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -1473,7 +1433,7 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
@@ -1487,7 +1447,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>0.28817218542098999</real>
+								<real>0.28817218542099</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -1512,7 +1472,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -1520,7 +1480,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -1528,7 +1488,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -1536,11 +1496,11 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
-								<real>0.0</real>
+								<real>0</real>
 								<key>stage</key>
 								<integer>4</integer>
 							</dict>
@@ -1550,7 +1510,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -1574,7 +1534,7 @@
 					<key>enabled</key>
 					<false/>
 					<key>resonance</key>
-					<real>0.0</real>
+					<real>0</real>
 				</dict>
 				<key>ID</key>
 				<integer>2</integer>
@@ -1584,11 +1544,11 @@
 						<key>ID</key>
 						<integer>0</integer>
 						<key>delay</key>
-						<real>0.0</real>
+						<real>0</real>
 						<key>enabled</key>
 						<true/>
 						<key>rate</key>
-						<real>4.8000001907348633</real>
+						<real>4.800000190734863</real>
 					</dict>
 				</array>
 				<key>Oscillator</key>
@@ -1950,9 +1910,9 @@
 						<key>inverse</key>
 						<false/>
 						<key>max value</key>
-						<real>0.50800001621246338</real>
+						<real>0.5080000162124634</real>
 						<key>min value</key>
-						<real>-0.50800001621246338</real>
+						<real>-0.5080000162124634</real>
 						<key>source</key>
 						<integer>10</integer>
 						<key>transform</key>
@@ -1990,7 +1950,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -1998,7 +1958,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2006,7 +1966,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2014,7 +1974,7 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
@@ -2028,7 +1988,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>8.5825719833374023</real>
+								<real>8.582571983337402</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2053,7 +2013,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2061,7 +2021,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2069,7 +2029,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2077,11 +2037,11 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
-								<real>0.0</real>
+								<real>0</real>
 								<key>stage</key>
 								<integer>4</integer>
 							</dict>
@@ -2091,7 +2051,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2115,7 +2075,7 @@
 					<key>enabled</key>
 					<false/>
 					<key>resonance</key>
-					<real>0.0</real>
+					<real>0</real>
 				</dict>
 				<key>ID</key>
 				<integer>3</integer>
@@ -2125,11 +2085,11 @@
 						<key>ID</key>
 						<integer>0</integer>
 						<key>delay</key>
-						<real>0.0</real>
+						<real>0</real>
 						<key>enabled</key>
 						<true/>
 						<key>rate</key>
-						<real>4.8000001907348633</real>
+						<real>4.800000190734863</real>
 					</dict>
 				</array>
 				<key>Oscillator</key>
@@ -2537,9 +2497,9 @@
 						<key>inverse</key>
 						<false/>
 						<key>max value</key>
-						<real>0.50800001621246338</real>
+						<real>0.5080000162124634</real>
 						<key>min value</key>
-						<real>-0.50800001621246338</real>
+						<real>-0.5080000162124634</real>
 						<key>source</key>
 						<integer>10</integer>
 						<key>transform</key>
@@ -2577,7 +2537,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2585,7 +2545,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2593,7 +2553,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2601,7 +2561,7 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
@@ -2615,7 +2575,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>8.6081714630126953</real>
+								<real>8.608171463012695</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2640,7 +2600,7 @@
 								<key>stage</key>
 								<integer>0</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2648,7 +2608,7 @@
 								<key>stage</key>
 								<integer>1</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2656,7 +2616,7 @@
 								<key>stage</key>
 								<integer>2</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2664,11 +2624,11 @@
 								<key>stage</key>
 								<integer>3</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>level</key>
-								<real>0.0</real>
+								<real>0</real>
 								<key>stage</key>
 								<integer>4</integer>
 							</dict>
@@ -2678,7 +2638,7 @@
 								<key>stage</key>
 								<integer>5</integer>
 								<key>time</key>
-								<real>0.0</real>
+								<real>0</real>
 							</dict>
 							<dict>
 								<key>curve</key>
@@ -2702,7 +2662,7 @@
 					<key>enabled</key>
 					<false/>
 					<key>resonance</key>
-					<real>0.0</real>
+					<real>0</real>
 				</dict>
 				<key>ID</key>
 				<integer>4</integer>
@@ -2712,11 +2672,11 @@
 						<key>ID</key>
 						<integer>0</integer>
 						<key>delay</key>
-						<real>0.0</real>
+						<real>0</real>
 						<key>enabled</key>
 						<true/>
 						<key>rate</key>
-						<real>4.8000001907348633</real>
+						<real>4.800000190734863</real>
 					</dict>
 				</array>
 				<key>Oscillator</key>
@@ -3015,9 +2975,7 @@
 	<key>coarse tune</key>
 	<integer>0</integer>
 	<key>data</key>
-	<data>
-	AAAAAAAAAAAAAAAEAAADhAAAAAAAAAOFAAAAAAAAA4YAAAAAAAADhwAAAAA=
-	</data>
+	<data>AAAAAAAAAAAAAAAEAAADhMFAAAAAAAOFAAAAAAAAA4YAAAAAAAADhwAAAAA=</data>
 	<key>file-references</key>
 	<dict>
 		<key>Sample:268435456</key>
@@ -3174,9 +3132,9 @@
 		<string>Sounds/French Horns/French Horns_stac_mf1/HO-4_stac_mf1_G#4.caf</string>
 	</dict>
 	<key>fine tune</key>
-	<real>0.0</real>
+	<real>0</real>
 	<key>gain</key>
-	<real>0.0</real>
+	<real>0</real>
 	<key>manufacturer</key>
 	<integer>1634758764</integer>
 	<key>name</key>
@@ -3184,7 +3142,7 @@
 	<key>output</key>
 	<integer>0</integer>
 	<key>pan</key>
-	<real>0.0</real>
+	<real>0</real>
 	<key>subtype</key>
 	<integer>1935764848</integer>
 	<key>type</key>

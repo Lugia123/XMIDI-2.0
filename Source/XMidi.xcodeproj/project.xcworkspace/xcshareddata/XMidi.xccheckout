@@ -12,20 +12,24 @@
 	<dict>
 		<key>B26911C2212E14588057AD1E73C6D5077E84BF19</key>
 		<string>https://git.oschina.net/lugia/XMIDI.git</string>
+		<key>F732C0B034033BEAB6B41130AD2DBD6830695B6D</key>
+		<string>https://git.oschina.net/lugia/XMIDI-2.0.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Source/XMidi.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B26911C2212E14588057AD1E73C6D5077E84BF19</key>
+		<string>../../../../XMIDI</string>
+		<key>F732C0B034033BEAB6B41130AD2DBD6830695B6D</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://git.oschina.net/lugia/XMIDI.git</string>
+	<string>https://git.oschina.net/lugia/XMIDI-2.0.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B26911C2212E14588057AD1E73C6D5077E84BF19</string>
+	<string>F732C0B034033BEAB6B41130AD2DBD6830695B6D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>B26911C2212E14588057AD1E73C6D5077E84BF19</string>
 			<key>IDESourceControlWCCName</key>
 			<string>XMIDI</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F732C0B034033BEAB6B41130AD2DBD6830695B6D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>XMIDI%202.0</string>
 		</dict>
 	</array>
 </dict>

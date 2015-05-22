@@ -41,9 +41,9 @@ static id<XAudioPlayerDelegate> delegate;
     [self setInstrumentAupreset:InstrumentFirstType_Bass aupresent:@""];
     [self setInstrumentAupreset:InstrumentFirstType_OrchestraSolo aupresent:@"String Ensemble"];
     [self setInstrumentAupreset:InstrumentFirstType_OrchestraEnsemble aupresent:@"String Ensemble"];
-    [self setInstrumentAupreset:InstrumentFirstType_Brass aupresent:@"French Horn Solo+"];
-    [self setInstrumentAupreset:InstrumentFirstType_Reed aupresent:@"Clarient Solo+"];
-    [self setInstrumentAupreset:InstrumentFirstType_Wind aupresent:@"Flute Solo+"];
+    [self setInstrumentAupreset:InstrumentFirstType_Brass aupresent:@"French Horns"];//French Horns
+    [self setInstrumentAupreset:InstrumentFirstType_Reed aupresent:@"Alto Sax"];//Alto Sax
+    [self setInstrumentAupreset:InstrumentFirstType_Wind aupresent:@"Flutes"];//Flute Solo+
     [self setInstrumentAupreset:InstrumentFirstType_SynthLead aupresent:@""];
     [self setInstrumentAupreset:InstrumentFirstType_SynthPad aupresent:@""];
     [self setInstrumentAupreset:InstrumentFirstType_SynthSoundFX aupresent:@""];
@@ -82,45 +82,50 @@ static id<XAudioPlayerDelegate> delegate;
     return nil;
 }
 
-+ (void)setAudioUnit:(XMidiTrack*)track
++ (void)setAudioUnit:(XMidiEvent*)event
 {
-    if (track == nil || track.eventIterator == nil){
+    if (event == nil || event.channelMessage == nil){
         return;
     }
-    
-    if (track.eventIterator.childEvents.count == 0){
-        return;
-    }
-    
-    if (track.instrumentFirstType <= 0){
+    XMidiChannelMessage* channelMessage = event.channelMessage;
+    if (channelMessage.instrumentFirstType <= 0){
         return;
     }
     
     NSString *preset = DEFAULT_AUPRESENT;
-    //SecondType
-    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:track.instrumentSecondType];
-    if (instrumentAupreset == nil){
-        //FirstType
-        instrumentAupreset = [self getInstrumentAupreset:track.instrumentFirstType];
+//    //SecondType
+//    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentSecondType];
+//    if (instrumentAupreset == nil){
+//        //FirstType
+//        instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentFirstType];
+//    }
+    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentFirstType];
+    
+    if (instrumentAupreset != nil){
+        preset = instrumentAupreset.aupresentFileName;
     }
-    preset = instrumentAupreset.aupresentFileName;
+    
+    if ([@"" isEqual:preset]){
+        preset = DEFAULT_AUPRESENT;
+    }
 
     NSString *presetFilePath = [[NSBundle mainBundle] pathForResource:preset ofType:@"aupreset"];
     if (presetFilePath == nil || [@"" isEqual:presetFilePath]){
-        [XFunction writeLog:@"No Aupreset File Find. TrackIndex:%d FirstType:%d SecondType:%d",
-         track.trackIndex, track.instrumentFirstType, track.instrumentSecondType];
+        [XFunction writeLog:@"No Aupreset File Find. Channel:%d FirstType:%d SecondType:%d",
+         channelMessage.channel, channelMessage.instrumentFirstType, channelMessage.instrumentSecondType];
         return;
     }
     
     NSURL *presetURL = [[NSURL alloc] initFileURLWithPath:presetFilePath];
-    NSLog(@"TrackIndex:%d FirstType:%d SecondType:%d",
-          track.trackIndex, track.instrumentFirstType, track.instrumentSecondType);
+    NSLog(@"Channel:%d TimeStamp:%f FirstType:%d SecondType:%d Preset:%@",
+          channelMessage.channel, event.timeStamp, channelMessage.instrumentFirstType, channelMessage.instrumentSecondType,preset);
     
     
-    XAudioUnit *audioUnit = [self getAudioUnit:track.trackIndex];
+    XAudioUnit *audioUnit = [self getAudioUnit:channelMessage.channel timeStamp:event.timeStamp];
     if (audioUnit == nil){
         audioUnit = [[XAudioUnit alloc] initWithPresetURL:presetURL];
-        audioUnit.trackIndex = track.trackIndex;
+        audioUnit.channel = channelMessage.channel;
+        audioUnit.timeStamp = event.timeStamp;
         [xAudioUnits addObject:audioUnit];
         return;
     }
@@ -128,38 +133,61 @@ static id<XAudioPlayerDelegate> delegate;
     [audioUnit loadSynthFromPresetURL:presetURL];
 }
 
-+ (XAudioUnit*)getAudioUnit:(int)trackIndex{
+//获取au
+//根据channel和时间
++ (XAudioUnit*)getAudioUnit:(int)channel timeStamp:(MusicTimeStamp)timeStamp;{
+    XAudioUnit *result = nil;
     for(int i=0;i<xAudioUnits.count;i++){
         XAudioUnit *audioUnit = xAudioUnits[i];
-        if (audioUnit.trackIndex == trackIndex){
+        if (audioUnit.channel == channel
+            && audioUnit.timeStamp <= timeStamp){
+            result = audioUnit;
+        }
+    }
+    return result;
+}
+
++ (XAudioUnit*)getFirstAudioUnit:(int)channel
+{
+    for(int i=0;i<xAudioUnits.count;i++){
+        XAudioUnit *audioUnit = xAudioUnits[i];
+        if (audioUnit.channel == channel){
             return audioUnit;
         }
     }
     return nil;
 }
 
-+ (void)playSound:(XMidiNoteMessage *)xMidiNoteMessage {
-    if (isDisposed){
++ (void)playSound:(XMidiEvent *)event {
+    if (isDisposed
+        || !event.track.isEnabled
+        || event.noteMessage == nil){
         return;
     }
     
-    XAudioUnit *au = [self getAudioUnit:xMidiNoteMessage.track.trackIndex];
+    XAudioUnit *au = [self getAudioUnit:event.noteMessage.channel timeStamp:event.timeStamp];
     
     if (au == nil){
+        //如果根据时间没有拿到对应的au，则获取channel对应的第一个au
+        au = [self getFirstAudioUnit:event.noteMessage.channel];
+    }
+    
+    if (au == nil){
+        [XFunction writeLog:@"Cant find AudioUnit by channel %d.",event.noteMessage.channel];
         return;
     }
     
-    Float32 velocity = xMidiNoteMessage.velocity;
+    Float32 velocity = event.noteMessage.velocity;
     if (velocity > 100){
         //防止音过高
         velocity = 100;
     }
     
     //play
-    [au startPlayingNote:xMidiNoteMessage.note withVelocity:velocity];
+    [au startPlayingNote:event.noteMessage.note withVelocity:velocity];
     
     //stop
-    Float32 duration = xMidiNoteMessage.duration;
+    Float32 duration = event.noteMessage.duration;
     if (duration < 0){
         duration = 0;
     }
@@ -171,12 +199,12 @@ static id<XAudioPlayerDelegate> delegate;
             return;
         }
         
-        [au stopPlayingNote:xMidiNoteMessage.note];
+        [au stopPlayingNote:event.noteMessage.note];
     });
     
     if (delegate != nil
         && [delegate respondsToSelector:@selector(playingSoundNote:)]) {
-        [delegate playingSoundNote:xMidiNoteMessage];
+        [delegate playingSoundNote:event];
     }
 }
 

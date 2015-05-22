@@ -17,7 +17,8 @@
 @property (nonatomic) AUGraph   processingGraph;
 @property (nonatomic) AudioUnit samplerUnit;
 //@property (nonatomic) AudioUnit ioUnit;
-@property (nonatomic) int trackIndex;
+@property (nonatomic) int channel;
+@property (nonatomic) MusicTimeStamp timeStamp;//出现时间
 
 - (id)initWithPresetURL:(NSURL *)url;
 - (void)startPlayingNote:(UInt32)note withVelocity:(double)velocity;

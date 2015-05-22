@@ -31,28 +31,20 @@
     }
     
     self.childEvents = [NSMutableArray array];
+    self.childChannelMessageEvents = [NSMutableArray array];
     while ([self hasCurrentEvent]) {
         XMidiEvent* event = [self currentEvent];
         if (event != nil){
             if ([event type] == kMusicEventType_MIDINoteMessage
                 || [event type] == kMusicEventType_ExtendedTempo){
-                event.noteMessage.track = track;
+                event.track = track;
                 [self.childEvents addObject:event];
             }
             
-            if ([event type] == kMusicEventType_MIDIChannelMessage
-                && event.channelMessage != nil
-                && track.instrumentSecondType == 0)
+            if ([event type] == kMusicEventType_MIDIChannelMessage)
             {
-                UInt8 patchNumberIndex = event.channelMessage->data1;
-                track.instrumentSecondType = patchNumberIndex + 1;
-                track.instrumentFirstType = 10000 + (int)ceil((double)track.instrumentSecondType / 8.0);
-//                NSLog(@"========== trackIndex %d ==========", track.trackIndex);
-//                NSLog(@"timeStamp %f", event.timeStamp);
-//                NSLog(@"channel event status %X", event.channelMessage->status);
-//                NSLog(@"channel event d1 %X", event.channelMessage->data1);
-//                NSLog(@"channel event d2 %X", event.channelMessage->data2);
-//                NSLog(@"MIDIChannelVoiceMessageTypeProgramChange %d", patchNumber);
+                event.track = track;
+                [self.childChannelMessageEvents addObject:event];
             }
         }
         [self moveToNextEvent];

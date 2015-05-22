@@ -363,8 +363,7 @@
 						<real>30.000001907348633</real>
 						<key>root key</key>
 						<integer>29</integer>
-						<key>sample start</key>
-						<integer>3026</integer>
+						
 						<key>waveform</key>
 						<integer>268435474</integer>
 					</dict>
@@ -391,8 +390,7 @@
 						<real>-32</real>
 						<key>root key</key>
 						<integer>85</integer>
-						<key>sample start</key>
-						<integer>1977</integer>
+						
 						<key>waveform</key>
 						<integer>268435490</integer>
 					</dict>
@@ -419,8 +417,7 @@
 						<real>55</real>
 						<key>root key</key>
 						<integer>32</integer>
-						<key>sample start</key>
-						<integer>2710</integer>
+						
 						<key>waveform</key>
 						<integer>268435475</integer>
 					</dict>
@@ -447,8 +444,7 @@
 						<real>61</real>
 						<key>root key</key>
 						<integer>40</integer>
-						<key>sample start</key>
-						<integer>2364</integer>
+						
 						<key>waveform</key>
 						<integer>268435476</integer>
 					</dict>
@@ -473,8 +469,7 @@
 						<real>61</real>
 						<key>root key</key>
 						<integer>43</integer>
-						<key>sample start</key>
-						<integer>1987</integer>
+						
 						<key>waveform</key>
 						<integer>268435477</integer>
 					</dict>
@@ -501,8 +496,7 @@
 						<real>60.000003814697266</real>
 						<key>root key</key>
 						<integer>45</integer>
-						<key>sample start</key>
-						<integer>1960</integer>
+						
 						<key>waveform</key>
 						<integer>268435478</integer>
 					</dict>
@@ -529,8 +523,7 @@
 						<real>55</real>
 						<key>root key</key>
 						<integer>48</integer>
-						<key>sample start</key>
-						<integer>1999</integer>
+						
 						<key>waveform</key>
 						<integer>268435479</integer>
 					</dict>
@@ -557,8 +550,7 @@
 						<real>46</real>
 						<key>root key</key>
 						<integer>51</integer>
-						<key>sample start</key>
-						<integer>1708</integer>
+						
 						<key>waveform</key>
 						<integer>268435480</integer>
 					</dict>
@@ -585,8 +577,7 @@
 						<real>44</real>
 						<key>root key</key>
 						<integer>54</integer>
-						<key>sample start</key>
-						<integer>1975</integer>
+						
 						<key>waveform</key>
 						<integer>268435481</integer>
 					</dict>
@@ -613,8 +604,7 @@
 						<real>14</real>
 						<key>root key</key>
 						<integer>57</integer>
-						<key>sample start</key>
-						<integer>1866</integer>
+						
 						<key>waveform</key>
 						<integer>268435482</integer>
 					</dict>
@@ -639,8 +629,7 @@
 						<real>14</real>
 						<key>root key</key>
 						<integer>60</integer>
-						<key>sample start</key>
-						<integer>1996</integer>
+						
 						<key>waveform</key>
 						<integer>268435483</integer>
 					</dict>
@@ -667,8 +656,7 @@
 						<real>9</real>
 						<key>root key</key>
 						<integer>63</integer>
-						<key>sample start</key>
-						<integer>2033</integer>
+						
 						<key>waveform</key>
 						<integer>268435484</integer>
 					</dict>
@@ -695,8 +683,7 @@
 						<real>3</real>
 						<key>root key</key>
 						<integer>66</integer>
-						<key>sample start</key>
-						<integer>2085</integer>
+						
 						<key>waveform</key>
 						<integer>268435485</integer>
 					</dict>
@@ -723,8 +710,7 @@
 						<real>-3</real>
 						<key>root key</key>
 						<integer>70</integer>
-						<key>sample start</key>
-						<integer>1979</integer>
+						
 						<key>waveform</key>
 						<integer>268435486</integer>
 					</dict>
@@ -751,8 +737,7 @@
 						<real>-9</real>
 						<key>root key</key>
 						<integer>73</integer>
-						<key>sample start</key>
-						<integer>1979</integer>
+						
 						<key>waveform</key>
 						<integer>268435487</integer>
 					</dict>
@@ -779,8 +764,7 @@
 						<real>-18</real>
 						<key>root key</key>
 						<integer>79</integer>
-						<key>sample start</key>
-						<integer>2168</integer>
+						
 						<key>waveform</key>
 						<integer>268435488</integer>
 					</dict>
@@ -807,8 +791,7 @@
 						<real>-26</real>
 						<key>root key</key>
 						<integer>82</integer>
-						<key>sample start</key>
-						<integer>2057</integer>
+						
 						<key>waveform</key>
 						<integer>268435489</integer>
 					</dict>
@@ -835,8 +818,7 @@
 						<real>-45</real>
 						<key>root key</key>
 						<integer>89</integer>
-						<key>sample start</key>
-						<integer>2065</integer>
+						
 						<key>waveform</key>
 						<integer>268435491</integer>
 					</dict>
@@ -1194,8 +1176,7 @@
 						<real>30.000001907348633</real>
 						<key>root key</key>
 						<integer>29</integer>
-						<key>sample start</key>
-						<integer>1924</integer>
+						
 						<key>waveform</key>
 						<integer>268435456</integer>
 					</dict>
@@ -1220,8 +1201,7 @@
 						<real>46</real>
 						<key>root key</key>
 						<integer>52</integer>
-						<key>sample start</key>
-						<integer>1974</integer>
+						
 						<key>waveform</key>
 						<integer>268435462</integer>
 					</dict>
@@ -1248,8 +1228,7 @@
 						<real>55</real>
 						<key>root key</key>
 						<integer>32</integer>
-						<key>sample start</key>
-						<integer>2083</integer>
+						
 						<key>waveform</key>
 						<integer>268435457</integer>
 					</dict>
@@ -1276,8 +1255,7 @@
 						<real>61</real>
 						<key>root key</key>
 						<integer>41</integer>
-						<key>sample start</key>
-						<integer>1998</integer>
+						
 						<key>waveform</key>
 						<integer>268435458</integer>
 					</dict>
@@ -1304,8 +1282,7 @@
 						<real>61</real>
 						<key>root key</key>
 						<integer>43</integer>
-						<key>sample start</key>
-						<integer>2000</integer>
+						
 						<key>waveform</key>
 						<integer>268435459</integer>
 					</dict>
@@ -1330,8 +1307,7 @@
 						<real>60.000003814697266</real>
 						<key>root key</key>
 						<integer>45</integer>
-						<key>sample start</key>
-						<integer>1036</integer>
+						
 						<key>waveform</key>
 						<integer>268435460</integer>
 					</dict>
@@ -1358,8 +1334,7 @@
 						<real>55</real>
 						<key>root key</key>
 						<integer>48</integer>
-						<key>sample start</key>
-						<integer>2056</integer>
+						
 						<key>waveform</key>
 						<integer>268435461</integer>
 					</dict>
@@ -1386,8 +1361,7 @@
 						<real>44</real>
 						<key>root key</key>
 						<integer>54</integer>
-						<key>sample start</key>
-						<integer>1955</integer>
+						
 						<key>waveform</key>
 						<integer>268435463</integer>
 					</dict>
@@ -1414,8 +1388,7 @@
 						<real>14</real>
 						<key>root key</key>
 						<integer>57</integer>
-						<key>sample start</key>
-						<integer>2081</integer>
+						
 						<key>waveform</key>
 						<integer>268435464</integer>
 					</dict>
@@ -1442,8 +1415,7 @@
 						<real>14</real>
 						<key>root key</key>
 						<integer>60</integer>
-						<key>sample start</key>
-						<integer>752</integer>
+						
 						<key>waveform</key>
 						<integer>268435465</integer>
 					</dict>
@@ -1470,8 +1442,7 @@
 						<real>9</real>
 						<key>root key</key>
 						<integer>63</integer>
-						<key>sample start</key>
-						<integer>1647</integer>
+						
 						<key>waveform</key>
 						<integer>268435466</integer>
 					</dict>
@@ -1498,8 +1469,7 @@
 						<real>3</real>
 						<key>root key</key>
 						<integer>66</integer>
-						<key>sample start</key>
-						<integer>2089</integer>
+						
 						<key>waveform</key>
 						<integer>268435467</integer>
 					</dict>
@@ -1526,8 +1496,7 @@
 						<real>-3</real>
 						<key>root key</key>
 						<integer>69</integer>
-						<key>sample start</key>
-						<integer>2359</integer>
+						
 						<key>waveform</key>
 						<integer>268435468</integer>
 					</dict>
@@ -1554,8 +1523,7 @@
 						<real>-9</real>
 						<key>root key</key>
 						<integer>73</integer>
-						<key>sample start</key>
-						<integer>98</integer>
+						
 						<key>waveform</key>
 						<integer>268435469</integer>
 					</dict>
@@ -1582,8 +1550,7 @@
 						<real>-18</real>
 						<key>root key</key>
 						<integer>79</integer>
-						<key>sample start</key>
-						<integer>840</integer>
+						
 						<key>waveform</key>
 						<integer>268435470</integer>
 					</dict>
@@ -1610,8 +1577,7 @@
 						<real>-26</real>
 						<key>root key</key>
 						<integer>82</integer>
-						<key>sample start</key>
-						<integer>1860</integer>
+						
 						<key>waveform</key>
 						<integer>268435471</integer>
 					</dict>
@@ -1638,8 +1604,7 @@
 						<real>-32</real>
 						<key>root key</key>
 						<integer>85</integer>
-						<key>sample start</key>
-						<integer>2432</integer>
+						
 						<key>waveform</key>
 						<integer>268435472</integer>
 					</dict>
@@ -1666,8 +1631,7 @@
 						<real>-45</real>
 						<key>root key</key>
 						<integer>88</integer>
-						<key>sample start</key>
-						<integer>1179</integer>
+						
 						<key>waveform</key>
 						<integer>268435473</integer>
 					</dict>
