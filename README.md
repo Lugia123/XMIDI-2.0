@@ -98,7 +98,7 @@
 >     第一级
 >     InstrumentFirstType_Piano “Yamaha Grand Piano”
 >     InstrumentFirstType_ChromaticPercussion “Celesta”
->     InstrumentFirstType_Organ Full ”Organ“
+>     InstrumentFirstType_Organ ”Full Organ“
 >     InstrumentFirstType_Guitar “Classical Acoustic Guitar”
 >     InstrumentFirstType_Bass “Muted Electric Bass”
 >     InstrumentFirstType_OrchestraSolo “String Ensemble”
