@@ -81,6 +81,7 @@
 ```
 
 ###6.关于乐器音频
+
 >    音频文件使用.aupreset文件，可以使用Apple的AU Lab生成。
 >    可以在Xcode->Open Developer Tool->More Developer Tools中下载Audio Tools for Xcode。
 
@@ -89,6 +90,7 @@
 >    其实还可以再细分，有兴趣的朋友可以看这里https://en.wikipedia.org/wiki/General_MIDI_Level_2
 
 ###7.默认乐器
+
 >    我添加的不全，缺少的大家可以自己添加，可在XAudioPlayer.h文件中修改乐器配置。
 >    第一级
 >    InstrumentFirstType_Piano “Yamaha Grand Piano”
