@@ -91,18 +91,19 @@
 
 ###7.默认乐器
 
->    我添加的不全，缺少的大家可以自己添加，可在XAudioPlayer.h文件中修改乐器配置。
->    第一级
->    InstrumentFirstType_Piano “Yamaha Grand Piano”
->    InstrumentFirstType_ChromaticPercussion “Celesta”
->    InstrumentFirstType_Organ Full ”Organ“
->    InstrumentFirstType_Guitar “Classical Acoustic Guitar”
->    InstrumentFirstType_Bass “Muted Electric Bass”
->    InstrumentFirstType_OrchestraSolo “String Ensemble”
->    InstrumentFirstType_OrchestraEnsemble “String Ensemble”
->    InstrumentFirstType_Brass “French Horns”
->    InstrumentFirstType_Reed ”Alto Sax“
->    InstrumentFirstType_Wind “Flutes”
-    
->    第二级
->    InstrumentSecondType_OrchestralKit Orchestral Kit
+
+>     我添加的不全，缺少的大家可以自己添加，可在XAudioPlayer.h文件中修改乐器配置。
+>     第一级
+>     InstrumentFirstType_Piano “Yamaha Grand Piano”
+>     InstrumentFirstType_ChromaticPercussion “Celesta”
+>     InstrumentFirstType_Organ Full ”Organ“
+>     InstrumentFirstType_Guitar “Classical Acoustic Guitar”
+>     InstrumentFirstType_Bass “Muted Electric Bass”
+>     InstrumentFirstType_OrchestraSolo “String Ensemble”
+>     InstrumentFirstType_OrchestraEnsemble “String Ensemble”
+>     InstrumentFirstType_Brass “French Horns”
+>     InstrumentFirstType_Reed ”Alto Sax“
+>     InstrumentFirstType_Wind “Flutes”
+>     
+>     第二级
+>     InstrumentSecondType_OrchestralKit Orchestral Kit
