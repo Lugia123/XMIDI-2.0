@@ -89,7 +89,7 @@
 > 
 >     乐器有两级分类，第一级17个大类，第二级128个子类。
 >     每个大类有一种默认乐器，然后每个子类对应一种乐器。
->     其实还可以再细分，有兴趣的朋友可以看这里[https://en.wikipedia.org/wiki/General_MIDI_Level_2](https://en.wikipedia.org/wiki/General_MIDI_Level_2)
+>     其实还可以再细分，有兴趣的朋友可以看这里https://en.wikipedia.org/wiki/General_MIDI_Level_2
 
 ###7.默认乐器
 
