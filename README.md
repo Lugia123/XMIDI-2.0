@@ -1,50 +1,33 @@
 #XMIDI
 ###简介
 
->     XMIDI是一款IOS上的MIDI文件播放引擎，基于Audio Toolbox Framework和OpenAL这两个库。 	
->     XMIDI使用Audio Toolbox Framework下API来完成MIDI文件的读取和解析，然后使用OpenAL来播放对应的音符。
->     OpenAL播放声音时，对声音做了音量、立体声和渐隐处理，来模拟真实钢琴弹奏效果。
+>     XMIDI是一款IOS上的MIDI文件播放引擎。 	
+>     2.0版本与之前1.0相比最大的变化在于播放模式的变更，由原来的OpenAL改为了AudioUnit。
+>     2.0版本支持多种乐器，可以自己定义和添加乐器。
 >     本引擎使用OC编写，项目示例为Swift语言。
 >     使用上有问题可以联系我。
 >     邮件:watarux@qq.com
 >     QQ:56809958    
 >     交流群:334533178
 
-###视频演示
->[音效演示视频截这里](http://v.youku.com/v_show/id_XOTEzMTc0MTYw.html)
-
-###Demo截图
->![AD](http://git.oschina.net/uploads/images/2015/0519/002136_1a65a0dc_21807.jpeg "AD")
-
 ###插播广告
 >   给自己游戏做个宣传，欢迎大家下载
 >![AD](http://git.oschina.net/uploads/images/2015/0519/002155_e5b0be86_21807.jpeg "AD")
 
 ###更新履历
-####2015-05-18
->1. 更新至1.2版本。
-2. 代码整合和优化，现在XMIDI所有代码都在XMidiLib目录下。
-3. XMidiPlayer方法更新。
-
-####2015-03-22
->1.增加播放控制。
-
-####2015-03-18
->1.增加XMidiPlayer，现在播放MIDI文件更为方便。
-
-####2015-03-17
+####2015-05-22
 >1.初次版本发布。
 
 ###使用方法
 ####1.初始化API
 ```javascript
-    //初始化，会将音频加载到内存，如果资源释放后，再播放，需要重新初始化。
+    //初始化。
     XMidiPlayer.xInit()
 ```
 
 ####2.资源释放API
 ```javascript
-    //资源释放，不必每次播放完都去释放资源，只有在你觉得需要时释放即可。
+    //资源释放。
     XMidiPlayer.xDispose()
 ```
 
@@ -95,4 +78,30 @@
 ```javascript
     //播放进度变化 progress是一个0～1的一个小数，代表进度百分比
     + (void)progressChanged:(double)progress;
+```
+
+###6.关于乐器音频
+```javascript
+    音频文件使用.aupreset文件，可以使用Apple的AU Lab生成。可以在Xcode->Open Developer Tool->More Developer Tools中下载Audio Tools for Xcode。
+
+    乐器有两级分类，第一级17个大类，第二级128个子类。每个大类有一种默认乐器，然后每个子类对应一种乐器。其实还可以再细分，有兴趣的朋友可以看这里https://en.wikipedia.org/wiki/General_MIDI_Level_2
+```
+
+###7.默认乐器
+```javascript
+    我添加的不全，缺少的大家可以自己添加，可在XAudioPlayer.h文件中修改乐器配置。
+    //第一级
+    InstrumentFirstType_Piano “Yamaha Grand Piano”
+    InstrumentFirstType_ChromaticPercussion “Celesta”
+    InstrumentFirstType_Organ Full ”Organ“
+    InstrumentFirstType_Guitar “Classical Acoustic Guitar”
+    InstrumentFirstType_Bass “Muted Electric Bass”
+    InstrumentFirstType_OrchestraSolo “String Ensemble”
+    InstrumentFirstType_OrchestraEnsemble “String Ensemble”
+    InstrumentFirstType_Brass “French Horns”
+    InstrumentFirstType_Reed ”Alto Sax“
+    InstrumentFirstType_Wind “Flutes”
+    
+    //第二级
+    InstrumentSecondType_OrchestralKit Orchestral Kit
 ```
