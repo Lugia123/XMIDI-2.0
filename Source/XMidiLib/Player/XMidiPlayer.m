@@ -133,7 +133,7 @@ double lastUpdateTime;
         for (int index = 0; index < track.eventIterator.childEvents.count; index ++) {
             XMidiEvent* event = track.eventIterator.childEvents[index];
             
-            event.isPlayed = playTimeStamp >= event.timeStamp;
+            event.isPlayed = playTimeStamp >= event.timeStamp && playTimeStamp != 0;
             if (event.isPlayed){
                 track.playEventIndex = index;
             }

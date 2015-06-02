@@ -177,10 +177,10 @@ static id<XAudioPlayerDelegate> delegate;
     }
     
     Float32 velocity = event.noteMessage.velocity;
-    if (velocity > 100){
-        //防止音过高
-        velocity = 100;
-    }
+//    if (velocity > 100){
+//        //防止音过高
+//        velocity = 100;
+//    }
     
     //play
     [au startPlayingNote:event.noteMessage.note withVelocity:velocity];
