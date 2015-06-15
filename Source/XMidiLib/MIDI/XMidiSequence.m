@@ -5,20 +5,7 @@
 
 #import "XMidiSequence.h"
 
-//速率
-static NSMutableArray* tempoChildEvents;
-
-
 @implementation XMidiSequence
-
-- (UInt32)trackCount{
-    UInt32 trackCount = 0;
-    OSStatus err = MusicSequenceGetTrackCount(self.sequence, &trackCount);
-    if (err != 0){
-        [XFunction writeLog:@"MusicSequenceGetTrackCount() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
-    }
-    return trackCount;
-}
 
 - (id)init:(NSURL*)midiUrl{
     if(self = [super init]){
@@ -34,33 +21,20 @@ static NSMutableArray* tempoChildEvents;
     return self;
 }
 
-+(NSMutableArray*)getTempoEvents{
-    return tempoChildEvents;
-}
-
-+(void)setTempoEvents:(NSMutableArray*)newVal{
-    if (tempoChildEvents != newVal){
-        tempoChildEvents = newVal;
-    }
-}
-
 -(void)initByData:(NSData*)data{
     MusicSequence sequence;
     OSStatus err = NewMusicSequence(&sequence);
     if (err != 0){
         [XFunction writeLog:@"NewMusicSequence() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
     }
-
+    
     self.sequence = sequence;
     err = MusicSequenceFileLoadData(self.sequence, (__bridge CFDataRef)(data), kMusicSequenceFile_MIDIType, 0);
     if (err != 0){
         [XFunction writeLog:@"MusicSequenceFileLoad() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
     }
     
-    [self initTempoTrack];
-    [self initTrack];
-//    [self initMusicTotalTimeStamp];
-    NSLog(@"musicTotalTime:%f length:%f",self.musicTotalTime,self.length);
+    [self initMidiTrack];
 }
 
 -(void)initByUrl:(NSURL*)midiUrl{
@@ -69,44 +43,31 @@ static NSMutableArray* tempoChildEvents;
     if (err != 0){
         [XFunction writeLog:@"NewMusicSequence() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
     }
-
+    
     self.sequence = sequence;
     err = MusicSequenceFileLoad(self.sequence, (__bridge CFURLRef)(midiUrl), kMusicSequenceFile_MIDIType, 0);
     if (err != 0){
         [XFunction writeLog:@"MusicSequenceFileLoad() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
     }
     
+    [self initMidiTrack];
+}
+
+-(void)initMidiTrack
+{
     [self initTempoTrack];
     [self initTrack];
     [self initAudioUnit];
-    NSLog(@"musicTotalTime:%f length:%f",self.musicTotalTime,self.length);
 }
 
 -(void)initTempoTrack{
     MusicTrack tempoTrack;
     OSStatus err = MusicSequenceGetTempoTrack(self.sequence, &tempoTrack);
     if (err != 0){
-        [XFunction writeLog:@"MusicSequenceGetIndTrack() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
+        [XFunction writeLog:@"MusicSequenceGetTempoTrack() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
     }
     
-//    NSLog(@"=============Tempo Track=============");
-    NSMutableArray* tempoEvents = [NSMutableArray array];
-    self.xTempoTrack = [[XMidiTrack alloc] init:tempoTrack trackIndex:-1];
-    
-//    NSLog(@"loopDuration:%f",self.xTempoTrack.loopDuration);
-//    NSLog(@"numberOfLoops:%d",(int)self.xTempoTrack.numberOfLoops);
-//    NSLog(@"offset:%f",self.xTempoTrack.offset);
-//    NSLog(@"muted:%d",self.xTempoTrack.muted);
-//    NSLog(@"solo:%d",self.xTempoTrack.solo);
-//    NSLog(@"length:%f",self.xTempoTrack.length);
-//    NSLog(@"timeResolution:%d",self.xTempoTrack.timeResolution);
-    
-    for (int i=0; i<[[[self.xTempoTrack eventIterator]childEvents]count]; i++) {
-        XMidiEvent* event = [[self.xTempoTrack eventIterator]childEvents][i];
-//        NSLog(@"time:%f bpm:%d",[event timeStamp],[event bpm]);
-        [tempoEvents addObject:event];
-    }
-    [XMidiSequence setTempoEvents:tempoEvents];
+    self.tempoTrack = [[XMidiTrack alloc] init:tempoTrack trackIndex:-1];
 }
 
 -(void)initTrack{
@@ -118,7 +79,7 @@ static NSMutableArray* tempoChildEvents;
         if (err != 0){
             [XFunction writeLog:@"MusicSequenceGetIndTrack() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
         }
-//        NSLog(@"=============Track [%d]=============",i);
+
         XMidiTrack* xTrack = [[XMidiTrack alloc] init:track trackIndex:i];
         [self.tracks addObject:xTrack];
     }
@@ -126,16 +87,35 @@ static NSMutableArray* tempoChildEvents;
 
 -(void)initAudioUnit
 {
-    for (XMidiTrack *track in self.tracks) {
-        for (XMidiEvent* event in track.eventIterator.childChannelMessageEvents)
+    for (XMidiTrack *track in self.tracks)
+    {
+        for (XMidiChannelMessageEvent* event in track.eventIterator.channelMessageEvents)
         {
-            [XAudioPlayer setAudioUnit:event];
+            if (event.channelType == XMidiChannelType_ProgramChange){
+                [XAudioPlayer setAudioUnit:event];
+            }
         }
     }
 }
 
-#pragma mark - Properties
+-(float)getTempoBpmInTimeStamp:(float)timeStamp{
+    NSMutableArray* tempoChildEvents = self.tempoTrack.eventIterator.tempoEvents;
+    int bpm = 100;
+    if (timeStamp <= 0 && tempoChildEvents.count > 0){
+        return [tempoChildEvents[0] bpm];
+    }
+    for (int i=(int)([tempoChildEvents count] - 1); i>=0; i--) {
+        if ([tempoChildEvents[i] timeStamp] <= timeStamp){
+            if ([tempoChildEvents[i] bpm] != 0){
+                bpm = [tempoChildEvents[i] bpm];
+            }
+            break;
+        }
+    }
+    return bpm;
+}
 
+#pragma mark - Properties
 - (MusicTimeStamp)length
 {
     MusicTimeStamp length = 0;
@@ -157,4 +137,106 @@ static NSMutableArray* tempoChildEvents;
     return duration;
 }
 
+- (UInt32)trackCount{
+    UInt32 trackCount = 0;
+    OSStatus err = MusicSequenceGetTrackCount(self.sequence, &trackCount);
+    if (err != 0){
+        [XFunction writeLog:@"MusicSequenceGetTrackCount() failed with error %d in %s.", err, __PRETTY_FUNCTION__];
+    }
+    return trackCount;
+}
+
+#pragma mark - Description
+- (NSString *)description
+{
+    NSString *result = [NSString stringWithFormat:@""];
+    result = [result stringByAppendingFormat:@"\n==========XMidi Description=========="];
+    result = [result stringByAppendingFormat:@"\nMusicTotalTime:%f",self.musicTotalTime];
+    result = [result stringByAppendingFormat:@"\nLength:%f",self.length];
+    
+    result = [result stringByAppendingFormat:@"\n----------Tempo Track----------"];
+    for (XMidiTempoEvent* tempoEvent in self.tempoTrack.eventIterator.tempoEvents)
+    {
+        result = [result stringByAppendingFormat:@"\nTimeStamp:%f  bpm:%d", tempoEvent.timeStamp, tempoEvent.bpm];
+    }
+    
+    result = [result stringByAppendingFormat:@"\n----------Track----------"];
+    for (XMidiTrack *track in self.tracks)
+    {
+        result = [result stringByAppendingFormat:@"\n----------Track Index:%d----------", track.trackIndex];
+        result = [result stringByAppendingFormat:@"\n----------Note Message Start----------"];
+        for (XMidiNoteMessageEvent* event in track.eventIterator.noteMessageEvents)
+        {
+            result = [result stringByAppendingFormat:@"\nTimeStamp:%f  Channel:%d  Note:%d  NoteNumber:%@  Octave:%d  Velocity:%d  Duration:%f",
+                      event.timeStamp,
+                      event.channel,
+                      event.note,
+                      event.noteNumber,
+                      event.octave,
+                      event.velocity,
+                      event.duration];
+        }
+        result = [result stringByAppendingFormat:@"\n----------Note Message End----------"];
+        
+        result = [result stringByAppendingFormat:@"\n----------Channel Message Start----------"];
+        for (XMidiChannelMessageEvent* event in track.eventIterator.channelMessageEvents)
+        {
+            if (event.channelType != XMidiChannelType_ProgramChange){
+                continue;
+            }
+            NSString *channelType = @"Ect";
+            switch (event.channelType) {
+                case XMidiChannelType_NoteOff:
+                    channelType = @"Note Off";
+                    break;
+                case XMidiChannelType_NoteOn:
+                    channelType = @"Note On";
+                    break;
+                case XMidiChannelType_PolyphonicKeyAftertouch:
+                    channelType = @"Polyphonic Key Aftertouch";
+                    break;
+                case XMidiChannelType_ControlChange:
+                    channelType = @"Control Change";
+                    break;
+                case XMidiChannelType_ProgramChange:
+                    channelType = @"Program Change";
+                    break;
+                case XMidiChannelType_ChannelAfterTouch:
+                    channelType = @"Channel After Touch";
+                    break;
+                case XMidiChannelType_PitchBendChange:
+                    channelType = @"PitchBend Change";
+                    break;
+                case XMidiChannelType_System:
+                    channelType = @"System";
+                    break;
+            }
+            result = [result stringByAppendingFormat:@"\nTimeStamp:%f  ChannelType:%@  Channel:%d  Status:%x  Data1:%x  Data2:%x  Reserved:%x",
+                      event.timeStamp,
+                      channelType,
+                      event.channel,
+                      event.status,
+                      event.data1,
+                      event.data2,
+                      event.reserved];
+        }
+        result = [result stringByAppendingFormat:@"\n----------Channel Message End----------"];
+    }
+    return result;
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

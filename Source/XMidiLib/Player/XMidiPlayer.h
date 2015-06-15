@@ -44,4 +44,6 @@
 -(void)setProgress:(double)progress;
 //关闭播放器
 -(void)closePlayer;
+//Midi信息
+- (NSString *)midiDescription;
 @end

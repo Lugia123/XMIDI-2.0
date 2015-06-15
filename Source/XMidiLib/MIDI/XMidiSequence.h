@@ -6,27 +6,29 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import "XMidiTrack.h"
+#import "XMidiNoteMessageEvent.h"
+#import "XMidiChannelMessageEvent.h"
+#import "XMidiTempoEvent.h"
 #import "XFunction.h"
 
 @class XMidiTrack;
 
 @interface XMidiSequence : NSObject
-/**
- *  XMidiTrack Array
- */
-@property (nonatomic) NSMutableArray* tracks;
-/**
- *  Tempo Track
- */
-@property (nonatomic) XMidiTrack* xTempoTrack;
+
 @property (nonatomic) MusicSequence sequence;
-@property (nonatomic) MusicTimeStamp length;
-@property (nonatomic, readonly) double musicTotalTime;
+//track
+@property (nonatomic) NSMutableArray* tracks;
+//Tempo Track
+@property (nonatomic) XMidiTrack* tempoTrack;
 
-+(NSMutableArray*)getTempoEvents;
-+(void)setTempoEvents:(NSMutableArray*)newVal;
-
-- (UInt32)trackCount;
+#pragma mark - Function
 - (id)init:(NSURL*)midiUrl;
 - (id)initWithData:(NSData*)data;
+- (float)getTempoBpmInTimeStamp:(float)timeStamp;
+- (NSString *)description;
+
+#pragma mark - Properties
+@property (nonatomic) MusicTimeStamp length;
+@property (nonatomic, readonly) double musicTotalTime;
+@property (nonatomic, readonly) UInt32 trackCount;
 @end

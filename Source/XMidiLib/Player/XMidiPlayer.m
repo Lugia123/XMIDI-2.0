@@ -118,7 +118,7 @@ double lastUpdateTime;
     currentMusitTime = 0;
     playTimeStamp = 0;
     while (currentMusitTime < maxTimeStamp) {
-        double bpm = [XMidiEvent getTempoBpmInTimeStamp:playTimeStamp];
+        double bpm = [midiSequence getTempoBpmInTimeStamp:playTimeStamp];
         playTimeStamp += 1 / 60.0 / 60.0 * bpm;
         currentMusitTime += 1 / 60.0;
     }
@@ -127,11 +127,11 @@ double lastUpdateTime;
     for (int i = 0; i< midiSequence.tracks.count; i++) {
         XMidiTrack* track = midiSequence.tracks[i];
         track.playEventIndex = 0;
-        if (track.eventIterator.childEvents.count <= 0){
+        if (track.eventIterator.noteMessageEvents.count <= 0){
             continue;
         }
-        for (int index = 0; index < track.eventIterator.childEvents.count; index ++) {
-            XMidiEvent* event = track.eventIterator.childEvents[index];
+        for (int index = 0; index < track.eventIterator.noteMessageEvents.count; index ++) {
+            XMidiNoteMessageEvent* event = track.eventIterator.noteMessageEvents[index];
             
             event.isPlayed = playTimeStamp >= event.timeStamp && playTimeStamp != 0;
             if (event.isPlayed){
@@ -151,7 +151,7 @@ double lastUpdateTime;
     double delayInSeconds = 1 / 60.0;
     if (!isPaused && currentMusitTime < midiSequence.musicTotalTime){
         //按bpm速率播放
-        self.currentBpm = [XMidiEvent getTempoBpmInTimeStamp:playTimeStamp];
+        self.currentBpm = [midiSequence getTempoBpmInTimeStamp:playTimeStamp];
         playTimeStamp += timeSinceLast / 60.0 * self.currentBpm;
         currentMusitTime += timeSinceLast;
         if (currentMusitTime > midiSequence.musicTotalTime){
@@ -183,16 +183,30 @@ double lastUpdateTime;
     for (int i = 0; i<midiSequence.tracks.count; i++) {
         XMidiTrack* track = midiSequence.tracks[i];
         for (int index = track.playEventIndex; index<track.playEventIndex + 10; index++) {
-            if (index < track.playEventIndex || index >= track.eventIterator.childEvents.count){
+            if (index < track.playEventIndex || index >= track.eventIterator.noteMessageEvents.count){
                 continue;
             }
             
-            XMidiEvent* event = track.eventIterator.childEvents[index];
-            if (playTimeStamp >= event.timeStamp && !event.isPlayed){
+            XMidiNoteMessageEvent* event = track.eventIterator.noteMessageEvents[index];
+            if (playTimeStamp >= event.timeStamp
+                && !event.isPlayed
+                && !track.isMuted)
+            {
                 track.playEventIndex = index;
-                [event playEvent];
+                event.isPlayed = true;
+                [XAudioPlayer playSoundByEvent:event];
             }
         }
     }
+}
+
+#pragma mark - Description
+- (NSString *)midiDescription
+{
+    if (midiSequence != nil){
+        return [midiSequence description];
+    }
+    
+    return @"";
 }
 @end

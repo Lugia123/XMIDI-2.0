@@ -3,9 +3,9 @@
 //  Copyright (c) 2015年 Freedom. All rights reserved.
 //
 
-#import "XMidiChannelMessage.h"
+#import "XMidiChannelMessageEvent.h"
 
-@implementation XMidiChannelMessage
+@implementation XMidiChannelMessageEvent
 struct MidiInstrument minstr[] = {
     // Piano
     { 7, 0, 0,  0, 60, "Grand Piano",InstrumentFirstType_Piano},
@@ -551,40 +551,95 @@ struct MidiInstrument minstr[] = {
     { 4,  4, 0,  52, 0, "Growl" ,InstrumentFirstType_DrumSounds},
     { 4,  4, 0,  53, 0, "Haunted" ,InstrumentFirstType_DrumSounds},
     { 4,  4, 0, 101, 0, "Applaus2" ,InstrumentFirstType_DrumSounds},
-    { -1,  0, 0,   0, 0, 0, InstrumentFirstType_DrumSounds }
+    { -1, 0, 0,   0, 0, 0, InstrumentFirstType_DrumSounds }
 };
 
--(id)init:(MIDIChannelMessage*)channelMessage{
-    if(self = [super init]){
+
+-(id)init:(XMidiEvent*)event
+{
+    if(self = [super init])
+    {
+        [super initWithEvent:event];
+        MIDIChannelMessage *channelMessage = (MIDIChannelMessage *)[self.data bytes];
         self.channel = channelMessage->status & 0x0F;
         self.status = channelMessage->status;
         self.data1 = channelMessage->data1;
         self.data2 = channelMessage->data2;
         self.reserved = channelMessage->reserved;
-        self.instrumentSecondType = self.data1;
         
-        int hbank = -1, lbank = -1;
-        if (self.instrumentSecondType == -1)
-            self.instrumentSecondType = 0;
-        else {
-            hbank = (self.instrumentSecondType >> 16);
-            lbank = (self.instrumentSecondType >> 8) & 0xff;
-            self.instrumentSecondType = self.instrumentSecondType & 0xff;
-        }
-        
-        for (int i = 0; i < sizeof(minstr)/sizeof(*minstr); ++i) {
-            struct MidiInstrument* mi = &minstr[i];
-            if ((mi->patch == self.instrumentSecondType)
-                && (mi->type & (char)MidiType_GM)
-                && (mi->hbank == hbank || hbank == -1)
-                && (mi->lbank == lbank || lbank == -1))
-            {
-                self.instrumentName = [NSString stringWithFormat:@"%s",mi->name];
-                self.instrumentFirstType = mi->firstType;
+        switch(channelMessage->status & 0xF0){
+            case 0x80:
+                self.channelType = XMidiChannelType_NoteOff;
                 break;
-            }
+            case 0x90:
+                self.channelType = XMidiChannelType_NoteOn;
+                break;
+            case 0xA0:
+                self.channelType = XMidiChannelType_PolyphonicKeyAftertouch;
+                break;
+            case 0xB0:
+                self.channelType = XMidiChannelType_ControlChange;
+                break;
+            case 0xC0:
+                self.channelType = XMidiChannelType_ProgramChange;
+                [self initProgramChange];
+                break;
+            case 0xD0:
+                self.channelType = XMidiChannelType_ChannelAfterTouch;
+                break;
+            case 0xE0:
+                self.channelType = XMidiChannelType_PitchBendChange;
+                break;
+            case 0xF0:
+                self.channelType = XMidiChannelType_System;
+                break;
         }
     }
     return self;
 }
+
+-(void)initProgramChange
+{
+    self.instrumentSecondType = self.data1;
+    
+    //GM Channel10定义为鼓
+    if (self.channel == 9)
+    {
+        self.instrumentName = @"SoCal";
+        self.instrumentFirstType = InstrumentFirstType_DrumSounds;
+        return;
+    }
+    
+    int hbank = -1, lbank = -1;
+    if (self.instrumentSecondType == -1)
+        self.instrumentSecondType = 0;
+    else {
+        hbank = (self.instrumentSecondType >> 16);
+        lbank = (self.instrumentSecondType >> 8) & 0xff;
+        self.instrumentSecondType = self.instrumentSecondType & 0xff;
+    }
+    
+    for (int i = 0; i < sizeof(minstr)/sizeof(*minstr); ++i) {
+        struct MidiInstrument* mi = &minstr[i];
+        if ((mi->patch == self.instrumentSecondType)
+            && (mi->type & (char)MidiType_GM)
+            && (mi->hbank == hbank || hbank == -1)
+            && (mi->lbank == lbank || lbank == -1))
+        {
+            self.instrumentName = [NSString stringWithFormat:@"%s",mi->name];
+            self.instrumentFirstType = mi->firstType;
+            break;
+        }
+    }
+}
+
+//-(void)printLog:(NSString*)str message:(MIDIChannelMessage*)channelMessage{
+//    NSLog(@"%@ %f %x %x %x %x",
+//          str,
+//          self.timeStamp,
+//          channelMessage->status,
+//          channelMessage->data1,
+//          channelMessage->data2,
+//          channelMessage->reserved);
+//}
 @end

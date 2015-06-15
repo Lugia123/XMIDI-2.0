@@ -16,11 +16,8 @@
 		95118A881B0A3BEF00EE90A3 /* Sound.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 95118A7E1B0A3BEF00EE90A3 /* Sound.fsh */; };
 		95118A891B0A3BEF00EE90A3 /* XSharderCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A801B0A3BEF00EE90A3 /* XSharderCenter.m */; };
 		95118B031B0A3BFB00EE90A3 /* XFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A8D1B0A3BFB00EE90A3 /* XFunction.m */; };
-		95118B041B0A3BFB00EE90A3 /* XMidiEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A901B0A3BFB00EE90A3 /* XMidiEvent.m */; };
 		95118B051B0A3BFB00EE90A3 /* XMidiEventIterator.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A921B0A3BFB00EE90A3 /* XMidiEventIterator.m */; };
-		95118B061B0A3BFB00EE90A3 /* XMidiNoteMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A941B0A3BFB00EE90A3 /* XMidiNoteMessage.m */; };
 		95118B071B0A3BFB00EE90A3 /* XMidiSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A961B0A3BFB00EE90A3 /* XMidiSequence.m */; };
-		95118B081B0A3BFB00EE90A3 /* XMidiTempoEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A981B0A3BFB00EE90A3 /* XMidiTempoEvent.m */; };
 		95118B091B0A3BFB00EE90A3 /* XMidiTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118A9A1B0A3BFB00EE90A3 /* XMidiTrack.m */; };
 		95118B0D1B0A3BFB00EE90A3 /* XMidiPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95118AA41B0A3BFB00EE90A3 /* XMidiPlayer.m */; };
 		952B60B31AB68FD500A87CDB /* 至爱丽丝.mid in Resources */ = {isa = PBXBuildFile; fileRef = 952B60AE1AB68FD500A87CDB /* 至爱丽丝.mid */; };
@@ -43,7 +40,6 @@
 		95AF42181AB4A2DC005C708C /* Sonata No.9 in E-1.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42151AB4A2DC005C708C /* Sonata No.9 in E-1.mid */; };
 		95AF42281AB5EBBC005C708C /* 命运交响曲第一章.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42271AB5EBBC005C708C /* 命运交响曲第一章.mid */; };
 		95AF422A1AB5FF5D005C708C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95AF42291AB5FF5D005C708C /* Images.xcassets */; };
-		95B288101B0F1AF4004BC1DC /* XMidiChannelMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B2880F1B0F1AF4004BC1DC /* XMidiChannelMessage.m */; };
 		95B288121B0F2A67004BC1DC /* Classical Acoustic Guitar.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B288111B0F2A67004BC1DC /* Classical Acoustic Guitar.aupreset */; };
 		95B288141B0F2C96004BC1DC /* Muted Electric Bass.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B288131B0F2C96004BC1DC /* Muted Electric Bass.aupreset */; };
 		95B288161B0F30D4004BC1DC /* Celesta.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B288151B0F30D4004BC1DC /* Celesta.aupreset */; };
@@ -53,6 +49,11 @@
 		95B288221B0F4FBF004BC1DC /* 机器猫.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95B288211B0F4FBF004BC1DC /* 机器猫.mid */; };
 		95B4C6BA1B0CF119000AC36A /* Orchestral Kit.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */; };
 		95B4C6C91B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */; };
+		95DB80FE1B1FFC9E00A75FBB /* XMidiChannelMessageEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DB80F71B1FFC9E00A75FBB /* XMidiChannelMessageEvent.m */; };
+		95DB80FF1B1FFC9E00A75FBB /* XMidiEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DB80F91B1FFC9E00A75FBB /* XMidiEvent.m */; };
+		95DB81001B1FFC9E00A75FBB /* XMidiNoteMessageEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DB80FB1B1FFC9E00A75FBB /* XMidiNoteMessageEvent.m */; };
+		95DB81031B20242F00A75FBB /* XMidiTempoEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DB81021B20242F00A75FBB /* XMidiTempoEvent.m */; };
+		95E468DF1B21658A008BC583 /* WhiteGirl.mid in Resources */ = {isa = PBXBuildFile; fileRef = 95E468DE1B21658A008BC583 /* WhiteGirl.mid */; };
 		95EFE98A1B0E0685008DD230 /* XInstrumentAupreset.m in Sources */ = {isa = PBXBuildFile; fileRef = 95EFE9891B0E0685008DD230 /* XInstrumentAupreset.m */; };
 		95EFE98D1B0E27AF008DD230 /* Alto Sax.aupreset in Resources */ = {isa = PBXBuildFile; fileRef = 95EFE98C1B0E27AF008DD230 /* Alto Sax.aupreset */; };
 		95F815B81B0C522D00C72B20 /* XAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F815B71B0C522D00C72B20 /* XAudioUnit.m */; };
@@ -92,16 +93,10 @@
 		95118A801B0A3BEF00EE90A3 /* XSharderCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSharderCenter.m; sourceTree = "<group>"; };
 		95118A8C1B0A3BFB00EE90A3 /* XFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFunction.h; sourceTree = "<group>"; };
 		95118A8D1B0A3BFB00EE90A3 /* XFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFunction.m; sourceTree = "<group>"; };
-		95118A8F1B0A3BFB00EE90A3 /* XMidiEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiEvent.h; sourceTree = "<group>"; };
-		95118A901B0A3BFB00EE90A3 /* XMidiEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiEvent.m; sourceTree = "<group>"; };
 		95118A911B0A3BFB00EE90A3 /* XMidiEventIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiEventIterator.h; sourceTree = "<group>"; };
 		95118A921B0A3BFB00EE90A3 /* XMidiEventIterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiEventIterator.m; sourceTree = "<group>"; };
-		95118A931B0A3BFB00EE90A3 /* XMidiNoteMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiNoteMessage.h; sourceTree = "<group>"; };
-		95118A941B0A3BFB00EE90A3 /* XMidiNoteMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiNoteMessage.m; sourceTree = "<group>"; };
 		95118A951B0A3BFB00EE90A3 /* XMidiSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiSequence.h; sourceTree = "<group>"; };
 		95118A961B0A3BFB00EE90A3 /* XMidiSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiSequence.m; sourceTree = "<group>"; };
-		95118A971B0A3BFB00EE90A3 /* XMidiTempoEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiTempoEvent.h; sourceTree = "<group>"; };
-		95118A981B0A3BFB00EE90A3 /* XMidiTempoEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiTempoEvent.m; sourceTree = "<group>"; };
 		95118A991B0A3BFB00EE90A3 /* XMidiTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiTrack.h; sourceTree = "<group>"; };
 		95118A9A1B0A3BFB00EE90A3 /* XMidiTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiTrack.m; sourceTree = "<group>"; };
 		95118AA31B0A3BFB00EE90A3 /* XMidiPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiPlayer.h; sourceTree = "<group>"; };
@@ -131,8 +126,6 @@
 		95AF42151AB4A2DC005C708C /* Sonata No.9 in E-1.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "Sonata No.9 in E-1.mid"; sourceTree = "<group>"; };
 		95AF42271AB5EBBC005C708C /* 命运交响曲第一章.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "命运交响曲第一章.mid"; sourceTree = "<group>"; };
 		95AF42291AB5FF5D005C708C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		95B2880E1B0F1AE4004BC1DC /* XMidiChannelMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMidiChannelMessage.h; sourceTree = "<group>"; };
-		95B2880F1B0F1AF4004BC1DC /* XMidiChannelMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiChannelMessage.m; sourceTree = "<group>"; };
 		95B288111B0F2A67004BC1DC /* Classical Acoustic Guitar.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Classical Acoustic Guitar.aupreset"; sourceTree = "<group>"; };
 		95B288131B0F2C96004BC1DC /* Muted Electric Bass.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Muted Electric Bass.aupreset"; sourceTree = "<group>"; };
 		95B288151B0F30D4004BC1DC /* Celesta.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Celesta.aupreset; sourceTree = "<group>"; };
@@ -142,6 +135,15 @@
 		95B288211B0F4FBF004BC1DC /* 机器猫.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = "机器猫.mid"; sourceTree = "<group>"; };
 		95B4C6B91B0CF119000AC36A /* Orchestral Kit.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Orchestral Kit.aupreset"; sourceTree = "<group>"; };
 		95B4C6C81B0CFBE1000AC36A /* Yamaha Grand Piano.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Yamaha Grand Piano.aupreset"; sourceTree = "<group>"; };
+		95DB80F61B1FFC9E00A75FBB /* XMidiChannelMessageEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiChannelMessageEvent.h; sourceTree = "<group>"; };
+		95DB80F71B1FFC9E00A75FBB /* XMidiChannelMessageEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiChannelMessageEvent.m; sourceTree = "<group>"; };
+		95DB80F81B1FFC9E00A75FBB /* XMidiEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiEvent.h; sourceTree = "<group>"; };
+		95DB80F91B1FFC9E00A75FBB /* XMidiEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiEvent.m; sourceTree = "<group>"; };
+		95DB80FA1B1FFC9E00A75FBB /* XMidiNoteMessageEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMidiNoteMessageEvent.h; sourceTree = "<group>"; };
+		95DB80FB1B1FFC9E00A75FBB /* XMidiNoteMessageEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiNoteMessageEvent.m; sourceTree = "<group>"; };
+		95DB81021B20242F00A75FBB /* XMidiTempoEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMidiTempoEvent.m; sourceTree = "<group>"; };
+		95DB81041B20243A00A75FBB /* XMidiTempoEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMidiTempoEvent.h; sourceTree = "<group>"; };
+		95E468DE1B21658A008BC583 /* WhiteGirl.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = WhiteGirl.mid; sourceTree = "<group>"; };
 		95EFE9891B0E0685008DD230 /* XInstrumentAupreset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XInstrumentAupreset.m; path = AudioUnit/XInstrumentAupreset.m; sourceTree = "<group>"; };
 		95EFE98B1B0E0691008DD230 /* XInstrumentAupreset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XInstrumentAupreset.h; path = AudioUnit/XInstrumentAupreset.h; sourceTree = "<group>"; };
 		95EFE98C1B0E27AF008DD230 /* Alto Sax.aupreset */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Alto Sax.aupreset"; sourceTree = "<group>"; };
@@ -245,20 +247,13 @@
 		95118A8E1B0A3BFB00EE90A3 /* MIDI */ = {
 			isa = PBXGroup;
 			children = (
-				95118A8F1B0A3BFB00EE90A3 /* XMidiEvent.h */,
-				95118A901B0A3BFB00EE90A3 /* XMidiEvent.m */,
+				95DB80F51B1FFC9E00A75FBB /* Events */,
 				95118A911B0A3BFB00EE90A3 /* XMidiEventIterator.h */,
 				95118A921B0A3BFB00EE90A3 /* XMidiEventIterator.m */,
-				95118A931B0A3BFB00EE90A3 /* XMidiNoteMessage.h */,
-				95118A941B0A3BFB00EE90A3 /* XMidiNoteMessage.m */,
 				95118A951B0A3BFB00EE90A3 /* XMidiSequence.h */,
 				95118A961B0A3BFB00EE90A3 /* XMidiSequence.m */,
-				95118A971B0A3BFB00EE90A3 /* XMidiTempoEvent.h */,
-				95118A981B0A3BFB00EE90A3 /* XMidiTempoEvent.m */,
 				95118A991B0A3BFB00EE90A3 /* XMidiTrack.h */,
 				95118A9A1B0A3BFB00EE90A3 /* XMidiTrack.m */,
-				95B2880E1B0F1AE4004BC1DC /* XMidiChannelMessage.h */,
-				95B2880F1B0F1AF4004BC1DC /* XMidiChannelMessage.m */,
 			);
 			path = MIDI;
 			sourceTree = "<group>";
@@ -414,6 +409,7 @@
 		95B4C6BD1B0CF7B3000AC36A /* 歌曲 */ = {
 			isa = PBXGroup;
 			children = (
+				95E468DE1B21658A008BC583 /* WhiteGirl.mid */,
 				95B288211B0F4FBF004BC1DC /* 机器猫.mid */,
 			);
 			path = "歌曲";
@@ -425,6 +421,21 @@
 				95B288191B0F4243004BC1DC /* 亡灵序曲.mid */,
 			);
 			path = "其他";
+			sourceTree = "<group>";
+		};
+		95DB80F51B1FFC9E00A75FBB /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				95DB80F81B1FFC9E00A75FBB /* XMidiEvent.h */,
+				95DB80F91B1FFC9E00A75FBB /* XMidiEvent.m */,
+				95DB80F61B1FFC9E00A75FBB /* XMidiChannelMessageEvent.h */,
+				95DB80F71B1FFC9E00A75FBB /* XMidiChannelMessageEvent.m */,
+				95DB80FA1B1FFC9E00A75FBB /* XMidiNoteMessageEvent.h */,
+				95DB80FB1B1FFC9E00A75FBB /* XMidiNoteMessageEvent.m */,
+				95DB81041B20243A00A75FBB /* XMidiTempoEvent.h */,
+				95DB81021B20242F00A75FBB /* XMidiTempoEvent.m */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		95F815B61B0C520700C72B20 /* AudioUnit */ = {
@@ -555,6 +566,7 @@
 				952B60B41AB68FD500A87CDB /* Rondeau.mid in Resources */,
 				95AF422A1AB5FF5D005C708C /* Images.xcassets in Resources */,
 				952B60B31AB68FD500A87CDB /* 至爱丽丝.mid in Resources */,
+				95E468DF1B21658A008BC583 /* WhiteGirl.mid in Resources */,
 				95B288141B0F2C96004BC1DC /* Muted Electric Bass.aupreset in Resources */,
 				95F816481B0CA67000C72B20 /* String Ensemble.aupreset in Resources */,
 				95B288161B0F30D4004BC1DC /* Celesta.aupreset in Resources */,
@@ -594,18 +606,20 @@
 				95118B0D1B0A3BFB00EE90A3 /* XMidiPlayer.m in Sources */,
 				95118B051B0A3BFB00EE90A3 /* XMidiEventIterator.m in Sources */,
 				95A4E2271ABE500600FE6946 /* XIconButton.swift in Sources */,
+				95DB81031B20242F00A75FBB /* XMidiTempoEvent.m in Sources */,
 				958C315D1AB943D9009A1EA1 /* XMidiFile.swift in Sources */,
+				95DB80FF1B1FFC9E00A75FBB /* XMidiEvent.m in Sources */,
 				95118A861B0A3BEF00EE90A3 /* UIApplication+iAppInfos.m in Sources */,
 				95118B031B0A3BFB00EE90A3 /* XFunction.m in Sources */,
-				95118B061B0A3BFB00EE90A3 /* XMidiNoteMessage.m in Sources */,
 				95F815B81B0C522D00C72B20 /* XAudioUnit.m in Sources */,
 				95118B071B0A3BFB00EE90A3 /* XMidiSequence.m in Sources */,
-				95118B041B0A3BFB00EE90A3 /* XMidiEvent.m in Sources */,
+				95DB81001B1FFC9E00A75FBB /* XMidiNoteMessageEvent.m in Sources */,
 				95118A891B0A3BEF00EE90A3 /* XSharderCenter.m in Sources */,
 				9589EE051AB3523A0088FB9C /* XBarButton.swift in Sources */,
 				9589ED091AB34F1B0088FB9C /* MusicPlay.swift in Sources */,
 				95118B091B0A3BFB00EE90A3 /* XMidiTrack.m in Sources */,
 				95118A851B0A3BEF00EE90A3 /* NSDictionary+iAppInfos.m in Sources */,
+				95DB80FE1B1FFC9E00A75FBB /* XMidiChannelMessageEvent.m in Sources */,
 				95118A871B0A3BEF00EE90A3 /* UIDevice+iAppInfos.m in Sources */,
 				95A4E2251ABE4CDC00FE6946 /* XProgressBar.swift in Sources */,
 				95EFE98A1B0E0685008DD230 /* XInstrumentAupreset.m in Sources */,
@@ -614,9 +628,7 @@
 				9589ED0B1AB34F1B0088FB9C /* GameViewController.swift in Sources */,
 				95F816441B0C6C2600C72B20 /* XAudioPlayer.m in Sources */,
 				9589ED051AB34F1B0088FB9C /* AppDelegate.swift in Sources */,
-				95118B081B0A3BFB00EE90A3 /* XMidiTempoEvent.m in Sources */,
 				95118A821B0A3BEF00EE90A3 /* iAppInfos.m in Sources */,
-				95B288101B0F1AF4004BC1DC /* XMidiChannelMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

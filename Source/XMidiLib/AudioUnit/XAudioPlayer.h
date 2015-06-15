@@ -6,12 +6,13 @@
 
 #import <Foundation/Foundation.h>
 #import "XAudioUnit.h"
-#import "XMidiNoteMessage.h"
+#import "XMidiNoteMessageEvent.h"
+#import "XMidiChannelMessageEvent.h"
 #import "XMidiTrack.h"
 #import "XInstrumentAupreset.h"
 
-
-@class XMidiEvent;
+@class XMidiChannelMessageEvent;
+@class XMidiNoteMessageEvent;
 @class XMidiTrack;
 
 enum
@@ -42,7 +43,7 @@ enum
 
 @protocol XAudioPlayerDelegate <NSObject>
 @optional
-+ (void)playingSoundNote:(XMidiEvent *)event;
++ (void)playingSoundNote:(XMidiNoteMessageEvent *)event;
 @end
 
 @interface XAudioPlayer : NSObject <XAudioPlayerDelegate>
@@ -56,13 +57,13 @@ enum
 + (void)xDispose;
 
 //根据track生成AudioUnit
-+ (void)setAudioUnit:(XMidiEvent*)event;
++ (void)setAudioUnit:(XMidiChannelMessageEvent*)event;
 
 //设置音频
 + (void)setInstrumentAupreset:(int)instrumentType aupresent:(NSString*)aupresentFileName;
 
 //播放声音
-+ (void)playSound:(XMidiEvent *)event;
++ (void)playSoundByEvent:(XMidiNoteMessageEvent *)event;
 
 //停止声音
 + (void)pauseSound;

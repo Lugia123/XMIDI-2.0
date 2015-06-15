@@ -30,23 +30,30 @@
         return;
     }
     
-    self.childEvents = [NSMutableArray array];
-    self.childChannelMessageEvents = [NSMutableArray array];
+    self.tempoEvents = [NSMutableArray array];
+    self.noteMessageEvents = [NSMutableArray array];
+    self.channelMessageEvents = [NSMutableArray array];
+    
     while ([self hasCurrentEvent]) {
-        XMidiEvent* event = [self currentEvent];
-        if (event != nil){
-            if ([event type] == kMusicEventType_MIDINoteMessage
-                || [event type] == kMusicEventType_ExtendedTempo){
-                event.track = track;
-                [self.childEvents addObject:event];
-            }
-            
-            if ([event type] == kMusicEventType_MIDIChannelMessage)
-            {
-                event.track = track;
-                [self.childChannelMessageEvents addObject:event];
-            }
+        XMidiEvent* event = (XMidiEvent *)[self currentEvent];
+        if (event == nil){
+            continue;
         }
+        
+        switch (event.type) {
+            case XMidiEventType_ExtendedTempo:
+                [self.tempoEvents addObject:[[XMidiTempoEvent alloc] init:event]];
+                break;
+            case XMidiEventType_MIDINoteMessage:
+                [self.noteMessageEvents addObject:[[XMidiNoteMessageEvent alloc] init:event]];
+                break;
+            case XMidiEventType_MIDIChannelMessage:
+                [self.channelMessageEvents addObject:[[XMidiChannelMessageEvent alloc] init:event]];
+                break;
+            default:
+                break;
+        }
+
         [self moveToNextEvent];
     }
 }
@@ -82,7 +89,7 @@
 
 #pragma mark - Current Event
 
-- (XMidiEvent *)currentEvent
+- (NSObject *)currentEvent
 {
     MusicTimeStamp timeStamp;
     MusicEventType type;

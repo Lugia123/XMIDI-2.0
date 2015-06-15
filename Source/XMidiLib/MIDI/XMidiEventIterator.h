@@ -8,20 +8,18 @@
 #import "XFunction.h"
 #import "XMidiEvent.h"
 #import "XMidiTrack.h"
+#import "XMidiNoteMessageEvent.h"
+#import "XMidiChannelMessageEvent.h"
+#import "XMidiTempoEvent.h"
 
 @class XMidiTrack;
 
 @interface XMidiEventIterator : NSObject
-enum eventTypes{
-    trackEvent,
-    tempoTrackEvent
-};
-
 @property (nonatomic) MusicEventIterator eventIterator;
-@property (nonatomic) NSMutableArray* childEvents;
-@property (nonatomic) NSMutableArray* childChannelMessageEvents;
-@property (nonatomic) enum eventTypes* eventType;
 
+@property (nonatomic) NSMutableArray* tempoEvents;
+@property (nonatomic) NSMutableArray* noteMessageEvents;
+@property (nonatomic) NSMutableArray* channelMessageEvents;
 
 -(id)init:(XMidiTrack*)track;
 @end

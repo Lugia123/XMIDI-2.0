@@ -82,22 +82,22 @@ static id<XAudioPlayerDelegate> delegate;
     return nil;
 }
 
-+ (void)setAudioUnit:(XMidiEvent*)event
++ (void)setAudioUnit:(XMidiChannelMessageEvent*)event
 {
-    if (event == nil || event.channelMessage == nil){
+    if (event == nil){
         return;
     }
-    XMidiChannelMessage* channelMessage = event.channelMessage;
-    if (channelMessage.instrumentFirstType <= 0){
+
+    if (event.instrumentFirstType <= 0){
         return;
     }
     
     NSString *preset = DEFAULT_AUPRESENT;
     //SecondType
-    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentSecondType];
+    XInstrumentAupreset *instrumentAupreset = [self getInstrumentAupreset:event.instrumentSecondType];
     if (instrumentAupreset == nil){
         //FirstType
-        instrumentAupreset = [self getInstrumentAupreset:channelMessage.instrumentFirstType];
+        instrumentAupreset = [self getInstrumentAupreset:event.instrumentFirstType];
     }
     
     if (instrumentAupreset != nil){
@@ -111,19 +111,19 @@ static id<XAudioPlayerDelegate> delegate;
     NSString *presetFilePath = [[NSBundle mainBundle] pathForResource:preset ofType:@"aupreset"];
     if (presetFilePath == nil || [@"" isEqual:presetFilePath]){
         [XFunction writeLog:@"No Aupreset File Find. Channel:%d FirstType:%d SecondType:%d",
-         channelMessage.channel, channelMessage.instrumentFirstType, channelMessage.instrumentSecondType];
+         event.channel, event.instrumentFirstType, event.instrumentSecondType];
         return;
     }
     
     NSURL *presetURL = [[NSURL alloc] initFileURLWithPath:presetFilePath];
-    NSLog(@"Channel:%d TimeStamp:%f FirstType:%d SecondType:%d Preset:%@",
-          channelMessage.channel, event.timeStamp, channelMessage.instrumentFirstType, channelMessage.instrumentSecondType,preset);
+//    NSLog(@"Channel:%d TimeStamp:%f FirstType:%d SecondType:%d Preset:%@",
+//          event.channel, event.timeStamp, event.instrumentFirstType, event.instrumentSecondType,preset);
     
     
-    XAudioUnit *audioUnit = [self getAudioUnit:channelMessage.channel timeStamp:event.timeStamp];
+    XAudioUnit *audioUnit = [self getAudioUnit:event.channel timeStamp:event.timeStamp];
     if (audioUnit == nil){
         audioUnit = [[XAudioUnit alloc] initWithPresetURL:presetURL];
-        audioUnit.channel = channelMessage.channel;
+        audioUnit.channel = event.channel;
         audioUnit.timeStamp = event.timeStamp;
         [xAudioUnits addObject:audioUnit];
         return;
@@ -157,36 +157,31 @@ static id<XAudioPlayerDelegate> delegate;
     return nil;
 }
 
-+ (void)playSound:(XMidiEvent *)event {
-    if (isDisposed
-        || event.track.isMuted
-        || event.noteMessage == nil){
++ (void)playSoundByEvent:(XMidiNoteMessageEvent *)event
+{
+    if (isDisposed){
         return;
     }
     
-    XAudioUnit *au = [self getAudioUnit:event.noteMessage.channel timeStamp:event.timeStamp];
+    XAudioUnit *au = [self getAudioUnit:event.channel timeStamp:event.timeStamp];
     
     if (au == nil){
         //如果根据时间没有拿到对应的au，则获取channel对应的第一个au
-        au = [self getFirstAudioUnit:event.noteMessage.channel];
+        au = [self getFirstAudioUnit:event.channel];
     }
     
     if (au == nil){
-        [XFunction writeLog:@"Cant find AudioUnit by channel %d.",event.noteMessage.channel];
+        [XFunction writeLog:@"Cant find AudioUnit by channel %d.",event.channel];
         return;
     }
     
-    Float32 velocity = event.noteMessage.velocity;
-//    if (velocity > 100){
-//        //防止音过高
-//        velocity = 100;
-//    }
+    Float32 velocity = event.velocity;
     
     //play
-    [au startPlayingNote:event.noteMessage.note withVelocity:velocity];
+    [au startPlayingNote:event.note withVelocity:velocity];
     
     //stop
-    Float32 duration = event.noteMessage.duration;
+    Float32 duration = event.duration;
     if (duration < 0){
         duration = 0;
     }
@@ -198,7 +193,7 @@ static id<XAudioPlayerDelegate> delegate;
             return;
         }
         
-        [au stopPlayingNote:event.noteMessage.note];
+        [au stopPlayingNote:event.note];
     });
     
     if (delegate != nil

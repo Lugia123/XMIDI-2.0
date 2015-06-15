@@ -65,7 +65,7 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
 //        midiFiles.append(XMidiFile(fileName:"埃克赛斯舞曲"))
         midiFiles.append(XMidiFile(fileName:"Symphony No.5-4"))
         midiFiles.append(XMidiFile(fileName:"命运交响曲第一章"))
-        midiFiles.append(XMidiFile(fileName:"亡灵序曲"))
+        midiFiles.append(XMidiFile(fileName:"WhiteGirl"))
         midiFiles.append(XMidiFile(fileName:"机器猫"))
     }
     
@@ -199,6 +199,7 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
         //        var data = NSFileManager.defaultManager().contentsAtPath(filePath!)
         //        midiPlayer.initMidiWithData(data)
         
+        NSLog(midiPlayer.midiDescription())
         midiPlayer.play()
         self.playButton.iconType = XIconButton.xIconButtonTypes.PauseIcon
     }
@@ -207,8 +208,8 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
         progressBar.progress = progress
     }
     
-    func playingSoundNote(event: XMidiEvent!) {
-        initBgShader(Float32(event.noteMessage.note))
+    func playingSoundNote(event: XMidiNoteMessageEvent!) {
+        initBgShader(Float32(event.note))
     }
     
     //低性能设备，关闭shader
