@@ -6,12 +6,16 @@
 #import "XMidiPlayer.h"
 
 @implementation XMidiPlayer
-double currentMusitTime;
+
+float DELAY_IN_SECONDS = 0.001;
+float BASICS_BPM = 60.0;
+
+float currentMusitTime;
+float currentTimeStamp;
+double lastUpdateTime;
 XMidiSequence* midiSequence;
 BOOL isPaused;
-BOOL isPlayTimerEnabled;
-double playTimeStamp;
-double lastUpdateTime;
+BOOL isClosed;
 
 +(void)xInit{
     [XAudioPlayer xInit];
@@ -24,7 +28,7 @@ double lastUpdateTime;
 
 -(id)init{
     if(self = [super init]){
-        isPlayTimerEnabled = true;
+        isClosed = false;
         [self playTimer];
     }
     return self;
@@ -33,7 +37,7 @@ double lastUpdateTime;
 - (void)initMidi:(NSURL*)midiUrl{
     isPaused = true;
     currentMusitTime = 0;
-    playTimeStamp = 0;
+    currentTimeStamp = 0;
     self.currentBpm = 100;
     midiSequence = [[XMidiSequence alloc] init:midiUrl];
 }
@@ -41,14 +45,14 @@ double lastUpdateTime;
 -(void)initMidiWithData:(NSData*)data{
     isPaused = true;
     currentMusitTime = 0;
-    playTimeStamp = 0;
+    currentTimeStamp = 0;
     self.currentBpm = 100;
     midiSequence = [[XMidiSequence alloc] initWithData:data];
 }
 
 -(void)closePlayer{
     [XAudioPlayer pauseSound];
-    isPlayTimerEnabled = false;
+    isClosed = true;
     isPaused = true;
     midiSequence = NULL;
 }
@@ -68,34 +72,37 @@ double lastUpdateTime;
     [self setProgress:0];
 }
 
--(double)totalTime{
+-(float)totalTime{
     if (midiSequence == NULL){
         return 0;
     }
     return midiSequence.musicTotalTime;
 }
 
--(double)time{
+-(float)time{
     if (midiSequence == NULL){
         return 0;
     }
     return currentMusitTime;
 }
 
--(void)setTime:(double)newValue{
+-(void)setTime:(float)newValue{
     if (midiSequence == NULL){
         return;
     }
     
-    double progress = newValue / midiSequence.musicTotalTime;
+    float progress = newValue / midiSequence.musicTotalTime;
     [self setProgress:progress];
 }
 
--(double)getProgress{
-    return currentMusitTime / midiSequence.musicTotalTime;
+-(float)timeStamp{
+    if (midiSequence == NULL){
+        return 0;
+    }
+    return currentTimeStamp;
 }
 
--(void)setProgress:(double)progress{
+-(void)setTimeStamp:(float)newValue{
     if (midiSequence == NULL){
         return;
     }
@@ -105,7 +112,41 @@ double lastUpdateTime;
     }
     
     isPaused = true;
-    double p = progress;
+
+    float maxTime = midiSequence.length;
+    currentMusitTime = 0;
+    currentTimeStamp = 0;
+    while (currentTimeStamp < maxTime) {
+        float bpm = [midiSequence getTempoBpmInTimeStamp:currentTimeStamp];
+        if (currentTimeStamp >= newValue){
+            break;
+        }
+        currentTimeStamp += DELAY_IN_SECONDS;
+        currentMusitTime += DELAY_IN_SECONDS / bpm * BASICS_BPM;
+        
+        currentTimeStamp = [[[NSString alloc]initWithFormat:@"%.3f",currentTimeStamp] floatValue];
+    }
+    
+    [self resetPlayTag];
+    
+    isPaused = false;
+}
+
+-(float)getProgress{
+    return currentMusitTime / midiSequence.musicTotalTime;
+}
+
+-(void)setProgress:(float)progress{
+    if (midiSequence == NULL){
+        return;
+    }
+    
+    if (midiSequence.tracks.count <= 0){
+        return;
+    }
+    
+    isPaused = true;
+    float p = progress;
     if (p < 0){
         p = 0;
     }
@@ -114,16 +155,27 @@ double lastUpdateTime;
         p = 1;
     }
     
-    double maxTimeStamp = midiSequence.musicTotalTime * p;
+    float maxTime = midiSequence.musicTotalTime * p;
     currentMusitTime = 0;
-    playTimeStamp = 0;
-    while (currentMusitTime < maxTimeStamp) {
-        double bpm = [midiSequence getTempoBpmInTimeStamp:playTimeStamp];
-        playTimeStamp += 1 / 60.0 / 60.0 * bpm;
-        currentMusitTime += 1 / 60.0;
+    currentTimeStamp = 0;
+    while (currentMusitTime < maxTime) {
+        float bpm = [midiSequence getTempoBpmInTimeStamp:currentTimeStamp];
+        currentTimeStamp += DELAY_IN_SECONDS / BASICS_BPM * bpm;
+        currentMusitTime += DELAY_IN_SECONDS;
+        
+        currentMusitTime = [[[NSString alloc]initWithFormat:@"%.3f",currentMusitTime] floatValue];
     }
     
     //重置播放标示
+    [self resetPlayTag];
+    
+    isPaused = false;
+}
+
+//重置播放标示
+-(void)resetPlayTag
+{
+    currentTimeStamp = [[[NSString alloc]initWithFormat:@"%.3f",currentTimeStamp] floatValue];
     for (int i = 0; i< midiSequence.tracks.count; i++) {
         XMidiTrack* track = midiSequence.tracks[i];
         track.playEventIndex = 0;
@@ -133,14 +185,12 @@ double lastUpdateTime;
         for (int index = 0; index < track.eventIterator.noteMessageEvents.count; index ++) {
             XMidiNoteMessageEvent* event = track.eventIterator.noteMessageEvents[index];
             
-            event.isPlayed = playTimeStamp >= event.timeStamp && playTimeStamp != 0;
+            event.isPlayed = (int)(currentTimeStamp * 1000) >= (int)(event.timeStamp * 1000) && currentTimeStamp != 0;
             if (event.isPlayed){
                 track.playEventIndex = index;
             }
         }
     }
-    
-    isPaused = false;
 }
 
 -(void)playTimer
@@ -148,11 +198,11 @@ double lastUpdateTime;
     double timeSinceLast = [[NSDate date] timeIntervalSince1970] - lastUpdateTime;
     lastUpdateTime = [[NSDate date] timeIntervalSince1970];
     
-    double delayInSeconds = 1 / 60.0;
+    float delayInSeconds = 1 / 60;
     if (!isPaused && currentMusitTime < midiSequence.musicTotalTime){
         //按bpm速率播放
-        self.currentBpm = [midiSequence getTempoBpmInTimeStamp:playTimeStamp];
-        playTimeStamp += timeSinceLast / 60.0 * self.currentBpm;
+        self.currentBpm = [midiSequence getTempoBpmInTimeStamp:currentTimeStamp];
+        currentTimeStamp += timeSinceLast / BASICS_BPM * self.currentBpm;
         currentMusitTime += timeSinceLast;
         if (currentMusitTime > midiSequence.musicTotalTime){
             currentMusitTime = midiSequence.musicTotalTime;
@@ -165,7 +215,7 @@ double lastUpdateTime;
     }
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        if (isPlayTimerEnabled){
+        if (!isClosed){
             [self playTimer];
         }
     });
@@ -188,16 +238,64 @@ double lastUpdateTime;
             }
             
             XMidiNoteMessageEvent* event = track.eventIterator.noteMessageEvents[index];
-            if (playTimeStamp >= event.timeStamp
+            if ((int)(currentTimeStamp * 1000) >= (int)(event.timeStamp * 1000)
                 && !event.isPlayed
                 && !track.isMuted)
             {
                 track.playEventIndex = index;
                 event.isPlayed = true;
+                
+//                NSString *result = [NSString stringWithFormat:@""];
+//                result = [result stringByAppendingFormat:@"\nTimeStamp:%f  Channel:%d  Note:%d  NoteNumber:%@  Octave:%d  Velocity:%d  Duration:%f",
+//                          event.timeStamp,
+//                          event.channel,
+//                          event.note,
+//                          event.noteNumber,
+//                          event.octave,
+//                          event.velocity,
+//                          event.duration];
+//                NSLog(@"%@",result);
                 [XAudioPlayer playSoundByEvent:event];
             }
         }
     }
+}
+
+-(void)gotoNoteByTrackIndex:(int)trackIndex NodeIndex:(int)noteIndex
+{
+    if (midiSequence == NULL){
+        return;
+    }
+    
+    if (midiSequence.tracks.count <= 0
+        || trackIndex >= midiSequence.tracks.count){
+        return;
+    }
+    
+    isPaused = true;
+    
+    //跳转到想要播放的那个音符的前一个音符时间
+    noteIndex = noteIndex - 1;
+    if (noteIndex < 0){
+        noteIndex = 0;
+    }
+    
+    XMidiTrack* track = midiSequence.tracks[trackIndex];
+    if (track.eventIterator.noteMessageEvents.count <= 0
+        || noteIndex >= track.eventIterator.noteMessageEvents.count){
+        isPaused = false;
+        return;
+    }
+    
+    XMidiNoteMessageEvent* event = track.eventIterator.noteMessageEvents[noteIndex];
+    if (event.timeStamp <= 0){
+        isPaused = false;
+        return;
+    }
+    
+    self.timeStamp = event.timeStamp;
+    
+    isPaused = false;
 }
 
 #pragma mark - Description

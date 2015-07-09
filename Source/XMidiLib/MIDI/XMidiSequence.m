@@ -165,9 +165,11 @@
     {
         result = [result stringByAppendingFormat:@"\n----------Track Index:%d----------", track.trackIndex];
         result = [result stringByAppendingFormat:@"\n----------Note Message Start----------"];
+        int noteIndex = 0;
         for (XMidiNoteMessageEvent* event in track.eventIterator.noteMessageEvents)
         {
-            result = [result stringByAppendingFormat:@"\nTimeStamp:%f  Channel:%d  Note:%d  NoteNumber:%@  Octave:%d  Velocity:%d  Duration:%f",
+            result = [result stringByAppendingFormat:@"\nIndex:%d  TimeStamp:%f  Channel:%d  Note:%d  NoteNumber:%@  Octave:%d  Velocity:%d  Duration:%f",
+                      noteIndex,
                       event.timeStamp,
                       event.channel,
                       event.note,
@@ -175,6 +177,7 @@
                       event.octave,
                       event.velocity,
                       event.duration];
+            noteIndex++;
         }
         result = [result stringByAppendingFormat:@"\n----------Note Message End----------"];
         

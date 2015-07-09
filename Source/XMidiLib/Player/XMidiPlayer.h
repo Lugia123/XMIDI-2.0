@@ -12,16 +12,20 @@
 @protocol XMidiPlayerDelegate <NSObject>
 @optional
 //播放进度变化 progress是一个0～1的一个小数，代表进度百分比
-+ (void)progressChanged:(double)progress;
++ (void)progressChanged:(float)progress;
 @end
 
 @interface XMidiPlayer : NSObject <XMidiPlayerDelegate>
 @property (nonatomic) id<XMidiPlayerDelegate> delegate;
-@property (nonatomic) double currentBpm;
-//Midi总播放时间(秒)
-@property (nonatomic,readonly) double totalTime;
-//Midi当前播放时间点(秒)
-@property (nonatomic) double time;
+@property (nonatomic) float currentBpm;
+//Midi总播放时间(秒)（真实时间）
+@property (nonatomic,readonly) float totalTime;
+//Midi当前播放时间点(秒)（真实时间）
+@property (nonatomic) float time;
+//Midi当前标准时间点(秒)（标准时间）
+@property (nonatomic) float timeStamp;
+//当前播放进度 返回一个0～1的一个小数，代表进度百分比
+@property (nonatomic) float progress;
 
 //开启播放设备
 +(void)xInit;
@@ -38,10 +42,8 @@
 -(void)play;
 //重播
 -(void)replay;
-//获取当前播放进度 返回一个0～1的一个小数，代表进度百分比
--(double)getProgress;
-//设置当前播放进度 progress是一个0～1的一个小数，代表进度百分比
--(void)setProgress:(double)progress;
+//跳转到某个音符开始播放
+-(void)gotoNoteByTrackIndex:(int)trackIndex NodeIndex:(int)noteIndex;
 //关闭播放器
 -(void)closePlayer;
 //Midi信息

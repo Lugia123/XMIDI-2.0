@@ -122,8 +122,8 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
         progressBar.initializer(CGPoint(x: playControlHeight, y: 0),
             size: CGSize(width: playControlLayout.size.width - playControlHeight * 1.3, height: playControlLayout.size.height))
         progressBar.anchorPoint = CGPointZero
-        progressBar.xProgressChanged = {(progress:Double) -> () in
-            self.midiPlayer.setProgress(progress)
+        progressBar.xProgressChanged = {(progress:Float) -> () in
+            self.midiPlayer.progress = progress
         }
         playControlLayout.addChild(progressBar)
         
@@ -199,12 +199,12 @@ class MusicPlay: SKScene,XAudioPlayerDelegate,XMidiPlayerDelegate{
         //        var data = NSFileManager.defaultManager().contentsAtPath(filePath!)
         //        midiPlayer.initMidiWithData(data)
         
-        NSLog(midiPlayer.midiDescription())
+        //NSLog(midiPlayer.midiDescription())
         midiPlayer.play()
         self.playButton.iconType = XIconButton.xIconButtonTypes.PauseIcon
     }
     
-    func progressChanged(progress: Double) {
+    func progressChanged(progress: Float) {
         progressBar.progress = progress
     }
     

@@ -2,8 +2,8 @@ import Foundation
 import SpriteKit
 
 class XProgressBar:SKSpriteNode {
-    private var _progress:Double = 0
-    var progress:Double {
+    private var _progress:Float = 0
+    var progress:Float {
         get{
             return _progress
         }
@@ -24,7 +24,7 @@ class XProgressBar:SKSpriteNode {
         }
     }
     
-    typealias xProgressChangedEvent = (progress:Double) -> ()
+    typealias xProgressChangedEvent = (progress:Float) -> ()
     var xProgressChanged:xProgressChangedEvent?
     
     private var backBarNode:SKSpriteNode!
@@ -76,7 +76,7 @@ class XProgressBar:SKSpriteNode {
         if (x > self.size.width - self.buttonNode.size.width){
             x = self.size.width - self.buttonNode.size.width
         }
-        self._progress = Double(x / (self.size.width - self.buttonNode.size.width))
+        self._progress = Float(x / (self.size.width - self.buttonNode.size.width))
         buttonNode.position.x = (self.size.width - self.buttonNode.size.width) * CGFloat(_progress)
         fontBarNode.size.width = (self.size.width - buttonNode.size.width) * CGFloat(_progress)
     }

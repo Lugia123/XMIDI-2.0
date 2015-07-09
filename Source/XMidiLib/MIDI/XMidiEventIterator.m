@@ -34,6 +34,8 @@
     self.noteMessageEvents = [NSMutableArray array];
     self.channelMessageEvents = [NSMutableArray array];
     
+    //计算每个音符真实时间
+    
     while ([self hasCurrentEvent]) {
         XMidiEvent* event = (XMidiEvent *)[self currentEvent];
         if (event == nil){
