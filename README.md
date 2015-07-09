@@ -10,11 +10,16 @@
 >     QQ:56809958    
 >     交流群:334533178
 
-###插播广告
->   给自己游戏做个宣传，欢迎大家下载
->![AD](http://git.oschina.net/uploads/images/2015/0519/002155_e5b0be86_21807.jpeg "AD")
-
 ###更新履历
+####2015-07-09
+>1.更新2.1，增加播放控制方法。
+```javascript
+    //Midi当前标准时间点(秒)（标准时间）
+    @property (nonatomic) float timeStamp;
+    //跳转到某个音符开始播放
+    -(void)gotoNoteByTrackIndex:(int)trackIndex NodeIndex:(int)noteIndex;
+```
+
 ####2015-05-22
 >1.初次版本发布。
 
@@ -51,10 +56,14 @@
 
 ###4.XMidiPlayer播放控制API
 ```javascript
-    //Midi总播放时间(秒)
-    @property (nonatomic,readonly) double totalTime;
-    //Midi当前播放时间点(秒)
-    @property (nonatomic) double time;
+    //Midi总播放时间(秒)（真实时间）
+    @property (nonatomic,readonly) float totalTime;
+    //Midi当前播放时间点(秒)（真实时间）
+    @property (nonatomic) float time;
+    //Midi当前标准时间点(秒)（标准时间）
+    @property (nonatomic) float timeStamp;
+    //当前播放进度 返回一个0～1的一个小数，代表进度百分比
+    @property (nonatomic) float progress;
 
     //初始化MIDI URL
     -(void)initMidi:(NSURL*)midiUrl;
@@ -66,12 +75,12 @@
     -(void)play;
     //重播
     -(void)replay;
-    //获取当前播放进度 返回一个0～1的一个小数，代表进度百分比
-    -(double)getProgress;
-    //设置当前播放进度 progress是一个0～1的一个小数，代表进度百分比
-    -(void)setProgress:(double)progress;
     //关闭播放器
     -(void)closePlayer;
+    //跳转到某个音符开始播放
+    -(void)gotoNoteByTrackIndex:(int)trackIndex NodeIndex:(int)noteIndex;
+    //Midi信息
+    - (NSString *)midiDescription;
 ```
 
 ###5.XMidiPlayer委托事件
