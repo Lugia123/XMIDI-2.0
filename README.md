@@ -12,12 +12,13 @@
 
 ###更新履历
 ####2015-07-09
->1.更新2.1。
->  增加播放控制方法
->  //Midi当前标准时间点(秒)（标准时间）
->  @property (nonatomic) float timeStamp;
->  //跳转到某个音符开始播放
->  -(void)gotoNoteByTrackIndex:(int)trackIndex NodeIndex:(int)noteIndex;
+>1.更新2.1，增加播放控制方法。
+```javascript
+    //Midi当前标准时间点(秒)（标准时间）
+    @property (nonatomic) float timeStamp;
+    //跳转到某个音符开始播放
+    -(void)gotoNoteByTrackIndex:(int)trackIndex NodeIndex:(int)noteIndex;
+```
 
 ####2015-05-22
 >1.初次版本发布。
